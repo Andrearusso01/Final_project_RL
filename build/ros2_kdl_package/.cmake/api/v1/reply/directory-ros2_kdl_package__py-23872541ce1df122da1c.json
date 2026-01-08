@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ros2_kdl_package__py",
+		"source" : "/home/user/ros2_ws/build/ros2_kdl_package/ros2_kdl_package__py"
+	}
+}

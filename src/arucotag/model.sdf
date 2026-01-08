@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version='1.9'>
+  <model name='arucotag'>
+    <static>true</static>
+    <link name='base'>
+      <visual name='base_visual'>
+        <geometry>
+          <box>
+            <size>0.07 0.07 0.001</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>/home/user/ros2_ws/src/arucotag/arucotag.png</albedo_map>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <collision name='base_collision'>
+        <geometry>
+          <box>
+            <size>0.07 0.07 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from ros2_kdl_package/action/ExecuteTrajectory.action
+// generated code does not contain a copyright notice
+
+
+module ros2_kdl_package {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct ExecuteTrajectory_Goal {
+      int32 order;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct ExecuteTrajectory_Result {
+      boolean success;
+    };
+    typedef double double__3[3];
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct ExecuteTrajectory_Feedback {
+      double__3 position_error;
+    };
+  };
+};

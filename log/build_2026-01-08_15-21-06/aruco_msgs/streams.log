@@ -1,0 +1,261 @@
+[0.029s] Invoking command in '/home/user/ros2_ws/build/aruco_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/aruco_ros/aruco_msgs -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/aruco_msgs
+[0.113s] -- The C compiler identification is GNU 11.4.0
+[0.187s] -- The CXX compiler identification is GNU 11.4.0
+[0.196s] -- Detecting C compiler ABI info
+[0.288s] -- Detecting C compiler ABI info - done
+[0.304s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.305s] -- Detecting C compile features
+[0.305s] -- Detecting C compile features - done
+[0.311s] -- Detecting CXX compiler ABI info
+[0.420s] -- Detecting CXX compiler ABI info - done
+[0.437s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.438s] -- Detecting CXX compile features
+[0.439s] -- Detecting CXX compile features - done
+[0.445s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.649s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.797s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.874s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.886s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.902s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.922s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.950s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.993s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.028s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.617s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.369s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.701s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.731s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.738s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.779s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.779s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.779s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.780s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.809s] -- Found PythonExtra: .so  
+[2.898s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.955s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.958s] -- Added test 'lint_cmake' to check CMake code style
+[2.960s] -- Added test 'xmllint' to check XML markup files
+[2.965s] -- Configuring done
+[3.023s] -- Generating done
+[3.038s] -- Build files have been written to: /home/user/ros2_ws/build/aruco_msgs
+[3.050s] Invoked command in '/home/user/ros2_ws/build/aruco_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/aruco_ros/aruco_msgs -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/aruco_msgs
+[3.052s] Invoking command in '/home/user/ros2_ws/build/aruco_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_msgs -- -j12 -l12
+[3.119s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.687s] [  2%] Built target aruco_msgs__cpp
+[3.721s] [  2%] Built target ament_cmake_python_copy_aruco_msgs
+[3.734s] [  5%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.082s] [  7%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aruco_msgs/msg/detail/marker__type_support.cpp.o[0m
+[4.546s] [ 10%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aruco_msgs/msg/detail/marker_array__type_support.cpp.o[0m
+[5.052s] [ 12%] [32m[1mLinking CXX shared library libaruco_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[5.153s] [ 12%] Built target aruco_msgs__rosidl_typesupport_introspection_cpp
+[5.439s] running egg_info
+[5.440s] creating aruco_msgs.egg-info
+[5.440s] writing aruco_msgs.egg-info/PKG-INFO
+[5.440s] writing dependency_links to aruco_msgs.egg-info/dependency_links.txt
+[5.440s] writing top-level names to aruco_msgs.egg-info/top_level.txt
+[5.440s] writing manifest file 'aruco_msgs.egg-info/SOURCES.txt'
+[5.443s] reading manifest file 'aruco_msgs.egg-info/SOURCES.txt'
+[5.444s] writing manifest file 'aruco_msgs.egg-info/SOURCES.txt'
+[5.474s] [ 12%] Built target ament_cmake_python_build_aruco_msgs_egg
+[5.487s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.873s] [ 17%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aruco_msgs/msg/detail/dds_fastrtps/marker__type_support.cpp.o[0m
+[6.353s] [ 20%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aruco_msgs/msg/detail/dds_fastrtps/marker_array__type_support.cpp.o[0m
+[6.893s] [ 23%] [32m[1mLinking CXX shared library libaruco_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.996s] [ 23%] Built target aruco_msgs__rosidl_typesupport_fastrtps_cpp
+[7.008s] [ 25%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.308s] [ 28%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aruco_msgs/msg/marker__type_support.cpp.o[0m
+[7.624s] [ 30%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aruco_msgs/msg/marker_array__type_support.cpp.o[0m
+[7.958s] [ 33%] [32m[1mLinking CXX shared library libaruco_msgs__rosidl_typesupport_cpp.so[0m
+[8.012s] [ 33%] Built target aruco_msgs__rosidl_typesupport_cpp
+[8.028s] [ 35%] [34m[1mGenerating C code for ROS interfaces[0m
+[8.485s] [ 38%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_generator_c.dir/rosidl_generator_c/aruco_msgs/msg/detail/marker__functions.c.o[0m
+[8.548s] [ 41%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_generator_c.dir/rosidl_generator_c/aruco_msgs/msg/detail/marker_array__functions.c.o[0m
+[8.607s] [ 43%] [32m[1mLinking C shared library libaruco_msgs__rosidl_generator_c.so[0m
+[8.651s] [ 43%] Built target aruco_msgs__rosidl_generator_c
+[8.664s] [ 46%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[8.993s] [ 48%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aruco_msgs/msg/detail/marker__type_support_c.cpp.o[0m
+[9.375s] [ 51%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aruco_msgs/msg/detail/marker_array__type_support_c.cpp.o[0m
+[9.762s] [ 53%] [32m[1mLinking CXX shared library libaruco_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[9.856s] [ 53%] Built target aruco_msgs__rosidl_typesupport_fastrtps_c
+[9.869s] [ 56%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[10.166s] [ 58%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aruco_msgs/msg/marker__type_support.cpp.o[0m
+[10.207s] [ 61%] [32mBuilding CXX object CMakeFiles/aruco_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aruco_msgs/msg/marker_array__type_support.cpp.o[0m
+[10.247s] [ 64%] [32m[1mLinking CXX shared library libaruco_msgs__rosidl_typesupport_c.so[0m
+[10.297s] [ 64%] Built target aruco_msgs__rosidl_typesupport_c
+[10.309s] [ 66%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.638s] [ 69%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aruco_msgs/msg/detail/marker__type_support.c.o[0m
+[10.687s] [ 71%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aruco_msgs/msg/detail/marker_array__type_support.c.o[0m
+[10.733s] [ 74%] [32m[1mLinking C shared library libaruco_msgs__rosidl_typesupport_introspection_c.so[0m
+[10.772s] [ 74%] Built target aruco_msgs__rosidl_typesupport_introspection_c
+[10.798s] [ 74%] Built target aruco_msgs
+[10.823s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[11.302s] [ 76%] Built target aruco_msgs__py
+[11.326s] [ 79%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_generator_py.dir/rosidl_generator_py/aruco_msgs/msg/_marker_s.c.o[0m
+[11.451s] [ 82%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_generator_py.dir/rosidl_generator_py/aruco_msgs/msg/_marker_array_s.c.o[0m
+[11.577s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/aruco_msgs/libaruco_msgs__rosidl_generator_py.so[0m
+[11.627s] [ 84%] Built target aruco_msgs__rosidl_generator_py
+[11.652s] [ 87%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/aruco_msgs/_aruco_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[11.781s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/aruco_msgs/aruco_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.830s] [ 89%] Built target aruco_msgs__rosidl_typesupport_fastrtps_c__pyext
+[11.854s] [ 92%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/aruco_msgs/_aruco_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[11.981s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/aruco_msgs/aruco_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[12.030s] [ 94%] Built target aruco_msgs__rosidl_typesupport_c__pyext
+[12.056s] [ 97%] [32mBuilding C object CMakeFiles/aruco_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/aruco_msgs/_aruco_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[12.202s] [100%] [32m[1mLinking C shared library rosidl_generator_py/aruco_msgs/aruco_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[12.251s] [100%] Built target aruco_msgs__rosidl_typesupport_introspection_c__pyext
+[12.265s] Invoked command in '/home/user/ros2_ws/build/aruco_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_msgs -- -j12 -l12
+[12.266s] Invoking command in '/home/user/ros2_ws/build/aruco_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_msgs
+[12.275s] -- Install configuration: ""
+[12.275s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/ament_index/resource_index/rosidl_interfaces/aruco_msgs
+[12.275s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs
+[12.275s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/marker.h
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__struct.h
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__functions.h
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__struct.h
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__functions.c
+[12.276s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__type_support.h
+[12.277s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__type_support.h
+[12.277s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__functions.h
+[12.277s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__functions.c
+[12.277s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/marker_array.h
+[12.277s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/rosidl_generator_c__visibility_control.h
+[12.278s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/library_path.sh
+[12.278s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/library_path.dsv
+[12.278s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_generator_c.so
+[12.279s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_generator_c.so" to ""
+[12.279s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs
+[12.279s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg
+[12.279s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail
+[12.279s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__rosidl_typesupport_fastrtps_c.h
+[12.280s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__rosidl_typesupport_fastrtps_c.h
+[12.280s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[12.280s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_fastrtps_c.so
+[12.280s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[12.281s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs
+[12.281s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg
+[12.281s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail
+[12.281s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__traits.hpp
+[12.281s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__traits.hpp
+[12.281s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__struct.hpp
+[12.281s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__builder.hpp
+[12.282s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__struct.hpp
+[12.282s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__type_support.hpp
+[12.282s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__type_support.hpp
+[12.282s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__builder.hpp
+[12.282s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[12.283s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/marker_array.hpp
+[12.283s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/marker.hpp
+[12.283s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs
+[12.283s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg
+[12.283s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[12.284s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail
+[12.284s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__rosidl_typesupport_fastrtps_cpp.hpp
+[12.284s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/dds_fastrtps
+[12.284s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__rosidl_typesupport_fastrtps_cpp.hpp
+[12.284s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_fastrtps_cpp.so
+[12.285s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[12.285s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs
+[12.285s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg
+[12.286s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[12.286s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail
+[12.286s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__rosidl_typesupport_introspection_c.h
+[12.286s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__type_support.c
+[12.286s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__rosidl_typesupport_introspection_c.h
+[12.286s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__type_support.c
+[12.287s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_introspection_c.so
+[12.287s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_introspection_c.so" to ""
+[12.287s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_c.so
+[12.288s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_c.so" to ""
+[12.288s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs
+[12.288s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg
+[12.288s] -- Up-to-date: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail
+[12.288s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__rosidl_typesupport_introspection_cpp.hpp
+[12.289s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker_array__type_support.cpp
+[12.289s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__type_support.cpp
+[12.289s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/include/aruco_msgs/aruco_msgs/msg/detail/marker__rosidl_typesupport_introspection_cpp.hpp
+[12.289s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_introspection_cpp.so
+[12.290s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[12.290s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_cpp.so
+[12.290s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_typesupport_cpp.so" to ""
+[12.290s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/pythonpath.sh
+[12.290s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/pythonpath.dsv
+[12.291s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs-5.0.5-py3.10.egg-info
+[12.291s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs-5.0.5-py3.10.egg-info/PKG-INFO
+[12.291s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs-5.0.5-py3.10.egg-info/top_level.txt
+[12.291s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs-5.0.5-py3.10.egg-info/SOURCES.txt
+[12.291s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs-5.0.5-py3.10.egg-info/dependency_links.txt
+[12.292s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs
+[12.292s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/_aruco_msgs_s.ep.rosidl_typesupport_c.c
+[12.292s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/__init__.py
+[12.292s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.293s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.293s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg
+[12.293s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/__init__.py
+[12.293s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/_marker_array.py
+[12.293s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/_marker_s.c
+[12.294s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/_marker_array_s.c
+[12.294s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/_marker.py
+[12.294s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/_aruco_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[12.294s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.294s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/_aruco_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[12.295s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/libaruco_msgs__rosidl_generator_py.so
+[12.335s] Listing '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs'...
+[12.335s] Compiling '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/__init__.py'...
+[12.335s] Listing '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg'...
+[12.336s] Compiling '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/__init__.py'...
+[12.336s] Compiling '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/_marker.py'...
+[12.336s] Compiling '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/msg/_marker_array.py'...
+[12.341s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.342s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[12.342s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.343s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[12.343s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.344s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages/aruco_msgs/aruco_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[12.344s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_generator_py.so
+[12.345s] -- Set runtime path of "/home/user/ros2_ws/install/aruco_msgs/lib/libaruco_msgs__rosidl_generator_py.so" to ""
+[12.345s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/msg/Marker.idl
+[12.346s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/msg/MarkerArray.idl
+[12.346s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/msg/Marker.msg
+[12.346s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/msg/MarkerArray.msg
+[12.347s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/ament_index/resource_index/package_run_dependencies/aruco_msgs
+[12.347s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/ament_index/resource_index/parent_prefix_path/aruco_msgs
+[12.347s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/ament_prefix_path.sh
+[12.348s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/ament_prefix_path.dsv
+[12.348s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/path.sh
+[12.348s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/environment/path.dsv
+[12.349s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/local_setup.bash
+[12.349s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/local_setup.sh
+[12.349s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/local_setup.zsh
+[12.350s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/local_setup.dsv
+[12.350s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.dsv
+[12.350s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/ament_index/resource_index/packages/aruco_msgs
+[12.351s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_generator_cExport.cmake
+[12.351s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_generator_cExport-noconfig.cmake
+[12.351s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[12.352s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[12.352s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_generator_cppExport.cmake
+[12.352s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[12.353s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[12.353s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_introspection_cExport.cmake
+[12.353s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[12.354s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_cExport.cmake
+[12.354s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[12.354s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[12.355s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[12.355s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_cppExport.cmake
+[12.355s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[12.356s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_generator_pyExport.cmake
+[12.356s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/export_aruco_msgs__rosidl_generator_pyExport-noconfig.cmake
+[12.356s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/rosidl_cmake-extras.cmake
+[12.357s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.357s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.357s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[12.358s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[12.358s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[12.358s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[12.359s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgsConfig.cmake
+[12.359s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/cmake/aruco_msgsConfig-version.cmake
+[12.359s] -- Installing: /home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.xml
+[12.364s] Invoked command in '/home/user/ros2_ws/build/aruco_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_msgs

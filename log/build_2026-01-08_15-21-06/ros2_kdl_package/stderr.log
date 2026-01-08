@@ -1,0 +1,18 @@
+[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+  Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+  rosidl_target_interfaces()
+Call Stack (most recent call first):
+  CMakeLists.txt:60 (rosidl_target_interfaces)
+
+[0m
+[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+  Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+  rosidl_target_interfaces()
+Call Stack (most recent call first):
+  CMakeLists.txt:90 (rosidl_target_interfaces)
+
+[0m
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:51:25:[m[K [01;35m[Kwarning: [m[Kcomparison of constant ‘[01m[K0[m[K’ with boolean expression is always true [[01;35m[K-Wbool-compare[m[K]
+   51 |     if([01;35m[Kkinematics_status>=0[m[K){
+      |        [01;35m[K~~~~~~~~~~~~~~~~~^~~[m[K

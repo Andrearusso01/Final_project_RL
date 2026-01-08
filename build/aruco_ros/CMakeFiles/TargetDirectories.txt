@@ -1,0 +1,13 @@
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/uninstall.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/aruco_ros_uninstall.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/aruco_ros_utils.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/single.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/double.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/marker_publisher.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/test.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/edit_cache.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/rebuild_cache.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/list_install_components.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/install.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/install/local.dir
+/home/user/ros2_ws/build/aruco_ros/CMakeFiles/install/strip.dir

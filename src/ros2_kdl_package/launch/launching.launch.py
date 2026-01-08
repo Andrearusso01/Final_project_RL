@@ -48,7 +48,7 @@ def generate_launch_description():
         parameters=[{
             'image_is_rect': True,
             'marker_size': 0.08,         # Dimensione del tag in metri
-            'marker_id': 0,            # ID del tag (assicurati coincida con Gazebo)
+            'marker_id': 201,            # ID del tag (assicurati coincida con Gazebo)
             'reference_frame': 'camera_link_optical',
             'camera_frame': 'camera_link_optical',
             'marker_frame': 'aruco_marker_frame',

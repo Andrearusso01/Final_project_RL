@@ -9,7 +9,7 @@ Run the kdl node:
 ```
 ros2 launch ros2_kdl_package launching.launch.py
 ```
-Set the rqt topic to /aruco_singles/result.  
+Set the rqt topic to /aruco_single/result.  
 Run the client node 
 ```
 ros2 run ros2_kdl_package ros2_kdl_node_client

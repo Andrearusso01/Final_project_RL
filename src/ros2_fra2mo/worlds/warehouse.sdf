@@ -62,12 +62,6 @@
       <pose> 6.847 1.881 0.1 0 0 0</pose>
       <uri>model://obstacle_06</uri>
     </include>
-
-    <include>
-      <name>start_pod </name> <!--low tower-->
-      <pose> -9.9 -4.9 0.1 0 0 0 </pose>
-      <uri>model://start_pod</uri>
-    </include> 
     
     <model name="shelf_1">
   <static>true</static>
@@ -351,6 +345,119 @@
     filename="gz-sim-air-pressure-system"
     name="gz::sim::systems::AirPressure">
   </plugin>-->  
+  
+ <model name="work_table">
+      <static>true</static>
+      <pose>8.8 -4.0 0.0 0 0 0</pose>
+      
+      <link name="link">
+        <inertial>
+          <mass>20</mass>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+
+        <visual name="top_visual">
+          <pose>0 0 0.675 0 0 0</pose> <geometry>
+            <box>
+              <size>0.8 0.8 0.05</size> </box>
+          </geometry>
+          <material>
+            <ambient>0.6 0.4 0.2 1</ambient>
+            <diffuse>0.6 0.4 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="top_collision">
+          <pose>0 0 0.675 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.8 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="leg1_visual">
+          <pose>0.36 0.36 0.325 0 0 0</pose> <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size> </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient> <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="leg1_collision">
+          <pose>0.36 0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="leg2_visual">
+          <pose>0.36 -0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="leg2_collision">
+          <pose>0.36 -0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="leg3_visual">
+          <pose>-0.36 0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="leg3_collision">
+          <pose>-0.36 0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="leg4_visual">
+          <pose>-0.36 -0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="leg4_collision">
+          <pose>-0.36 -0.36 0.325 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.65</size>
+            </box>
+          </geometry>
+        </collision>
+
+      </link>
+    </model>
   
   </world>
 </sdf>

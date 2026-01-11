@@ -170,10 +170,11 @@
       </collision>
       <inertial>
         <origin xyz="0 0 0.02" rpy="0 0 0"/>
-        <mass value="${0.3 / 0.308 * 0.44}"/> <!--this is for the MFT Pneumatisch flange-->
+        <mass value="${0.3 / 0.308 * 0.44}"/>
         <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
   </link>
+  
   <link name="${prefix}tool0"/>
 
   <joint name="${prefix}joint_a1" type="revolute">
@@ -232,42 +233,70 @@
       <axis xyz="0 0 0"/>
   </joint>
   
- 
-      <joint name="${prefix}camera_joint" type="fixed">
-        <parent link="${prefix}tool0"/>
-        <child link="${prefix}camera_link"/>
-        <origin xyz="0 0 0.02" rpy="3.14 -1.57 0"/>
-    </joint>
+  <joint name="${prefix}camera_joint" type="fixed">
+      <parent link="${prefix}tool0"/>
+      <child link="${prefix}camera_link"/>
+      <origin xyz="0.07 0.0 -0.03" rpy="3.14 -1.57 0"/>
+  </joint>
 
-    <link name="${prefix}camera_link">
-        <visual>
-          <geometry>
-            <box size="0.03 0.03 0.03"/>
-          </geometry>
-          <material name="black">
-            <color rgba="0 0 0 1"/>
-          </material>
-        </visual>
-        <collision>
-          <geometry>
-            <box size="0.03 0.03 0.03"/>
-          </geometry>
-        </collision>
-        <inertial>
-          <mass value="0.05"/>
-          <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-        </inertial>
-    </link>
+  <link name="${prefix}camera_link">
+      <visual>
+        <geometry>
+          <box size="0.03 0.03 0.03"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.03 0.03 0.03"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.05"/>
+        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+      </inertial>
+  </link>
 
-    <joint name="${prefix}camera_optical_joint" type="fixed">
-        <parent link="${prefix}camera_link"/>
-        <child link="${prefix}camera_optical_frame"/>
-        <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
-    </joint>
+  <joint name="${prefix}camera_optical_joint" type="fixed">
+      <parent link="${prefix}camera_link"/>
+      <child link="${prefix}camera_optical_frame"/>
+      <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+  </joint>
 
-    <link name="${prefix}camera_optical_frame"/>
+  <link name="${prefix}camera_optical_frame"/>
 
-    <gazebo reference="${prefix}camera_link">
+  <link name="${prefix}vacuum_gripper_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.02"/>
+      </geometry>
+      <material name="Black">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.02"/>
+      </geometry>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="${prefix}vacuum_gripper_joint" type="fixed">
+    <parent link="${prefix}tool0"/>
+    <child link="${prefix}vacuum_gripper_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+
+  <gazebo reference="${prefix}camera_link">
       <sensor name="${prefix}camera" type="camera">
         <always_on>1</always_on>
         <update_rate>30</update_rate>
@@ -291,7 +320,18 @@
           </noise>
         </camera>
       </sensor>
-    </gazebo>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="libignition-gazebo-vacuum-gripper-system.so"
+            name="ignition::gazebo::systems::VacuumGripper">
+      <self_collide>false</self_collide>
+      <link_name>${prefix}vacuum_gripper_link</link_name>
+      <suction_on_topic>/gripper/on</suction_on_topic>
+      <suction_off_topic>/gripper/off</suction_off_topic>
+      <suction_enabled>false</suction_enabled>
+    </plugin>
+  </gazebo>
 
   </xacro:macro>
 </robot>

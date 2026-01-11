@@ -1,0 +1,306 @@
+[0.024s] Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_kdl_package -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_kdl_package
+[0.088s] -- The C compiler identification is GNU 11.4.0
+[0.151s] -- The CXX compiler identification is GNU 11.4.0
+[0.158s] -- Detecting C compiler ABI info
+[0.232s] -- Detecting C compiler ABI info - done
+[0.247s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.247s] -- Detecting C compile features
+[0.248s] -- Detecting C compile features - done
+[0.252s] -- Detecting CXX compiler ABI info
+[0.343s] -- Detecting CXX compiler ABI info - done
+[0.352s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.353s] -- Detecting CXX compile features
+[0.353s] -- Detecting CXX compile features - done
+[0.358s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.545s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.705s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.801s] -- Found kdl_parser: 2.6.4 (/opt/ros/humble/share/kdl_parser/cmake)
+[0.832s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.832s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.833s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.847s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.973s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.012s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.063s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.131s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.209s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.430s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[1.638s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.655s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.795s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.967s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.976s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.035s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.044s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.074s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.103s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.163s] -- Looking for pthread.h
+[2.389s] -- Looking for pthread.h - found
+[2.389s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.575s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.581s] -- Found Threads: TRUE  
+[2.780s] -- Found rclcpp_action: 16.0.16 (/opt/ros/humble/share/rclcpp_action/cmake)
+[2.984s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[3.041s] -- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+[4.038s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[4.601s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.848s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.905s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[4.913s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[4.998s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[4.999s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.999s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[4.999s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[5.047s] -- Found PythonExtra: .so  
+[5.180s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[5.180s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[5.180s]   rosidl_target_interfaces()
+[5.180s] Call Stack (most recent call first):
+[5.181s]   CMakeLists.txt:60 (rosidl_target_interfaces)
+[5.181s] 
+[5.181s] [0m
+[5.191s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[5.192s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[5.192s]   rosidl_target_interfaces()
+[5.192s] Call Stack (most recent call first):
+[5.192s]   CMakeLists.txt:90 (rosidl_target_interfaces)
+[5.192s] 
+[5.192s] [0m
+[5.199s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.329s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.330s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/user/ros2_ws/src/ros2_kdl_package/include>
+[5.330s] -- Configured cppcheck exclude dirs and/or files: 
+[5.335s] -- Added test 'flake8' to check Python code syntax and style conventions
+[5.337s] -- Added test 'lint_cmake' to check CMake code style
+[5.338s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[5.346s] -- Added test 'uncrustify' to check C / C++ code style
+[5.346s] -- Configured uncrustify additional arguments: 
+[5.348s] -- Added test 'xmllint' to check XML markup files
+[5.362s] -- Configuring done
+[5.525s] -- Generating done
+[5.575s] -- Build files have been written to: /home/user/ros2_ws/build/ros2_kdl_package
+[5.625s] Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_kdl_package -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_kdl_package
+[5.627s] Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[5.763s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.796s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[5.810s] [  7%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node_example.dir/src/ros2_kdl_node_example.cpp.o[0m
+[5.838s] [  7%] Built target ament_cmake_python_copy_ros2_kdl_package
+[6.460s] running egg_info
+[6.460s] creating ros2_kdl_package.egg-info
+[6.461s] writing ros2_kdl_package.egg-info/PKG-INFO
+[6.461s] writing dependency_links to ros2_kdl_package.egg-info/dependency_links.txt
+[6.461s] writing top-level names to ros2_kdl_package.egg-info/top_level.txt
+[6.461s] writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[6.461s] reading manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[6.462s] writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[6.508s] [  7%] Built target ament_cmake_python_build_ros2_kdl_package_egg
+[6.776s] [  7%] Built target ros2_kdl_package__cpp
+[6.792s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.792s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.792s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.873s] [ 17%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_generator_c.dir/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.c.o[0m
+[7.082s] [ 20%] [32m[1mLinking C shared library libros2_kdl_package__rosidl_generator_c.so[0m
+[7.142s] [ 20%] Built target ros2_kdl_package__rosidl_generator_c
+[7.166s] [ 22%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.177s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.184s] [ 27%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.439s] [ 30%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros2_kdl_package/action/execute_trajectory__type_support.cpp.o[0m
+[7.527s] [ 32%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros2_kdl_package/action/detail/execute_trajectory__type_support.cpp.o[0m
+[7.724s] [ 35%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros2_kdl_package/action/detail/dds_fastrtps/execute_trajectory__type_support.cpp.o[0m
+[7.933s] [ 37%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros2_kdl_package/action/execute_trajectory__type_support.cpp.o[0m
+[8.019s] [ 40%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros2_kdl_package/action/detail/execute_trajectory__type_support.c.o[0m
+[8.049s] [ 42%] [32m[1mLinking CXX shared library libros2_kdl_package__rosidl_typesupport_c.so[0m
+[8.097s] [ 45%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros2_kdl_package/action/detail/execute_trajectory__type_support_c.cpp.o[0m
+[8.110s] [ 47%] [32m[1mLinking C shared library libros2_kdl_package__rosidl_typesupport_introspection_c.so[0m
+[8.129s] [ 47%] Built target ros2_kdl_package__rosidl_typesupport_c
+[8.179s] [ 47%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c
+[8.286s] [ 50%] [32m[1mLinking CXX shared library libros2_kdl_package__rosidl_typesupport_cpp.so[0m
+[8.354s] [ 50%] Built target ros2_kdl_package__rosidl_typesupport_cpp
+[8.672s] [ 52%] [32m[1mLinking CXX shared library libros2_kdl_package__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.712s] [ 55%] [32m[1mLinking CXX shared library libros2_kdl_package__rosidl_typesupport_introspection_cpp.so[0m
+[8.761s] [ 57%] [32m[1mLinking CXX shared library libros2_kdl_package__rosidl_typesupport_fastrtps_c.so[0m
+[8.773s] [ 57%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp
+[8.848s] [ 57%] Built target ros2_kdl_package__rosidl_typesupport_introspection_cpp
+[8.860s] [ 57%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c
+[8.883s] [ 57%] Built target ros2_kdl_package
+[8.911s] [ 60%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o[0m
+[8.912s] [ 67%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node.dir/src/kdl_robot.cpp.o[0m
+[8.913s] [ 65%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node.dir/src/kdl_planner.cpp.o[0m
+[8.913s] [ 67%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node.dir/src/kdl_control.cpp.o[0m
+[8.915s] [ 70%] [34m[1mGenerating Python code for ROS interfaces[0m
+[8.915s] [ 72%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node_client.dir/src/ros2_kdl_node_client.cpp.o[0m
+[10.478s] [ 72%] Built target ros2_kdl_package__py
+[10.512s] [ 75%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_generator_py.dir/rosidl_generator_py/ros2_kdl_package/action/_execute_trajectory_s.c.o[0m
+[10.721s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[10.721s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:51:25:[m[K [01;35m[Kwarning: [m[Kcomparison of constant ‘[01m[K0[m[K’ with boolean expression is always true [[01;35m[K-Wbool-compare[m[K]
+[10.721s]    51 |     if([01;35m[Kkinematics_status>=0[m[K){
+[10.721s]       |        [01;35m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[10.788s] [ 77%] [32m[1mLinking C shared library rosidl_generator_py/ros2_kdl_package/libros2_kdl_package__rosidl_generator_py.so[0m
+[10.865s] [ 77%] Built target ros2_kdl_package__rosidl_generator_py
+[10.912s] [ 80%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[10.922s] [ 82%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[10.942s] [ 85%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_c.c.o[0m
+[11.165s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.240s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.264s] [ 90%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext
+[11.276s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.321s] [ 92%] Built target ros2_kdl_package__rosidl_typesupport_c__pyext
+[11.342s] [ 92%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c__pyext
+[11.574s] [ 95%] [32m[1mLinking CXX executable ros2_kdl_node_example[0m
+[11.765s] [ 95%] Built target ros2_kdl_node_example
+[14.750s] [ 97%] [32m[1mLinking CXX executable ros2_kdl_node_client[0m
+[15.196s] [ 97%] Built target ros2_kdl_node_client
+[48.077s] [100%] [32m[1mLinking CXX executable ros2_kdl_node[0m
+[49.401s] [100%] Built target ros2_kdl_node
+[49.412s] Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[49.414s] Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_kdl_package
+[49.422s] -- Install configuration: ""
+[49.422s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ament_index/resource_index/rosidl_interfaces/ros2_kdl_package
+[49.422s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package
+[49.422s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action
+[49.422s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail
+[49.422s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__type_support.h
+[49.422s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__functions.h
+[49.423s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__functions.c
+[49.423s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__struct.h
+[49.423s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/execute_trajectory.h
+[49.423s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg
+[49.424s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg/rosidl_generator_c__visibility_control.h
+[49.424s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/library_path.sh
+[49.424s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/library_path.dsv
+[49.424s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_generator_c.so
+[49.425s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_generator_c.so" to ""
+[49.425s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package
+[49.425s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action
+[49.425s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail
+[49.425s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__rosidl_typesupport_fastrtps_c.h
+[49.425s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg
+[49.425s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[49.425s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_fastrtps_c.so
+[49.426s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_fastrtps_c.so" to ""
+[49.426s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package
+[49.426s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action
+[49.426s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail
+[49.426s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__builder.hpp
+[49.426s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__type_support.hpp
+[49.426s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__traits.hpp
+[49.427s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__struct.hpp
+[49.427s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/execute_trajectory.hpp
+[49.427s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg
+[49.427s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg/rosidl_generator_cpp__visibility_control.hpp
+[49.427s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package
+[49.428s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action
+[49.428s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail
+[49.428s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/dds_fastrtps
+[49.428s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[49.428s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg
+[49.428s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[49.428s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_fastrtps_cpp.so
+[49.429s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_fastrtps_cpp.so" to ""
+[49.429s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package
+[49.429s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action
+[49.429s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail
+[49.429s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__rosidl_typesupport_introspection_c.h
+[49.429s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__type_support.c
+[49.429s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg
+[49.430s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[49.430s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_introspection_c.so
+[49.430s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_introspection_c.so" to ""
+[49.430s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_c.so
+[49.431s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_c.so" to ""
+[49.431s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package
+[49.431s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action
+[49.431s] -- Up-to-date: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail
+[49.431s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[49.431s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/include/ros2_kdl_package/ros2_kdl_package/action/detail/execute_trajectory__type_support.cpp
+[49.431s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_introspection_cpp.so
+[49.432s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_introspection_cpp.so" to ""
+[49.432s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_cpp.so
+[49.433s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_typesupport_cpp.so" to ""
+[49.433s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/pythonpath.sh
+[49.433s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/pythonpath.dsv
+[49.433s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package-0.0.0-py3.10.egg-info
+[49.433s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package-0.0.0-py3.10.egg-info/PKG-INFO
+[49.433s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package-0.0.0-py3.10.egg-info/top_level.txt
+[49.433s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package-0.0.0-py3.10.egg-info/SOURCES.txt
+[49.434s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package-0.0.0-py3.10.egg-info/dependency_links.txt
+[49.434s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package
+[49.434s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action
+[49.434s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action/__init__.py
+[49.434s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action/_execute_trajectory.py
+[49.434s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action/_execute_trajectory_s.c
+[49.435s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_fastrtps_c.c
+[49.435s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/libros2_kdl_package__rosidl_generator_py.so
+[49.435s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[49.435s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/__init__.py
+[49.435s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[49.435s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_introspection_c.c
+[49.436s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_c.c
+[49.436s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[49.470s] Listing '/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package'...
+[49.470s] Compiling '/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/__init__.py'...
+[49.470s] Listing '/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action'...
+[49.470s] Compiling '/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action/__init__.py'...
+[49.470s] Compiling '/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/action/_execute_trajectory.py'...
+[49.473s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[49.474s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[49.474s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[49.475s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[49.475s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[49.475s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/local/lib/python3.10/dist-packages/ros2_kdl_package/ros2_kdl_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[49.475s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_generator_py.so
+[49.476s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/libros2_kdl_package__rosidl_generator_py.so" to ""
+[49.476s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/action/ExecuteTrajectory.idl
+[49.476s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/action/ExecuteTrajectory.action
+[49.476s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/ros2_kdl_package/ros2_kdl_node
+[49.487s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/ros2_kdl_package/ros2_kdl_node" to ""
+[49.487s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/ros2_kdl_package/ros2_kdl_node_example
+[49.488s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/ros2_kdl_package/ros2_kdl_node_example" to ""
+[49.488s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/lib/ros2_kdl_package/ros2_kdl_node_client
+[49.489s] -- Set runtime path of "/home/user/ros2_ws/install/ros2_kdl_package/lib/ros2_kdl_package/ros2_kdl_node_client" to ""
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/launch
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/launch/__pycache__
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/launch/__pycache__/launching.launch.cpython-310.pyc
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/launch/launching.launch.py
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/config
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/config/kdl_params.yaml
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ament_index/resource_index/package_run_dependencies/ros2_kdl_package
+[49.489s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ament_index/resource_index/parent_prefix_path/ros2_kdl_package
+[49.490s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/ament_prefix_path.sh
+[49.490s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/ament_prefix_path.dsv
+[49.490s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/path.sh
+[49.490s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/environment/path.dsv
+[49.490s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/local_setup.bash
+[49.490s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/local_setup.sh
+[49.491s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/local_setup.zsh
+[49.491s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/local_setup.dsv
+[49.491s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.dsv
+[49.491s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ament_index/resource_index/packages/ros2_kdl_package
+[49.491s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_generator_cExport.cmake
+[49.492s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_generator_cExport-noconfig.cmake
+[49.492s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_typesupport_fastrtps_cExport.cmake
+[49.492s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[49.492s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_generator_cppExport.cmake
+[49.492s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_typesupport_fastrtps_cppExport.cmake
+[49.492s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[49.493s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_introspection_cExport.cmake
+[49.493s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[49.493s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_cExport.cmake
+[49.493s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_cExport-noconfig.cmake
+[49.493s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_introspection_cppExport.cmake
+[49.494s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[49.494s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_cppExport.cmake
+[49.494s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_package__rosidl_typesupport_cppExport-noconfig.cmake
+[49.494s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_generator_pyExport.cmake
+[49.494s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/export_ros2_kdl_package__rosidl_generator_pyExport-noconfig.cmake
+[49.494s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/rosidl_cmake-extras.cmake
+[49.495s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ament_cmake_export_dependencies-extras.cmake
+[49.495s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ament_cmake_export_include_directories-extras.cmake
+[49.495s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ament_cmake_export_libraries-extras.cmake
+[49.495s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ament_cmake_export_targets-extras.cmake
+[49.495s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[49.495s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[49.496s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_packageConfig.cmake
+[49.496s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/cmake/ros2_kdl_packageConfig-version.cmake
+[49.496s] -- Installing: /home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.xml
+[49.498s] Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_kdl_package

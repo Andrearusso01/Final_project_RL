@@ -178,8 +178,8 @@ def generate_launch_description():
 	arguments=[
             '-topic', '/fra2mo/robot_description',
             '-name', 'fra2mo',
-            '-x', '7.2',
-            '-y', '-4.35',
+            '-x', '6.86',
+            '-y', '-4.65',
             '-z', '0.15'
         ],
         output='screen'

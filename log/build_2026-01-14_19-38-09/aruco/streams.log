@@ -1,0 +1,90 @@
+[0.043s] Invoking command in '/home/user/ros2_ws/build/aruco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/aruco_ros/aruco -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/aruco
+[0.119s] -- The C compiler identification is GNU 11.4.0
+[0.210s] -- The CXX compiler identification is GNU 11.4.0
+[0.222s] -- Detecting C compiler ABI info
+[0.314s] -- Detecting C compiler ABI info - done
+[0.328s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.329s] -- Detecting C compile features
+[0.330s] -- Detecting C compile features - done
+[0.336s] -- Detecting CXX compiler ABI info
+[0.468s] -- Detecting CXX compiler ABI info - done
+[0.484s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.485s] -- Detecting CXX compile features
+[0.486s] -- Detecting CXX compile features - done
+[0.492s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.711s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.911s] -- Found OpenCV: /usr (found suitable version "4.5.4", minimum required is "4.2.0") 
+[1.021s] -- Configuring done
+[1.037s] -- Generating done
+[1.041s] -- Build files have been written to: /home/user/ros2_ws/build/aruco
+[1.048s] Invoked command in '/home/user/ros2_ws/build/aruco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/aruco_ros/aruco -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/aruco
+[1.051s] Invoking command in '/home/user/ros2_ws/build/aruco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco -- -j12 -l12
+[1.120s] [  5%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o[0m
+[1.121s] [ 11%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/cvdrawingutils.cpp.o[0m
+[1.122s] [ 16%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractaldetector.cpp.o[0m
+[1.125s] [ 22%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/ippe.cpp.o[0m
+[1.128s] [ 27%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/marker.cpp.o[0m
+[1.131s] [ 38%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/debug.cpp.o[0m
+[1.131s] [ 38%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/dictionary_based.cpp.o[0m
+[1.131s] [ 44%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markerdetector_impl.cpp.o[0m
+[1.135s] [ 50%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/dictionary.cpp.o[0m
+[1.141s] [ 55%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markerlabeler.cpp.o[0m
+[1.162s] [ 61%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markerdetector.cpp.o[0m
+[1.166s] [ 66%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markermap.cpp.o[0m
+[2.545s] [ 72%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/posetracker.cpp.o[0m
+[3.321s] [ 77%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractallabeler.cpp.o[0m
+[3.675s] [ 83%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractalmarker.cpp.o[0m
+[3.794s] [ 88%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractalmarkerset.cpp.o[0m
+[4.250s] [ 94%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractalposetracker.cpp.o[0m
+[14.366s] [100%] [32m[1mLinking CXX shared library libaruco.so[0m
+[15.466s] [100%] Built target aruco
+[15.509s] Invoked command in '/home/user/ros2_ws/build/aruco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco -- -j12 -l12
+[15.509s] Invoking command in '/home/user/ros2_ws/build/aruco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco
+[15.522s] -- Install configuration: ""
+[15.523s] -- Installing: /home/user/ros2_ws/install/aruco/lib/libaruco.so
+[15.533s] -- Installing: /home/user/ros2_ws/install/aruco/include
+[15.534s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco
+[15.534s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/fractaldetector.h
+[15.534s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/fractallabelers
+[15.534s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/fractallabelers/fractalmarkerset.h
+[15.535s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/fractallabelers/fractalposetracker.h
+[15.535s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/fractallabelers/fractallabeler.h
+[15.535s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/fractallabelers/fractalmarker.h
+[15.535s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/cvdrawingutils.h
+[15.539s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/aruco_cvversioning.h
+[15.539s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/dictionary.h
+[15.539s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/markerdetector_impl.h
+[15.540s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/marker.h
+[15.540s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/aruco.h
+[15.540s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/levmarq.h
+[15.540s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/debug.h
+[15.540s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/cameraparameters.h
+[15.540s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/aruco_export.h
+[15.541s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/markermap.h
+[15.541s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/ippe.h
+[15.541s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/posetracker.h
+[15.541s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/dictionary_based.h
+[15.541s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/markerlabeler.h
+[15.542s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/markerdetector.h
+[15.542s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/timers.h
+[15.543s] -- Installing: /home/user/ros2_ws/install/aruco/include/aruco/picoflann.h
+[15.543s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/environment/library_path.sh
+[15.543s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/environment/library_path.dsv
+[15.543s] -- Installing: /home/user/ros2_ws/install/aruco/share/ament_index/resource_index/package_run_dependencies/aruco
+[15.543s] -- Installing: /home/user/ros2_ws/install/aruco/share/ament_index/resource_index/parent_prefix_path/aruco
+[15.545s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/environment/ament_prefix_path.sh
+[15.546s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/environment/ament_prefix_path.dsv
+[15.546s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/environment/path.sh
+[15.546s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/environment/path.dsv
+[15.548s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/local_setup.bash
+[15.548s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/local_setup.sh
+[15.548s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/local_setup.zsh
+[15.548s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/local_setup.dsv
+[15.548s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/package.dsv
+[15.552s] -- Installing: /home/user/ros2_ws/install/aruco/share/ament_index/resource_index/packages/aruco
+[15.552s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.552s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/cmake/ament_cmake_export_libraries-extras.cmake
+[15.552s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/cmake/arucoConfig.cmake
+[15.552s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/cmake/arucoConfig-version.cmake
+[15.552s] -- Installing: /home/user/ros2_ws/install/aruco/share/aruco/package.xml
+[15.569s] Invoked command in '/home/user/ros2_ws/build/aruco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco

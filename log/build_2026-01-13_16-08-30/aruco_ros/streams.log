@@ -1,0 +1,45 @@
+[0.024s] Invoking command in '/home/user/ros2_ws/build/aruco_ros': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_ros -- -j12 -l12
+[0.080s] [ 18%] Built target aruco_ros_utils
+[0.084s] [ 72%] Built target single
+[0.084s] [ 72%] Built target double
+[0.085s] [100%] Built target marker_publisher
+[0.096s] Invoked command in '/home/user/ros2_ws/build/aruco_ros' returned '0': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_ros -- -j12 -l12
+[0.096s] Invoking command in '/home/user/ros2_ws/build/aruco_ros': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_ros
+[0.103s] -- Install configuration: ""
+[0.104s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/lib/libaruco_ros_utils.so
+[0.104s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/lib/aruco_ros/marker_publisher
+[0.104s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/lib/aruco_ros/single
+[0.105s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/lib/aruco_ros/double
+[0.105s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/include
+[0.105s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/include/aruco_ros
+[0.105s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc
+[0.105s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker26_5cm.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker582_5cm.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/new_coordinates.png
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/reem_gazebo_floating_marker_world.png
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker582_5cm_margin_2cm.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker_in_hand.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/reem_gazebo_floating_marker.png
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker_in_object.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker26_5cm_margin_1cm.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/etc/marker26_5cm_margin_2cm.jpg
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/launch
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/launch/double.launch.py
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/launch/marker_publisher.launch.py
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/launch/single.launch.py
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/ament_index/resource_index/package_run_dependencies/aruco_ros
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/ament_index/resource_index/parent_prefix_path/aruco_ros
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/environment/ament_prefix_path.sh
+[0.106s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/environment/ament_prefix_path.dsv
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/environment/path.sh
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/environment/path.dsv
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/local_setup.bash
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/local_setup.sh
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/local_setup.zsh
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/local_setup.dsv
+[0.107s] -- Installing: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.dsv
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/ament_index/resource_index/packages/aruco_ros
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/cmake/aruco_rosConfig.cmake
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/cmake/aruco_rosConfig-version.cmake
+[0.107s] -- Up-to-date: /home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.xml
+[0.108s] Invoked command in '/home/user/ros2_ws/build/aruco_ros' returned '0': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_ros

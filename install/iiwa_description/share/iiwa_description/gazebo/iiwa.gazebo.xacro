@@ -4,7 +4,7 @@
 
     <!-- ros_control plugin -->
   <gazebo>
-  <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+  <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
     <ros>
       <namespace>/iiwa</namespace> </ros>
     
@@ -18,6 +18,18 @@
     <gazebo reference="${prefix}link_7">
       <material>Gazebo/Gray</material>
     </gazebo>
+    
+     <gazebo>
+      <plugin filename="libignition-gazebo-detachable-joint-system.so"
+              name="ignition::gazebo::systems::DetachableJoint">
+        <parent_link>${prefix}vacuum_gripper_link</parent_link>
+        <child_model>package</child_model>
+        <child_link>package_link</child_link>
+        <output_topic>/gripper/state</output_topic>
+        <detach_topic>/gripper/detach</detach_topic>
+        <attach_topic>/gripper/attach</attach_topic>
+      </plugin>
+    </gazebo> 
 
   </xacro:macro>
 </robot>

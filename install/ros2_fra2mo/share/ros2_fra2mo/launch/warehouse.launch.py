@@ -32,6 +32,9 @@ def generate_launch_description():
         get_package_share_directory('ros2_fra2mo'),
         'worlds', 'warehouse.sdf'
     )
+    
+    pkg_kdl = get_package_share_directory('ros2_kdl_package')
+    bridge_config_file = os.path.join(pkg_kdl, 'config', 'bridge_config.yaml')
 
     # Fra2mo description
     fra2mo_xacro = os.path.join(
@@ -110,6 +113,7 @@ def generate_launch_description():
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
+        parameters=[{'config_file': bridge_config_file}],
         arguments=[
             # --- ROBOT FRA2MO (Rover) ---
             '/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
@@ -131,10 +135,10 @@ def generate_launch_description():
             # --- BRACCIO IIWA ---
             # Lettura stato giunti (per RViz)
             '/iiwa/joint_states@sensor_msgs/msg/JointState@ignition.msgs.Model',
-            '/tf_static@tf2_msgs/msg/TFMessage[ignition.msgs.Pose_V',
+            #'/tf_static@tf2_msgs/msg/TFMessage[ignition.msgs.Pose_V',
 
             # Invio comandi movimento
-            '/model/iiwa/joint_trajectory@trajectory_msgs/msg/JointTrajectory]ignition.msgs.JointTrajectory'
+            '/iiwa/joint_trajectory@trajectory_msgs/msg/JointTrajectory]ignition.msgs.JointTrajectory'
         ],
         output='screen'
     )
@@ -220,9 +224,9 @@ def generate_launch_description():
     velocity_controller = Node(
         package='controller_manager',
         executable='spawner',
+        output='log',
         arguments=['velocity_controller', '-c', '/iiwa/controller_manager'],
-        namespace='iiwa',
-        output='screen'
+        namespace='iiwa'
     )
 
     # Gestore eventi: avvia i controller DOPO che iiwa è stato spawnato
@@ -231,10 +235,19 @@ def generate_launch_description():
             target_action=spawn_iiwa,
             on_exit=[
                 joint_state_broadcaster,
-                # arm_controller,
+                #arm_controller,
                 velocity_controller
             ]
         )
+    )
+    
+    # Nodo per unire gli alberi TF: world -> fra2mo/odom
+    # Questo permette al braccio di sapere dove si trova il rover rispetto a lui
+    static_tf_world_to_fra2mo = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0', '0', '0', '0', '0', '0', 'world', 'fra2mo/odom'],
+        output='screen'
     )
 
     # -------------------------
@@ -251,6 +264,7 @@ def generate_launch_description():
         gz_args,
         bridge,
         odom_tf,
+        static_tf_world_to_fra2mo,
         gazebo,
         fra2mo_rsp,
         spawn_fra2mo,

@@ -406,19 +406,6 @@ ros2_kdl_node/fast:
 .PHONY : ros2_kdl_node/fast
 
 #=============================================================================
-# Target rules for targets named ros2_kdl_node_example
-
-# Build rule for target.
-ros2_kdl_node_example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ros2_kdl_node_example
-.PHONY : ros2_kdl_node_example
-
-# fast build rule for target.
-ros2_kdl_node_example/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_kdl_node_example.dir/build.make CMakeFiles/ros2_kdl_node_example.dir/build
-.PHONY : ros2_kdl_node_example/fast
-
-#=============================================================================
 # Target rules for targets named ros2_kdl_node_client
 
 # Build rule for target.
@@ -430,6 +417,19 @@ ros2_kdl_node_client: cmake_check_build_system
 ros2_kdl_node_client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_kdl_node_client.dir/build.make CMakeFiles/ros2_kdl_node_client.dir/build
 .PHONY : ros2_kdl_node_client/fast
+
+#=============================================================================
+# Target rules for targets named ros2_kdl_node_example
+
+# Build rule for target.
+ros2_kdl_node_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ros2_kdl_node_example
+.PHONY : ros2_kdl_node_example
+
+# fast build rule for target.
+ros2_kdl_node_example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_kdl_node_example.dir/build.make CMakeFiles/ros2_kdl_node_example.dir/build
+.PHONY : ros2_kdl_node_example/fast
 
 #=============================================================================
 # Target rules for targets named ros2_kdl_package__py

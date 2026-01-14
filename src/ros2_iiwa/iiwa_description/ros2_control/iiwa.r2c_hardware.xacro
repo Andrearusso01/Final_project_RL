@@ -8,13 +8,13 @@
 
             <xacro:if value="$(arg use_sim)">
                 <hardware>
-                    <plugin>ign_ros2_control/IgnitionSystem</plugin>
+                    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
                 </hardware>
             </xacro:if>
             <xacro:unless value="$(arg use_sim)">
                 <hardware>
                 <xacro:if value="${use_fake_hardware}">
-                    <plugin>mock_components/GenericSystem</plugin>
+                    <plugin>fake_components/GenericSystem</plugin>
                     <param name="calculate_dynamics">true</param>
                 </xacro:if>
                 <xacro:unless value="${use_fake_hardware}">

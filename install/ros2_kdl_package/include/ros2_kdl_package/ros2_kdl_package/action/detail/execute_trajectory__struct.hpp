@@ -15,6 +15,10 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
+// Include directives for member types
+// Member 'pose'
+#include "geometry_msgs/msg/detail/pose__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__ros2_kdl_package__action__ExecuteTrajectory_Goal __attribute__((deprecated))
 #else
@@ -34,6 +38,7 @@ struct ExecuteTrajectory_Goal_
   using Type = ExecuteTrajectory_Goal_<ContainerAllocator>;
 
   explicit ExecuteTrajectory_Goal_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : pose(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -43,8 +48,8 @@ struct ExecuteTrajectory_Goal_
   }
 
   explicit ExecuteTrajectory_Goal_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : pose(_alloc, _init)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -53,11 +58,20 @@ struct ExecuteTrajectory_Goal_
   }
 
   // field types and members
+  using _pose_type =
+    geometry_msgs::msg::Pose_<ContainerAllocator>;
+  _pose_type pose;
   using _order_type =
     int32_t;
   _order_type order;
 
   // setters for named parameter idiom
+  Type & set__pose(
+    const geometry_msgs::msg::Pose_<ContainerAllocator> & _arg)
+  {
+    this->pose = _arg;
+    return *this;
+  }
   Type & set__order(
     const int32_t & _arg)
   {
@@ -107,6 +121,9 @@ struct ExecuteTrajectory_Goal_
   // comparison operators
   bool operator==(const ExecuteTrajectory_Goal_ & other) const
   {
+    if (this->pose != other.pose) {
+      return false;
+    }
     if (this->order != other.order) {
       return false;
     }

@@ -1,0 +1,263 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+-- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/ros2_ws/build/ros2_fra2mo
+[ 50%] [32mBuilding CXX object CMakeFiles/dynamic_tf_publisher.dir/src/odom_bl_tf.cpp.o[0m
+[100%] [32m[1mLinking CXX executable dynamic_tf_publisher[0m
+[100%] Built target dynamic_tf_publisher
+-- Install configuration: ""
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_slam.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_amcl.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_explore.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_navigation.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/warehouse.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/display_fra2mo.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/gazebo_fra2mo.launch.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/fra2mo.urdf.xacro
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/d435_gazebo_macro.xacro
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/fra2mo_base_macro.xacro
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/test.urdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/utility_macro.xacro
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/lidar_gazebo_macro.xacro
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/mesh/unknown_obst_high.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/unknown_obst_1.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_0.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_3.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_4.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_1.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_2.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/scripts/marker_1.material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/marker_1.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/mesh/start_pod.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/start_pod.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/mesh/unknown_obst_low.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/unknown_obst_2.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/mesh/tunnel_short.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/unknown_tunnel_2.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/mesh/unknown_obst_wall.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/unknown_obst_3.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/obstacle_10_.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/mesh/ostacolo_10_.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/unknown_tunnel_1.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/mesh/tunnel_long.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/obstacle_06.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/mesh/ostacolo_06.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/marker_4.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_0.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_3.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_4.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_1.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_2.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/scripts/marker_4.material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/marker_3.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_0.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_3.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_4.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_1.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_2.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/scripts/marker_3.material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/roof.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/mesh/roof.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/ar_tag_0.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_0.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_3.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_4.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_1.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_2.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/scripts/marker_0.material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/marker_0.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/mesh/campo_gara.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/model.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/mesh/ostacolo_09.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/obstacle_09.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/mesh/ostacolo_03.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/obstacle_03.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material/textures
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material/textures/aruco-26_8cm.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material/scripts/marker26_8cm.material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/marker26_8cm_massless.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_0.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_3.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_4.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_1.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_2.png
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/scripts/marker_2.material
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/marker_2.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/mesh/ostacolo_10.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/obstacle_10.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/intruder.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/mesh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/mesh/intruder.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/model.config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/unknown_obst_low.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/assieme_gara_2023.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/start_pod.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_10.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/tunnel_short.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_06.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_09.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/unknown_obst_wall.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/intruder.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/rl_fra2mo_body.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/rl_fra2mo_wheel.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/unknown_obst_high.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_03.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/tunnel_long.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/campo_gara.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/lidar.stl
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/worlds
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/worlds/leonardo_race_field.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/worlds/warehouse.sdf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/slam.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/explore.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/iiwa.pose.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/amcl.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/navigation.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/src
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/src/odom_bl_tf.cpp
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/sim_map.pgm
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/warehouse_map.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/sim_map.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/map.yaml
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/map.pgm
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/warehouse_map.pgm
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/scripts
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/scripts/reach_goal.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/scripts/follow_waypoints.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/slam_view.rviz
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/amcl_view.rviz
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/navigation.rviz
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/fra2mo_conf.rviz
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/conf_base.rviz
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/explore.rviz
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/dynamic_tf_publisher
+-- Set runtime path of "/home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/dynamic_tf_publisher" to ""
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/reach_goal.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/follow_waypoints.py
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ament_index/resource_index/package_run_dependencies/ros2_fra2mo
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ament_index/resource_index/parent_prefix_path/ros2_fra2mo
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/ament_prefix_path.sh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/ament_prefix_path.dsv
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/path.sh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/path.dsv
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.bash
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.sh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.zsh
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.dsv
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.dsv
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ament_index/resource_index/packages/ros2_fra2mo
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/cmake/ros2_fra2moConfig.cmake
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/cmake/ros2_fra2moConfig-version.cmake
+-- Installing: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.xml

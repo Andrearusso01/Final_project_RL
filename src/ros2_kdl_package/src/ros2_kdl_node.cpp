@@ -137,97 +137,13 @@ private:
     void handle_accepted(const std::shared_ptr<GoalHandleExecuteTrajectory> goal_handle) {
         std::thread{std::bind(&Iiwa_pub_sub::execute, this, std::placeholders::_1), goal_handle}.detach();
     }
-
-    // --- CORE EXECUTION ---
-    
-    
-    
-    /*
-    void execute(const std::shared_ptr<GoalHandleExecuteTrajectory> goal_handle) {
-        RCLCPP_INFO(this->get_logger(), "Executing trajectory...");
-        auto feedback = std::make_shared<ExecuteTrajectory::Feedback>();
-        auto result = std::make_shared<ExecuteTrajectory::Result>();
-        
-        rclcpp::Rate rate(50);
-        double t = 0.0;
-        double dt = 1.0 / 50.0;
-
-        // Inizializzazione planner con stato corrente
-        robot_->update(toStdVector(joint_positions_.data), toStdVector(joint_velocities_.data));
-        KDL::Frame init_frame = robot_->getEEFrame();
-        Eigen::Vector3d start_p(init_frame.p.data);
-        RCLCPP_INFO(this->get_logger(), "%f, %f, %f,",end_position_vec_[0],end_position_vec_[1],end_position_vec_[2]);
-        Eigen::Vector3d end_p(end_position_vec_[0], end_position_vec_[1], end_position_vec_[2]);
-        
-        planner_ = (traj_type_ == "linear") ? 
-                   KDLPlanner(traj_duration_, acc_duration_, start_p, end_p) :
-                   KDLPlanner(traj_duration_, start_p, 0.15, acc_duration_);
-
-        while (rclcpp::ok() && t < total_time_) {
-            if (goal_handle->is_canceling()) {
-                goal_handle->canceled(result);
-                return;
-            }
-
-            // 1. Aggiorna Robot
-            robot_->update(toStdVector(joint_positions_.data), toStdVector(joint_velocities_.data));
-            KDL::Frame current_cart_frame = robot_->getEEFrame();
-
-            // 2. Traiettoria desiderata
-            if (traj_type_ == "linear") {
-                p_ = (s_type_ == "trapezoidal") ? planner_.linear_traj_trapezoidal(t) : planner_.linear_traj_cubic(t);
-            } else {
-                p_ = (s_type_ == "trapezoidal") ? planner_.circular_traj_trapezoidal(t) : planner_.circular_traj_cubic(t);
-            }
-
-            // 3. Calcolo Errore
-            Eigen::Vector3d pos_error = p_.pos - Eigen::Vector3d(current_cart_frame.p.data);
-Eigen::Vector3d ori_error = computeOrientationError(toEigen(init_frame.M), toEigen(current_cart_frame.M));
-            
-            feedback->position_error = {pos_error(0), pos_error(1), pos_error(2)};
-            goal_handle->publish_feedback(feedback);
-
-            // 4. Controllo Law
-            if (cmd_interface_ == "velocity") {
-                if (ctrl_ == "vision") {
-                    joint_velocities_cmd_ = controller_.vision_ctrl(Kp_, cPo_, Eigen::Vector3d(0,0,1));
-                } else if (ctrl_ == "velocity_ctrl_null") {
-                    Eigen::Matrix<double,6,1> err_6d; err_6d << pos_error, ori_error;
-                    joint_velocities_cmd_ = controller_.velocity_ctrl_null(err_6d, Kp_);
-                } else {
-                    Vector6d cart_vel; cart_vel << p_.vel + Kp_ * pos_error, ori_error;
-                    joint_velocities_cmd_.data = pseudoinverse(robot_->getEEJacobian().data) * cart_vel;
-                }
-                desired_commands_ = toStdVector(joint_velocities_cmd_.data);
-            } 
-            else if (cmd_interface_ == "position") {
-                KDL::Frame next_f = current_cart_frame;
-                next_f.p = current_cart_frame.p + (toKDL(p_.vel) + toKDL(Kp_ * pos_error)) * dt;
-                robot_->getInverseKinematics(next_f, joint_positions_cmd_);
-                desired_commands_ = toStdVector(joint_positions_cmd_.data);
-            }
-
-            // 5. Pubblica
-            FloatArray cmd_msg;
-            cmd_msg.data = desired_commands_;
-            cmdPublisher_->publish(cmd_msg);
-
-            t += dt;
-            rate.sleep();
-        }
-
-        result->success = true;
-        goal_handle->succeed(result);
-        stop_robot();
-    }
-    
-    
-    */
     
     void execute(const std::shared_ptr<GoalHandleExecuteTrajectory> goal_handle)
 {
     RCLCPP_INFO(this->get_logger(), "Starting trajectory execution...");
 
+    // 1. RECUPERO DATI DAL CLIENT
+    const auto goal = goal_handle->get_goal();
     auto feedback = std::make_shared<ExecuteTrajectory::Feedback>();
     auto result = std::make_shared<ExecuteTrajectory::Result>();
 
@@ -235,63 +151,89 @@ Eigen::Vector3d ori_error = computeOrientationError(toEigen(init_frame.M), toEig
     double dt = 1.0 / 50.0;
     double t = 0.0;
 
-    // 1. ATTESA DATI INIZIALI (Evita NaN se i joint_states non sono ancora arrivati)
+    // 2. ATTESA JOINT STATES
     while (rclcpp::ok() && joint_positions_.data.norm() < 0.0001) {
         RCLCPP_INFO(this->get_logger(), "Waiting for joint states...");
         rclcpp::sleep_for(100ms);
     }
 
-    // 2. AGGIORNAMENTO STATO ROBOT E INIZIALIZZAZIONE PLANNER
+    // 3. UPDATE ROBOT E POSA INIZIALE
     robot_->update(toStdVector(joint_positions_.data), toStdVector(joint_velocities_.data));
     KDL::Frame init_frame = robot_->getEEFrame();
     Eigen::Vector3d start_p(init_frame.p.data);
-    Eigen::Vector3d end_p(end_position_vec_[0], end_position_vec_[1], end_position_vec_[2]);
 
-    // Inizializziamo il planner qui, altrimenti p_ sarà vuoto/NaN
+    // Selezione Target di posizione
+    Eigen::Vector3d end_p;
+    if (goal->order == 0) {
+        RCLCPP_INFO(this->get_logger(), "Received Target: [X: %.2f, Y: %.2f, Z: %.2f]",
+                    goal->pose.position.x, goal->pose.position.y, goal->pose.position.z);
+        end_p << goal->pose.position.x, goal->pose.position.y, goal->pose.position.z;
+    } else {
+        end_p << end_position_vec_[0], end_position_vec_[1], end_position_vec_[2];
+    }
+
+    // 4. INIZIALIZZAZIONE PLANNER
     if (traj_type_ == "linear") {
         planner_ = KDLPlanner(traj_duration_, acc_duration_, start_p, end_p);
     } else {
         planner_ = KDLPlanner(traj_duration_, start_p, 0.15, acc_duration_);
     }
 
-    // --- LOOP DI CONTROLLO TRAIETTORIA (Linear/Circular) ---
+    // --- LOOP DI CONTROLLO TRAIETTORIA ---
     while (rclcpp::ok() && t < total_time_ && ctrl_ != "vision") {
+        
         if (goal_handle->is_canceling()) {
             goal_handle->canceled(result);
             stop_robot();
             return;
         }
 
-        // Calcolo traiettoria desiderata
+        // Calcolo traiettoria desiderata (posizione e velocità lineare)
         if (traj_type_ == "linear") {
             p_ = (s_type_ == "trapezoidal") ? planner_.linear_traj_trapezoidal(t) : planner_.linear_traj_cubic(t);
         } else {
             p_ = (s_type_ == "trapezoidal") ? planner_.circular_traj_trapezoidal(t) : planner_.circular_traj_cubic(t);
         }
 
-        // Aggiorna robot e calcola errore
+        // Aggiorna stato robot
         robot_->update(toStdVector(joint_positions_.data), toStdVector(joint_velocities_.data));
         KDL::Frame current_f = robot_->getEEFrame();
-        Eigen::Vector3d error = p_.pos - Eigen::Vector3d(current_f.p.data);
 
-        // Feedback
-        feedback->position_error = {error(0), error(1), error(2)};
+        // 5. CALCOLO ERRORE DI POSIZIONE
+        Eigen::Vector3d pos_error = p_.pos - Eigen::Vector3d(current_f.p.data);
+
+        // 6. CALCOLO ERRORE DI ORIENTAMENTO (CORRETTO)
+        // Creiamo la rotazione desiderata dal quaternion ricevuto dal Client
+        KDL::Rotation target_rot = KDL::Rotation::Quaternion(
+            goal->pose.orientation.x, goal->pose.orientation.y, 
+            goal->pose.orientation.z, goal->pose.orientation.w);
+
+        // Calcoliamo la rotazione relativa: R_err = R_curr^-1 * R_target
+        // .GetRot() restituisce il vettore di rotazione la cui direzione è l'asse e il modulo l'angolo
+        KDL::Vector ori_error_kdl = (current_f.M.Inverse() * target_rot).GetRot();
+        Eigen::Vector3d ori_error(ori_error_kdl.x(), ori_error_kdl.y(), ori_error_kdl.z());
+
+        // Componiamo l'errore a 6 gradi di libertà
+        Eigen::Matrix<double, 6, 1> error_6d;
+        error_6d << pos_error, ori_error;
+
+        // Feedback al client
+        feedback->position_error = {pos_error(0), pos_error(1), pos_error(2)};
         goal_handle->publish_feedback(feedback);
 
-        // Calcolo comando di velocità
+        // 7. CALCOLO COMANDO DI VELOCITÀ AI GIUNTI
         if (ctrl_ == "velocity_ctrl") {
             Vector6d cartvel;
-            cartvel << p_.vel + Kp_ * error, Eigen::Vector3d::Zero();
-            // Utilizzo della pseudo-inversa per evitare singolarità
+            // Velocità desiderata = Velocità feedforward (p_.vel) + Guadagno (Kp_) * Errore
+            cartvel << p_.vel + Kp_ * pos_error, Kp_ * ori_error; 
             joint_velocities_cmd_.data = pseudoinverse(robot_->getEEJacobian().data) * cartvel;
         } 
         else if (ctrl_ == "velocity_ctrl_null") {
-            Eigen::Matrix<double, 6, 1> error_6d;
-            error_6d << error, Eigen::Vector3d::Zero();
+            // Utilizzo del controller specifico per la gestione del nullo (se implementato in kdl_control.cpp)
             joint_velocities_cmd_ = controller_.velocity_ctrl_null(error_6d, Kp_);
         }
 
-        // Pubblicazione (con controllo NaN di sicurezza)
+        // 8. PUBBLICAZIONE COMANDI
         if (!std::isnan(joint_velocities_cmd_.data(0))) {
             std_msgs::msg::Float64MultiArray cmd_msg;
             cmd_msg.data.assign(joint_velocities_cmd_.data.data(), 
@@ -303,36 +245,35 @@ Eigen::Vector3d ori_error = computeOrientationError(toEigen(init_frame.M), toEig
         rate.sleep();
     }
 
-    // --- LOOP DI CONTROLLO VISIONE ---
+    // --- LOOP VISIONE (Invariato per logica, ma con feedback) ---
     while (rclcpp::ok() && ctrl_ == "vision") {
-    // 1. Calcolo errore per il feedback
-    double norm = cPo_.norm();
-    if (norm < 0.001) norm = 1.0; // Evita divisione per zero
-    Eigen::Vector3d s = cPo_ / norm;
-    Eigen::Vector3d sd(0, 0, 1);
-    Eigen::Vector3d dir_error = s - sd;
+        double norm = cPo_.norm();
+        if (norm < 0.001) norm = 1.0; 
+        Eigen::Vector3d s = cPo_ / norm;
+        Eigen::Vector3d sd(0, 0, 1);
+        Eigen::Vector3d dir_error = s - sd;
 
-    // 2. Calcolo comando
-    joint_velocities_cmd_ = controller_.vision_ctrl(Kp_, cPo_, sd);
+        joint_velocities_cmd_ = controller_.vision_ctrl(Kp_, cPo_, sd);
 
-    // 3. Feedback e Pubblicazione
-    feedback->position_error = {dir_error(0), dir_error(1), dir_error(2)};
-    goal_handle->publish_feedback(feedback);
+        feedback->position_error = {dir_error(0), dir_error(1), dir_error(2)};
+        goal_handle->publish_feedback(feedback);
 
-    robot_->update(toStdVector(joint_positions_.data), toStdVector(joint_velocities_.data));
-    std_msgs::msg::Float64MultiArray cmd_msg;
-    cmd_msg.data.assign(joint_velocities_cmd_.data.data(),
-                        joint_velocities_cmd_.data.data() + joint_velocities_cmd_.rows());
-    cmdPublisher_->publish(cmd_msg);
+        robot_->update(toStdVector(joint_positions_.data), toStdVector(joint_velocities_.data));
+        std_msgs::msg::Float64MultiArray cmd_msg;
+        cmd_msg.data.assign(joint_velocities_cmd_.data.data(),
+                            joint_velocities_cmd_.data.data() + joint_velocities_cmd_.rows());
+        cmdPublisher_->publish(cmd_msg);
 
-    // FONDAMENTALE: Lascia respirare il sistema per aggiornare cPo_
-    rate.sleep(); 
-}
+        rate.sleep(); 
+    }
+
     result->success = true;
     goal_handle->succeed(result);
     stop_robot();
     RCLCPP_INFO(this->get_logger(), "Execution completed.");
 }
+    
+
     
 
     void stop_robot() {

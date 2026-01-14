@@ -1,0 +1,790 @@
+[0.121s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.121s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7c10054184c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7c10055a5300>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7c10055a5300>>, mixin_verb=('build',))
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.306s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/user/ros2_ws'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'ros'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extensions ['cmake', 'python']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'cmake'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'python'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extensions ['python_setup_py']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros) by extension 'python_setup_py'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extension 'ignore_ament_install'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extensions ['colcon_pkg']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extension 'colcon_pkg'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extensions ['colcon_meta']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extension 'colcon_meta'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extensions ['ros']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco) by extension 'ros'
+[0.322s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aruco_ros/aruco' with type 'ros.ament_cmake' and name 'aruco'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extensions ['colcon_pkg']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extension 'colcon_pkg'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extensions ['colcon_meta']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extension 'colcon_meta'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extensions ['ros']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_msgs) by extension 'ros'
+[0.324s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aruco_ros/aruco_msgs' with type 'ros.ament_cmake' and name 'aruco_msgs'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_ros/aruco_ros) by extension 'ros'
+[0.325s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aruco_ros/aruco_ros' with type 'ros.ament_cmake' and name 'aruco_ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extensions ['cmake', 'python']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'cmake'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'python'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extensions ['python_setup_py']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/arucotag) by extension 'python_setup_py'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_fra2mo) by extension 'ros'
+[0.328s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_fra2mo' with type 'ros.ament_cmake' and name 'ros2_fra2mo'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'ignore_ament_install'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extensions ['colcon_pkg']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'colcon_pkg'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extensions ['colcon_meta']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'colcon_meta'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extensions ['ros']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'ros'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extensions ['cmake', 'python']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'cmake'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'python'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extensions ['python_setup_py']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa) by extension 'python_setup_py'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extension 'ignore'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extension 'ignore_ament_install'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extensions ['colcon_pkg']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extension 'colcon_pkg'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extensions ['colcon_meta']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extension 'colcon_meta'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extensions ['ros']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_bringup) by extension 'ros'
+[0.330s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_iiwa/iiwa_bringup' with type 'ros.ament_cmake' and name 'iiwa_bringup'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'ignore_ament_install'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extensions ['colcon_pkg']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'colcon_pkg'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extensions ['colcon_meta']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'colcon_meta'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extensions ['ros']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'ros'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extensions ['cmake', 'python']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'cmake'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'python'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extensions ['python_setup_py']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers) by extension 'python_setup_py'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extension 'ignore'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extension 'ignore_ament_install'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extensions ['colcon_pkg']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extension 'colcon_pkg'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extensions ['colcon_meta']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extension 'colcon_meta'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extensions ['ros']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) by extension 'ros'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/admittance_controller) ignored
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extension 'ignore'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extension 'ignore_ament_install'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extensions ['colcon_pkg']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extension 'colcon_pkg'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extensions ['colcon_meta']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extension 'colcon_meta'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extensions ['ros']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster) by extension 'ros'
+[0.332s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster' with type 'ros.ament_cmake' and name 'external_torque_sensor_broadcaster'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extensions ['colcon_pkg']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extension 'colcon_pkg'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extensions ['colcon_meta']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extension 'colcon_meta'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extensions ['ros']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_controllers/impedance_controller) by extension 'ros'
+[0.334s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_iiwa/iiwa_controllers/impedance_controller' with type 'ros.ament_cmake' and name 'impedance_controller'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extension 'ignore'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extension 'ignore_ament_install'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extension 'colcon_meta'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extensions ['ros']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_description) by extension 'ros'
+[0.335s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_iiwa/iiwa_description' with type 'ros.ament_cmake' and name 'iiwa_description'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extension 'ignore_ament_install'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extension 'colcon_pkg'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extensions ['colcon_meta']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extension 'colcon_meta'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extensions ['ros']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) by extension 'ros'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_hardware) ignored
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extension 'ignore_ament_install'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extension 'colcon_meta'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extensions ['ros']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) by extension 'ros'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_moveit2) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extensions ['colcon_pkg']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extension 'colcon_meta'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extensions ['ros']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) by extension 'ros'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_iiwa/iiwa_sunrise) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_kdl_package) by extension 'ros'
+[0.338s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_kdl_package' with type 'ros.ament_cmake' and name 'ros2_kdl_package'
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_target' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_clean_cache' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_clean_first' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_force_configure' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'ament_cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'catkin_cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.370s] DEBUG:colcon.colcon_core.verb:Building package 'aruco' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/aruco', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/aruco', 'merge_install': False, 'path': '/home/user/ros2_ws/src/aruco_ros/aruco', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/aruco_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/aruco_msgs', 'merge_install': False, 'path': '/home/user/ros2_ws/src/aruco_ros/aruco_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'external_torque_sensor_broadcaster' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'external_torque_sensor_broadcaster' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/external_torque_sensor_broadcaster', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/external_torque_sensor_broadcaster', 'merge_install': False, 'path': '/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'iiwa_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'iiwa_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/iiwa_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/iiwa_description', 'merge_install': False, 'path': '/home/user/ros2_ws/src/ros2_iiwa/iiwa_description', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'impedance_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'impedance_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/impedance_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/impedance_controller', 'merge_install': False, 'path': '/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_fra2mo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_fra2mo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/ros2_fra2mo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/ros2_fra2mo', 'merge_install': False, 'path': '/home/user/ros2_ws/src/ros2_fra2mo', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'catkin_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'ros2_kdl_package' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_kdl_package' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/ros2_kdl_package', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/ros2_kdl_package', 'merge_install': False, 'path': '/home/user/ros2_ws/src/ros2_kdl_package', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/aruco_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/aruco_ros', 'merge_install': False, 'path': '/home/user/ros2_ws/src/aruco_ros/aruco_ros', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'iiwa_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'iiwa_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user/ros2_ws/build/iiwa_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user/ros2_ws/install/iiwa_bringup', 'merge_install': False, 'path': '/home/user/ros2_ws/src/ros2_iiwa/iiwa_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.375s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.376s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.376s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/aruco_ros/aruco' with build type 'ament_cmake'
+[0.376s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/aruco_ros/aruco'
+[0.379s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.379s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.379s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.385s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/aruco_ros/aruco_msgs' with build type 'ament_cmake'
+[0.385s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/aruco_ros/aruco_msgs'
+[0.385s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.385s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.390s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_description' with build type 'ament_cmake'
+[0.390s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_description'
+[0.390s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.390s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.395s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster' with build type 'ament_cmake'
+[0.395s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/external_torque_sensor_broadcaster'
+[0.395s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.395s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.401s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller' with build type 'ament_cmake'
+[0.401s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller'
+[0.402s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.402s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.408s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/ros2_fra2mo' with build type 'ament_cmake'
+[0.408s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/ros2_fra2mo'
+[0.409s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.409s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.416s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/ros2_kdl_package' with build type 'ament_cmake'
+[0.416s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/ros2_kdl_package'
+[0.416s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.416s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/aruco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco -- -j12 -l12
+[0.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/aruco_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_msgs -- -j12 -l12
+[0.435s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/iiwa_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/iiwa_description -- -j12 -l12
+[0.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/external_torque_sensor_broadcaster': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/external_torque_sensor_broadcaster -- -j12 -l12
+[0.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/impedance_controller -- -j12 -l12
+[0.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_fra2mo -- -j12 -l12
+[0.454s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[0.499s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/iiwa_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/iiwa_description -- -j12 -l12
+[0.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/iiwa_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/iiwa_description
+[0.555s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_description)
+[0.557s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/iiwa_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/iiwa_description
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description' for CMake module files
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description' for CMake config files
+[0.567s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_description', 'cmake_prefix_path')
+[0.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/hook/cmake_prefix_path.ps1'
+[0.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/hook/cmake_prefix_path.dsv'
+[0.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/hook/cmake_prefix_path.sh'
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/bin'
+[0.576s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/lib/pkgconfig/iiwa_description.pc'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/lib/python3.10/site-packages'
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/bin'
+[0.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.ps1'
+[0.593s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.dsv'
+[0.595s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.sh'
+[0.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.bash'
+[0.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.zsh'
+[0.603s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/iiwa_description/share/colcon-core/packages/iiwa_description)
+[0.604s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_description)
+[0.605s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description' for CMake module files
+[0.607s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description' for CMake config files
+[0.608s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_description', 'cmake_prefix_path')
+[0.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/hook/cmake_prefix_path.ps1'
+[0.610s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/hook/cmake_prefix_path.dsv'
+[0.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/hook/cmake_prefix_path.sh'
+[0.613s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/bin'
+[0.613s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/lib/pkgconfig/iiwa_description.pc'
+[0.613s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/lib/python3.10/site-packages'
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_description/bin'
+[0.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.ps1'
+[0.618s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.dsv'
+[0.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.sh'
+[0.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.bash'
+[0.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_description/share/iiwa_description/package.zsh'
+[0.625s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/iiwa_description/share/colcon-core/packages/iiwa_description)
+[0.627s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_bringup' with build type 'ament_cmake'
+[0.627s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/ros2_iiwa/iiwa_bringup'
+[0.628s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.628s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/impedance_controller -- -j12 -l12
+[0.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/impedance_controller
+[0.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/external_torque_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/external_torque_sensor_broadcaster -- -j12 -l12
+[0.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/external_torque_sensor_broadcaster': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/external_torque_sensor_broadcaster
+[0.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/aruco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco -- -j12 -l12
+[0.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/aruco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco
+[0.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_fra2mo -- -j12 -l12
+[0.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_fra2mo
+[0.673s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/iiwa_bringup': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/iiwa_bringup -- -j12 -l12
+[0.685s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(external_torque_sensor_broadcaster)
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster' for CMake module files
+[0.692s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster' for CMake config files
+[0.698s] Level 1:colcon.colcon_core.shell:create_environment_hook('external_torque_sensor_broadcaster', 'cmake_prefix_path')
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/cmake_prefix_path.ps1'
+[0.700s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/cmake_prefix_path.dsv'
+[0.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/cmake_prefix_path.sh'
+[0.704s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib'
+[0.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('external_torque_sensor_broadcaster', 'ld_library_path_lib')
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/ld_library_path_lib.ps1'
+[0.708s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/ld_library_path_lib.dsv'
+[0.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/ld_library_path_lib.sh'
+[0.715s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/bin'
+[0.715s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib/pkgconfig/external_torque_sensor_broadcaster.pc'
+[0.716s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib/python3.10/site-packages'
+[0.717s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/bin'
+[0.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.ps1'
+[0.718s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.dsv'
+[0.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.sh'
+[0.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.bash'
+[0.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.zsh'
+[0.729s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/colcon-core/packages/external_torque_sensor_broadcaster)
+[0.732s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/external_torque_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/external_torque_sensor_broadcaster
+[0.733s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(external_torque_sensor_broadcaster)
+[0.734s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster' for CMake module files
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster' for CMake config files
+[0.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('external_torque_sensor_broadcaster', 'cmake_prefix_path')
+[0.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/cmake_prefix_path.ps1'
+[0.748s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/cmake_prefix_path.dsv'
+[0.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/cmake_prefix_path.sh'
+[0.754s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib'
+[0.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('external_torque_sensor_broadcaster', 'ld_library_path_lib')
+[0.756s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/ld_library_path_lib.ps1'
+[0.758s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/ld_library_path_lib.dsv'
+[0.763s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/hook/ld_library_path_lib.sh'
+[0.765s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/bin'
+[0.766s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib/pkgconfig/external_torque_sensor_broadcaster.pc'
+[0.766s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib/python3.10/site-packages'
+[0.767s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/bin'
+[0.768s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.ps1'
+[0.772s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.dsv'
+[0.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.sh'
+[0.778s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.bash'
+[0.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/external_torque_sensor_broadcaster/package.zsh'
+[0.780s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/external_torque_sensor_broadcaster/share/colcon-core/packages/external_torque_sensor_broadcaster)
+[0.781s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(impedance_controller)
+[0.781s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller' for CMake module files
+[0.782s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/impedance_controller
+[0.783s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller' for CMake config files
+[0.784s] Level 1:colcon.colcon_core.shell:create_environment_hook('impedance_controller', 'cmake_prefix_path')
+[0.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/cmake_prefix_path.ps1'
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/cmake_prefix_path.dsv'
+[0.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/cmake_prefix_path.sh'
+[0.788s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/lib'
+[0.788s] Level 1:colcon.colcon_core.shell:create_environment_hook('impedance_controller', 'ld_library_path_lib')
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/ld_library_path_lib.ps1'
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/ld_library_path_lib.dsv'
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/ld_library_path_lib.sh'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/bin'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/lib/pkgconfig/impedance_controller.pc'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/lib/python3.10/site-packages'
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/bin'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.ps1'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.dsv'
+[0.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.sh'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.bash'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.zsh'
+[0.797s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/impedance_controller/share/colcon-core/packages/impedance_controller)
+[0.798s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(impedance_controller)
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller' for CMake module files
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller' for CMake config files
+[0.800s] Level 1:colcon.colcon_core.shell:create_environment_hook('impedance_controller', 'cmake_prefix_path')
+[0.801s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/cmake_prefix_path.ps1'
+[0.801s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/cmake_prefix_path.dsv'
+[0.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/cmake_prefix_path.sh'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/lib'
+[0.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('impedance_controller', 'ld_library_path_lib')
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/ld_library_path_lib.ps1'
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/ld_library_path_lib.dsv'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/hook/ld_library_path_lib.sh'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/bin'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/lib/pkgconfig/impedance_controller.pc'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/lib/python3.10/site-packages'
+[0.807s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/impedance_controller/bin'
+[0.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.ps1'
+[0.809s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.dsv'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.sh'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.bash'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.zsh'
+[0.812s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/impedance_controller/share/colcon-core/packages/impedance_controller)
+[0.814s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco)
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco' for CMake module files
+[0.816s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco' for CMake config files
+[0.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/aruco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco
+[0.818s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco', 'cmake_prefix_path')
+[0.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/cmake_prefix_path.ps1'
+[0.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco/share/aruco/hook/cmake_prefix_path.dsv'
+[0.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/cmake_prefix_path.sh'
+[0.821s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/lib'
+[0.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco', 'ld_library_path_lib')
+[0.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/ld_library_path_lib.ps1'
+[0.823s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco/share/aruco/hook/ld_library_path_lib.dsv'
+[0.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/ld_library_path_lib.sh'
+[0.825s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/bin'
+[0.825s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/lib/pkgconfig/aruco.pc'
+[0.825s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/lib/python3.10/site-packages'
+[0.826s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/bin'
+[0.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.ps1'
+[0.828s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/aruco/share/aruco/package.dsv'
+[0.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.sh'
+[0.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.bash'
+[0.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.zsh'
+[0.832s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/aruco/share/colcon-core/packages/aruco)
+[0.833s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco)
+[0.834s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco' for CMake module files
+[0.835s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco' for CMake config files
+[0.835s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco', 'cmake_prefix_path')
+[0.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/cmake_prefix_path.ps1'
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco/share/aruco/hook/cmake_prefix_path.dsv'
+[0.838s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/cmake_prefix_path.sh'
+[0.839s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/lib'
+[0.839s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco', 'ld_library_path_lib')
+[0.839s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/ld_library_path_lib.ps1'
+[0.840s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco/share/aruco/hook/ld_library_path_lib.dsv'
+[0.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco/share/aruco/hook/ld_library_path_lib.sh'
+[0.841s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/bin'
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/lib/pkgconfig/aruco.pc'
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/lib/python3.10/site-packages'
+[0.843s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco/bin'
+[0.844s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.ps1'
+[0.845s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/aruco/share/aruco/package.dsv'
+[0.846s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.sh'
+[0.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.bash'
+[0.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco/share/aruco/package.zsh'
+[0.848s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/aruco/share/colcon-core/packages/aruco)
+[0.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/iiwa_bringup' returned '0': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/iiwa_bringup -- -j12 -l12
+[0.852s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_fra2mo)
+[0.853s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo' for CMake module files
+[0.854s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/iiwa_bringup': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/iiwa_bringup
+[0.854s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_fra2mo
+[0.855s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo' for CMake config files
+[0.856s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_fra2mo', 'cmake_prefix_path')
+[0.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/hook/cmake_prefix_path.ps1'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/hook/cmake_prefix_path.dsv'
+[0.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/hook/cmake_prefix_path.sh'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/lib'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/bin'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/lib/pkgconfig/ros2_fra2mo.pc'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/lib/python3.10/site-packages'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/bin'
+[0.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.ps1'
+[0.862s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.dsv'
+[0.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.sh'
+[0.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.bash'
+[0.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.zsh'
+[0.864s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/ros2_fra2mo/share/colcon-core/packages/ros2_fra2mo)
+[0.864s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_fra2mo)
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo' for CMake module files
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo' for CMake config files
+[0.866s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_fra2mo', 'cmake_prefix_path')
+[0.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/hook/cmake_prefix_path.ps1'
+[0.866s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/hook/cmake_prefix_path.dsv'
+[0.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/hook/cmake_prefix_path.sh'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/lib'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/bin'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/lib/pkgconfig/ros2_fra2mo.pc'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/lib/python3.10/site-packages'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_fra2mo/bin'
+[0.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.ps1'
+[0.869s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.dsv'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.sh'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.bash'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.zsh'
+[0.871s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/ros2_fra2mo/share/colcon-core/packages/ros2_fra2mo)
+[0.873s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_bringup)
+[0.873s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup' for CMake module files
+[0.876s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup' for CMake config files
+[0.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/iiwa_bringup' returned '0': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/iiwa_bringup
+[0.878s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_bringup', 'cmake_prefix_path')
+[0.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/hook/cmake_prefix_path.ps1'
+[0.879s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/hook/cmake_prefix_path.dsv'
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/hook/cmake_prefix_path.sh'
+[0.880s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/bin'
+[0.880s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/lib/pkgconfig/iiwa_bringup.pc'
+[0.881s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/lib/python3.10/site-packages'
+[0.881s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/bin'
+[0.882s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.ps1'
+[0.882s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.dsv'
+[0.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.sh'
+[0.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.bash'
+[0.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.zsh'
+[0.885s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/iiwa_bringup/share/colcon-core/packages/iiwa_bringup)
+[0.886s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_bringup)
+[0.886s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup' for CMake module files
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup' for CMake config files
+[0.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_bringup', 'cmake_prefix_path')
+[0.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/hook/cmake_prefix_path.ps1'
+[0.888s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/hook/cmake_prefix_path.dsv'
+[0.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/hook/cmake_prefix_path.sh'
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/bin'
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/lib/pkgconfig/iiwa_bringup.pc'
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/lib/python3.10/site-packages'
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/iiwa_bringup/bin'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.ps1'
+[0.893s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.dsv'
+[0.894s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.sh'
+[0.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.bash'
+[0.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/iiwa_bringup/share/iiwa_bringup/package.zsh'
+[0.896s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/iiwa_bringup/share/colcon-core/packages/iiwa_bringup)
+[1.058s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/aruco_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_msgs -- -j12 -l12
+[1.059s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/aruco_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_msgs
+[1.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[1.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_kdl_package
+[1.126s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_msgs)
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs' for CMake module files
+[1.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/aruco_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_msgs
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs' for CMake config files
+[1.128s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_msgs', 'cmake_prefix_path')
+[1.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/cmake_prefix_path.ps1'
+[1.129s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/cmake_prefix_path.dsv'
+[1.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/cmake_prefix_path.sh'
+[1.130s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/lib'
+[1.130s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_msgs', 'ld_library_path_lib')
+[1.130s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/ld_library_path_lib.ps1'
+[1.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/ld_library_path_lib.dsv'
+[1.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/ld_library_path_lib.sh'
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/bin'
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/lib/pkgconfig/aruco_msgs.pc'
+[1.134s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/lib/python3.10/site-packages'
+[1.134s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/bin'
+[1.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.ps1'
+[1.137s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.dsv'
+[1.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.sh'
+[1.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.bash'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.zsh'
+[1.142s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/aruco_msgs/share/colcon-core/packages/aruco_msgs)
+[1.143s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_msgs)
+[1.143s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs' for CMake module files
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs' for CMake config files
+[1.144s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_msgs', 'cmake_prefix_path')
+[1.144s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/cmake_prefix_path.ps1'
+[1.145s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/cmake_prefix_path.dsv'
+[1.145s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/cmake_prefix_path.sh'
+[1.146s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/lib'
+[1.146s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_msgs', 'ld_library_path_lib')
+[1.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/ld_library_path_lib.ps1'
+[1.146s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/ld_library_path_lib.dsv'
+[1.147s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/hook/ld_library_path_lib.sh'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/bin'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/lib/pkgconfig/aruco_msgs.pc'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/lib/python3.10/site-packages'
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_msgs/bin'
+[1.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.ps1'
+[1.149s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.dsv'
+[1.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.sh'
+[1.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.bash'
+[1.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_msgs/share/aruco_msgs/package.zsh'
+[1.150s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/aruco_msgs/share/colcon-core/packages/aruco_msgs)
+[1.151s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user/ros2_ws/src/aruco_ros/aruco_ros' with build type 'ament_cmake'
+[1.151s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user/ros2_ws/src/aruco_ros/aruco_ros'
+[1.151s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.151s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.158s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_kdl_package)
+[1.159s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package' for CMake module files
+[1.159s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_kdl_package
+[1.160s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package' for CMake config files
+[1.160s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_kdl_package', 'cmake_prefix_path')
+[1.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/cmake_prefix_path.ps1'
+[1.161s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/cmake_prefix_path.dsv'
+[1.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/cmake_prefix_path.sh'
+[1.162s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/lib'
+[1.162s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_kdl_package', 'ld_library_path_lib')
+[1.162s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/ld_library_path_lib.ps1'
+[1.163s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/ld_library_path_lib.dsv'
+[1.163s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/ld_library_path_lib.sh'
+[1.163s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/bin'
+[1.163s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/lib/pkgconfig/ros2_kdl_package.pc'
+[1.164s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/lib/python3.10/site-packages'
+[1.164s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/bin'
+[1.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.ps1'
+[1.165s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.dsv'
+[1.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.sh'
+[1.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.bash'
+[1.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.zsh'
+[1.167s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/ros2_kdl_package/share/colcon-core/packages/ros2_kdl_package)
+[1.168s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_kdl_package)
+[1.168s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package' for CMake module files
+[1.169s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package' for CMake config files
+[1.170s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_kdl_package', 'cmake_prefix_path')
+[1.170s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/cmake_prefix_path.ps1'
+[1.170s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/cmake_prefix_path.dsv'
+[1.171s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/cmake_prefix_path.sh'
+[1.171s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/lib'
+[1.171s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_kdl_package', 'ld_library_path_lib')
+[1.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/ld_library_path_lib.ps1'
+[1.172s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/ld_library_path_lib.dsv'
+[1.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/hook/ld_library_path_lib.sh'
+[1.173s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/bin'
+[1.173s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/lib/pkgconfig/ros2_kdl_package.pc'
+[1.173s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/lib/python3.10/site-packages'
+[1.173s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/ros2_kdl_package/bin'
+[1.174s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.ps1'
+[1.174s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.dsv'
+[1.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.sh'
+[1.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.bash'
+[1.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/ros2_kdl_package/share/ros2_kdl_package/package.zsh'
+[1.176s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/ros2_kdl_package/share/colcon-core/packages/ros2_kdl_package)
+[1.180s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/aruco_ros': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_ros -- -j12 -l12
+[1.265s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/aruco_ros' returned '0': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user/ros2_ws/build/aruco_ros -- -j12 -l12
+[1.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user/ros2_ws/build/aruco_ros': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_ros
+[1.279s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_ros)
+[1.279s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros' for CMake module files
+[1.280s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user/ros2_ws/build/aruco_ros' returned '0': CMAKE_PREFIX_PATH=/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/home/user/ros2_ws/install/ros2_kdl_package:/home/user/ros2_ws/install/ros2_fra2mo:/home/user/ros2_ws/install/impedance_controller:/home/user/ros2_ws/install/iiwa_bringup:/home/user/ros2_ws/install/iiwa_description:/home/user/ros2_ws/install/external_torque_sensor_broadcaster:/home/user/ros2_ws/install/aruco_ros:/opt/ros/humble LD_LIBRARY_PATH=/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/home/user/ros2_ws/install/ros2_kdl_package/lib:/home/user/ros2_ws/install/impedance_controller/lib:/home/user/ros2_ws/install/external_torque_sensor_broadcaster/lib:/home/user/ros2_ws/install/aruco_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user/ros2_ws/build/aruco_ros
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros' for CMake config files
+[1.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_ros', 'cmake_prefix_path')
+[1.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/cmake_prefix_path.ps1'
+[1.281s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/cmake_prefix_path.dsv'
+[1.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/cmake_prefix_path.sh'
+[1.282s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/lib'
+[1.282s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_ros', 'ld_library_path_lib')
+[1.283s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/ld_library_path_lib.ps1'
+[1.283s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/ld_library_path_lib.dsv'
+[1.284s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/ld_library_path_lib.sh'
+[1.285s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/bin'
+[1.285s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/lib/pkgconfig/aruco_ros.pc'
+[1.285s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/lib/python3.10/site-packages'
+[1.286s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/bin'
+[1.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.ps1'
+[1.287s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.dsv'
+[1.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.sh'
+[1.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.bash'
+[1.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.zsh'
+[1.290s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/aruco_ros/share/colcon-core/packages/aruco_ros)
+[1.290s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_ros)
+[1.290s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros' for CMake module files
+[1.291s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros' for CMake config files
+[1.291s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_ros', 'cmake_prefix_path')
+[1.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/cmake_prefix_path.ps1'
+[1.292s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/cmake_prefix_path.dsv'
+[1.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/cmake_prefix_path.sh'
+[1.293s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/lib'
+[1.293s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_ros', 'ld_library_path_lib')
+[1.293s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/ld_library_path_lib.ps1'
+[1.294s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/ld_library_path_lib.dsv'
+[1.294s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/hook/ld_library_path_lib.sh'
+[1.294s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/bin'
+[1.294s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/lib/pkgconfig/aruco_ros.pc'
+[1.295s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/lib/python3.10/site-packages'
+[1.295s] Level 1:colcon.colcon_core.environment:checking '/home/user/ros2_ws/install/aruco_ros/bin'
+[1.295s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.ps1'
+[1.296s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.dsv'
+[1.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.sh'
+[1.297s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.bash'
+[1.297s] INFO:colcon.colcon_core.shell:Creating package script '/home/user/ros2_ws/install/aruco_ros/share/aruco_ros/package.zsh'
+[1.298s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user/ros2_ws/install/aruco_ros/share/colcon-core/packages/aruco_ros)
+[1.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.298s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.304s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.304s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.304s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.304s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.306s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[1.307s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.307s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user/ros2_ws/install/local_setup.ps1'
+[1.308s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/user/ros2_ws/install/_local_setup_util_ps1.py'
+[1.309s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user/ros2_ws/install/setup.ps1'
+[1.311s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user/ros2_ws/install/local_setup.sh'
+[1.312s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/user/ros2_ws/install/_local_setup_util_sh.py'
+[1.313s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user/ros2_ws/install/setup.sh'
+[1.314s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user/ros2_ws/install/local_setup.bash'
+[1.315s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user/ros2_ws/install/setup.bash'
+[1.316s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user/ros2_ws/install/local_setup.zsh'
+[1.317s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user/ros2_ws/install/setup.zsh'

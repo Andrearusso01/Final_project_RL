@@ -24,13 +24,29 @@ namespace builder
 class Init_ExecuteTrajectory_Goal_order
 {
 public:
-  Init_ExecuteTrajectory_Goal_order()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_ExecuteTrajectory_Goal_order(::ros2_kdl_package::action::ExecuteTrajectory_Goal & msg)
+  : msg_(msg)
   {}
   ::ros2_kdl_package::action::ExecuteTrajectory_Goal order(::ros2_kdl_package::action::ExecuteTrajectory_Goal::_order_type arg)
   {
     msg_.order = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::ros2_kdl_package::action::ExecuteTrajectory_Goal msg_;
+};
+
+class Init_ExecuteTrajectory_Goal_pose
+{
+public:
+  Init_ExecuteTrajectory_Goal_pose()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_ExecuteTrajectory_Goal_order pose(::ros2_kdl_package::action::ExecuteTrajectory_Goal::_pose_type arg)
+  {
+    msg_.pose = std::move(arg);
+    return Init_ExecuteTrajectory_Goal_order(msg_);
   }
 
 private:
@@ -48,7 +64,7 @@ template<>
 inline
 auto build<::ros2_kdl_package::action::ExecuteTrajectory_Goal>()
 {
-  return ros2_kdl_package::action::builder::Init_ExecuteTrajectory_Goal_order();
+  return ros2_kdl_package::action::builder::Init_ExecuteTrajectory_Goal_pose();
 }
 
 }  // namespace ros2_kdl_package

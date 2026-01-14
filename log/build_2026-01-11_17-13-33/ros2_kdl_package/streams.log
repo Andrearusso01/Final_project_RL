@@ -1,0 +1,115 @@
+[0.028s] Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[0.070s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.260s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.323s] -- Found kdl_parser: 2.6.4 (/opt/ros/humble/share/kdl_parser/cmake)
+[0.326s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.327s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.329s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.354s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.360s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.371s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.385s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.399s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.482s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.524s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.527s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.559s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.571s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.588s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.600s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.612s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.673s] -- Found rclcpp_action: 16.0.16 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.713s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.722s] -- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.786s] -- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.041s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.343s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.460s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.484s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.506s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.506s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.506s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.535s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.535s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.535s]   rosidl_target_interfaces()
+[1.535s] Call Stack (most recent call first):
+[1.535s]   CMakeLists.txt:62 (rosidl_target_interfaces)
+[1.535s] 
+[1.535s] [0m
+[1.537s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.537s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.537s]   rosidl_target_interfaces()
+[1.537s] Call Stack (most recent call first):
+[1.537s]   CMakeLists.txt:92 (rosidl_target_interfaces)
+[1.538s] 
+[1.538s] [0m
+[1.538s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.554s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.554s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/user/ros2_ws/src/ros2_kdl_package/include>
+[1.554s] -- Configured cppcheck exclude dirs and/or files: 
+[1.555s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.555s] -- Added test 'lint_cmake' to check CMake code style
+[1.556s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.558s] -- Added test 'uncrustify' to check C / C++ code style
+[1.558s] -- Configured uncrustify additional arguments: 
+[1.558s] -- Added test 'xmllint' to check XML markup files
+[1.560s] -- Configuring done
+[1.616s] -- Generating done
+[1.636s] -- Build files have been written to: /home/user/ros2_ws/build/ros2_kdl_package
+[1.666s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.666s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_node_example[0m
+[1.677s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.687s] [  5%] Built target ament_cmake_python_copy_ros2_kdl_package
+[1.687s] [ 10%] Built target ros2_kdl_node_example
+[1.928s] running egg_info
+[1.929s] writing ros2_kdl_package.egg-info/PKG-INFO
+[1.929s] writing dependency_links to ros2_kdl_package.egg-info/dependency_links.txt
+[1.929s] writing top-level names to ros2_kdl_package.egg-info/top_level.txt
+[1.931s] reading manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[1.932s] writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[1.957s] [ 10%] Built target ament_cmake_python_build_ros2_kdl_package_egg
+[2.127s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_generator_c[0m
+[2.131s] [ 10%] Built target ros2_kdl_package__cpp
+[2.139s] [ 12%] [32mBuilding C object CMakeFiles/ros2_kdl_package__rosidl_generator_c.dir/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.c.o[0m
+[2.142s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.142s] [ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.142s] [ 20%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.178s] In file included from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.h:19[m[K,
+[2.178s]                  from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.c:4[m[K:
+[2.178s] [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/pose__struct.h: No such file or directory
+[2.178s]    22 | #include [01;31m[K"geometry_msgs/msg/detail/pose__struct.h"[m[K
+[2.178s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.178s] compilation terminated.
+[2.179s] gmake[2]: *** [CMakeFiles/ros2_kdl_package__rosidl_generator_c.dir/build.make:112: CMakeFiles/ros2_kdl_package__rosidl_generator_c.dir/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.c.o] Error 1
+[2.179s] gmake[1]: *** [CMakeFiles/Makefile2:219: CMakeFiles/ros2_kdl_package__rosidl_generator_c.dir/all] Error 2
+[2.180s] gmake[1]: *** Waiting for unfinished jobs....
+[2.445s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_cpp[0m
+[2.461s] [ 22%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros2_kdl_package/action/execute_trajectory__type_support.cpp.o[0m
+[2.540s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_introspection_cpp[0m
+[2.557s] [ 25%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros2_kdl_package/action/detail/execute_trajectory__type_support.cpp.o[0m
+[2.573s] In file included from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_typesupport_cpp/ros2_kdl_package/action/execute_trajectory__type_support.cpp:7[m[K:
+[2.573s] [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/detail/execute_trajectory__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/pose__struct.hpp: No such file or directory
+[2.573s]    20 | #include [01;31m[K"geometry_msgs/msg/detail/pose__struct.hpp"[m[K
+[2.574s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.574s] compilation terminated.
+[2.575s] gmake[2]: *** [CMakeFiles/ros2_kdl_package__rosidl_typesupport_cpp.dir/build.make:93: CMakeFiles/ros2_kdl_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros2_kdl_package/action/execute_trajectory__type_support.cpp.o] Error 1
+[2.575s] gmake[1]: *** [CMakeFiles/Makefile2:401: CMakeFiles/ros2_kdl_package__rosidl_typesupport_cpp.dir/all] Error 2
+[2.576s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp[0m
+[2.591s] [ 27%] [32mBuilding CXX object CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros2_kdl_package/action/detail/dds_fastrtps/execute_trajectory__type_support.cpp.o[0m
+[2.641s] In file included from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_typesupport_introspection_cpp/ros2_kdl_package/action/detail/execute_trajectory__type_support.cpp:12[m[K:
+[2.641s] [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/detail/execute_trajectory__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/pose__struct.hpp: No such file or directory
+[2.641s]    20 | #include [01;31m[K"geometry_msgs/msg/detail/pose__struct.hpp"[m[K
+[2.641s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.641s] compilation terminated.
+[2.642s] gmake[2]: *** [CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_cpp.dir/build.make:98: CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros2_kdl_package/action/detail/execute_trajectory__type_support.cpp.o] Error 1
+[2.642s] gmake[1]: *** [CMakeFiles/Makefile2:375: CMakeFiles/ros2_kdl_package__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+[2.663s] In file included from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_typesupport_fastrtps_cpp/ros2_kdl_package/action/detail/execute_trajectory__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+[2.663s]                  from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_typesupport_fastrtps_cpp/ros2_kdl_package/action/detail/dds_fastrtps/execute_trajectory__type_support.cpp:4[m[K:
+[2.663s] [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/detail/execute_trajectory__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/pose__struct.hpp: No such file or directory
+[2.663s]    20 | #include [01;31m[K"geometry_msgs/msg/detail/pose__struct.hpp"[m[K
+[2.663s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.663s] compilation terminated.
+[2.664s] gmake[2]: *** [CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_cpp.dir/build.make:98: CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros2_kdl_package/action/detail/dds_fastrtps/execute_trajectory__type_support.cpp.o] Error 1
+[2.664s] gmake[1]: *** [CMakeFiles/Makefile2:297: CMakeFiles/ros2_kdl_package__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+[2.665s] gmake: *** [Makefile:146: all] Error 2
+[2.667s] Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12

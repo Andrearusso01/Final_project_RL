@@ -245,12 +245,17 @@ CMakeFiles/ros2_kdl_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py
   rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__type_support.h \
   rosidl_generator_c/ros2_kdl_package/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.h
 
 
 /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h:
 
 /usr/include/python3.10/fileutils.h:
 
@@ -349,6 +354,8 @@ rosidl_generator_c/ros2_kdl_package/msg/rosidl_generator_c__visibility_control.h
 /usr/include/python3.10/floatobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h:
 
 /usr/include/wchar.h:
 
@@ -603,6 +610,8 @@ rosidl_generator_py/ros2_kdl_package/_ros2_kdl_package_s.ep.rosidl_typesupport_c
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
 
 /usr/include/python3.10/cpython/pythonrun.h:
 

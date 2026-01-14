@@ -34,8 +34,23 @@ extern "C"
 {
 #endif
 
+#include "geometry_msgs/msg/detail/pose__functions.h"  // pose
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_ros2_kdl_package
+size_t get_serialized_size_geometry_msgs__msg__Pose(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_ros2_kdl_package
+size_t max_serialized_size_geometry_msgs__msg__Pose(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_ros2_kdl_package
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Pose)();
 
 
 using _ExecuteTrajectory_Goal__ros_msg_type = ros2_kdl_package__action__ExecuteTrajectory_Goal;
@@ -49,6 +64,20 @@ static bool _ExecuteTrajectory_Goal__cdr_serialize(
     return false;
   }
   const _ExecuteTrajectory_Goal__ros_msg_type * ros_message = static_cast<const _ExecuteTrajectory_Goal__ros_msg_type *>(untyped_ros_message);
+  // Field name: pose
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Pose
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->pose, cdr))
+    {
+      return false;
+    }
+  }
+
   // Field name: order
   {
     cdr << ros_message->order;
@@ -66,6 +95,20 @@ static bool _ExecuteTrajectory_Goal__cdr_deserialize(
     return false;
   }
   _ExecuteTrajectory_Goal__ros_msg_type * ros_message = static_cast<_ExecuteTrajectory_Goal__ros_msg_type *>(untyped_ros_message);
+  // Field name: pose
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Pose
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->pose))
+    {
+      return false;
+    }
+  }
+
   // Field name: order
   {
     cdr >> ros_message->order;
@@ -88,6 +131,10 @@ size_t get_serialized_size_ros2_kdl_package__action__ExecuteTrajectory_Goal(
   (void)padding;
   (void)wchar_size;
 
+  // field.name pose
+
+  current_alignment += get_serialized_size_geometry_msgs__msg__Pose(
+    &(ros_message->pose), current_alignment);
   // field.name order
   {
     size_t item_size = sizeof(ros_message->order);
@@ -123,6 +170,25 @@ size_t max_serialized_size_ros2_kdl_package__action__ExecuteTrajectory_Goal(
   full_bounded = true;
   is_plain = true;
 
+  // member: pose
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_geometry_msgs__msg__Pose(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
   // member: order
   {
     size_t array_size = 1;

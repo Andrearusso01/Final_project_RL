@@ -37,7 +37,24 @@ void ExecuteTrajectory_Goal_fini_function(void * message_memory)
   typed_message->~ExecuteTrajectory_Goal();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ExecuteTrajectory_Goal_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ExecuteTrajectory_Goal_message_member_array[2] = {
+  {
+    "pose",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::Pose>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ros2_kdl_package::action::ExecuteTrajectory_Goal, pose),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "order",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -60,7 +77,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ExecuteTrajec
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ExecuteTrajectory_Goal_message_members = {
   "ros2_kdl_package::action",  // message namespace
   "ExecuteTrajectory_Goal",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(ros2_kdl_package::action::ExecuteTrajectory_Goal),
   ExecuteTrajectory_Goal_message_member_array,  // message members
   ExecuteTrajectory_Goal_init_function,  // function to initialize message memory (memory has to be allocated)

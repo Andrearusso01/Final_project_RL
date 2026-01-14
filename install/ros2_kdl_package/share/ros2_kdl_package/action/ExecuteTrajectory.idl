@@ -2,12 +2,15 @@
 // with input from ros2_kdl_package/action/ExecuteTrajectory.action
 // generated code does not contain a copyright notice
 
+#include "geometry_msgs/msg/Pose.idl"
 
 module ros2_kdl_package {
   module action {
     @verbatim (language="comment", text=
       "Goal")
     struct ExecuteTrajectory_Goal {
+      geometry_msgs::msg::Pose pose;
+
       int32 order;
     };
     @verbatim (language="comment", text=

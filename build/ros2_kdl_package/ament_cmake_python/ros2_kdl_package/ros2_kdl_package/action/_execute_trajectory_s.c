@@ -16,6 +16,10 @@
 #include "ros2_kdl_package/action/detail/execute_trajectory__struct.h"
 #include "ros2_kdl_package/action/detail/execute_trajectory__functions.h"
 
+ROSIDL_GENERATOR_C_IMPORT
+bool geometry_msgs__msg__pose__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * geometry_msgs__msg__pose__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool ros2_kdl_package__action__execute_trajectory__goal__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -50,6 +54,17 @@ bool ros2_kdl_package__action__execute_trajectory__goal__convert_from_py(PyObjec
     assert(strncmp("ros2_kdl_package.action._execute_trajectory.ExecuteTrajectory_Goal", full_classname_dest, 66) == 0);
   }
   ros2_kdl_package__action__ExecuteTrajectory_Goal * ros_message = _ros_message;
+  {  // pose
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pose");
+    if (!field) {
+      return false;
+    }
+    if (!geometry_msgs__msg__pose__convert_from_py(field, &ros_message->pose)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
   {  // order
     PyObject * field = PyObject_GetAttrString(_pymsg, "order");
     if (!field) {
@@ -81,6 +96,20 @@ PyObject * ros2_kdl_package__action__execute_trajectory__goal__convert_to_py(voi
     }
   }
   ros2_kdl_package__action__ExecuteTrajectory_Goal * ros_message = (ros2_kdl_package__action__ExecuteTrajectory_Goal *)raw_ros_message;
+  {  // pose
+    PyObject * field = NULL;
+    field = geometry_msgs__msg__pose__convert_to_py(&ros_message->pose);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pose", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // order
     PyObject * field = NULL;
     field = PyLong_FromLong(ros_message->order);

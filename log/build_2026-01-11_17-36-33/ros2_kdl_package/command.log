@@ -1,0 +1,2 @@
+Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': /usr/bin/cmake /home/user/ros2_ws/src/ros2_kdl_package -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_kdl_package
+Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '1': /usr/bin/cmake /home/user/ros2_ws/src/ros2_kdl_package -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_kdl_package

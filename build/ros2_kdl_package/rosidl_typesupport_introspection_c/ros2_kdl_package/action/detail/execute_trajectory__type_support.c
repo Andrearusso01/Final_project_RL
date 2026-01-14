@@ -12,6 +12,12 @@
 #include "ros2_kdl_package/action/detail/execute_trajectory__struct.h"
 
 
+// Include directives for member types
+// Member `pose`
+#include "geometry_msgs/msg/pose.h"
+// Member `pose`
+#include "geometry_msgs/msg/detail/pose__rosidl_typesupport_introspection_c.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,7 +37,24 @@ void ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_intros
   ros2_kdl_package__action__ExecuteTrajectory_Goal__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array[2] = {
+  {
+    "pose",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ros2_kdl_package__action__ExecuteTrajectory_Goal, pose),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "order",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -54,7 +77,7 @@ static rosidl_typesupport_introspection_c__MessageMember ros2_kdl_package__actio
 static const rosidl_typesupport_introspection_c__MessageMembers ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_members = {
   "ros2_kdl_package__action",  // message namespace
   "ExecuteTrajectory_Goal",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(ros2_kdl_package__action__ExecuteTrajectory_Goal),
   ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array,  // message members
   ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -72,6 +95,8 @@ static rosidl_message_type_support_t ros2_kdl_package__action__ExecuteTrajectory
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_ros2_kdl_package
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, ros2_kdl_package, action, ExecuteTrajectory_Goal)() {
+  ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Pose)();
   if (!ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_type_support_handle.typesupport_identifier) {
     ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

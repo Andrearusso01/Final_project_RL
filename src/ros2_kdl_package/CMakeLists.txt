@@ -19,16 +19,18 @@ find_package(geometry_msgs REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(tf2 REQUIRED)             # Aggiunto tf2 base
 find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 # ======== Generazione action ========
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/ExecuteTrajectory.action"
-  DEPENDENCIES builtin_interfaces
+  DEPENDENCIES builtin_interfaces geometry_msgs # geometry_msgs aggiunto qui è fondamentale
 )
 ament_export_dependencies(rosidl_default_runtime)
 
-# ======== Nodo principale ========
+# ======== Nodo principale (SERVER) ========
 add_executable(ros2_kdl_node
   src/ros2_kdl_node.cpp
   src/kdl_robot.cpp
@@ -53,46 +55,40 @@ ament_target_dependencies(ros2_kdl_node
   sensor_msgs
   std_msgs
   geometry_msgs
+  tf2
   tf2_ros
+  tf2_geometry_msgs
 )
 
-# ======== Collega le action generate al nodo ========
-rosidl_target_interfaces(ros2_kdl_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp"
+# ======== Nodo CLIENT (Corretto) ========
+add_executable(ros2_kdl_node_client src/ros2_kdl_node_client.cpp)
+
+ament_target_dependencies(ros2_kdl_node_client
+  rclcpp
+  rclcpp_action
+  geometry_msgs       # <--- Aggiunto
+  std_msgs            # <--- Aggiunto
+  tf2                 # <--- Aggiunto
+  tf2_ros             # <--- Aggiunto
+  tf2_geometry_msgs   # <--- Aggiunto
 )
 
-# ======== Nodo di esempio opzionale ========
+# ======== Nodo Esempio (Opzionale) ========
 add_executable(ros2_kdl_node_example src/ros2_kdl_node_example.cpp)
-
 target_include_directories(ros2_kdl_node_example PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
   ${EIGEN3_INCLUDE_DIRS}
 )
-
 target_compile_features(ros2_kdl_node_example PUBLIC c_std_99 cxx_std_17)
+ament_target_dependencies(ros2_kdl_node_example orocos_kdl rclcpp)
 
-ament_target_dependencies(ros2_kdl_node_example
-  orocos_kdl
-  rclcpp
-)
+# ======== Collegamento Action (Metodo Moderno per evitare Warning) ========
+rosidl_get_typesupport_target(cpp_typesupport_target
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
-
-add_executable(ros2_kdl_node_client 
-src/ros2_kdl_node_client.cpp)
-
-
-ament_target_dependencies(ros2_kdl_node_client
-  rclcpp
-  rclcpp_action
-)
-
-rosidl_target_interfaces(ros2_kdl_node_client
-  ${PROJECT_NAME} "rosidl_typesupport_cpp"
-)
-
-
-
+target_link_libraries(ros2_kdl_node "${cpp_typesupport_target}")
+target_link_libraries(ros2_kdl_node_client "${cpp_typesupport_target}")
 
 
 # ======== Install ========
@@ -102,7 +98,7 @@ install(TARGETS ros2_kdl_node ros2_kdl_node_example ros2_kdl_node_client
 
 install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME})
 
-# ======== Testing (opzionale) ========
+# ======== Testing ========
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   set(ament_cmake_copyright_FOUND TRUE)

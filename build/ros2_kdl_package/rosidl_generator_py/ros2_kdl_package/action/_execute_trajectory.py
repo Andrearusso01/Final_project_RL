@@ -42,6 +42,10 @@ class Metaclass_ExecuteTrajectory_Goal(type):
             cls._TYPE_SUPPORT = module.type_support_msg__action__execute_trajectory__goal
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__action__execute_trajectory__goal
 
+            from geometry_msgs.msg import Pose
+            if Pose.__class__._TYPE_SUPPORT is None:
+                Pose.__class__.__import_type_support__()
+
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -55,14 +59,17 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
     """Message class 'ExecuteTrajectory_Goal'."""
 
     __slots__ = [
+        '_pose',
         '_order',
     ]
 
     _fields_and_field_types = {
+        'pose': 'geometry_msgs/Pose',
         'order': 'int32',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Pose'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
@@ -70,6 +77,8 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        from geometry_msgs.msg import Pose
+        self.pose = kwargs.get('pose', Pose())
         self.order = kwargs.get('order', int())
 
     def __repr__(self):
@@ -101,6 +110,8 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.pose != other.pose:
+            return False
         if self.order != other.order:
             return False
         return True
@@ -109,6 +120,20 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def pose(self):
+        """Message field 'pose'."""
+        return self._pose
+
+    @pose.setter
+    def pose(self, value):
+        if __debug__:
+            from geometry_msgs.msg import Pose
+            assert \
+                isinstance(value, Pose), \
+                "The 'pose' field must be a sub message of type 'Pose'"
+        self._pose = value
 
     @builtins.property
     def order(self):

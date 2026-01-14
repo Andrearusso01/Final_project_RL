@@ -14,6 +14,10 @@
 #include "ros2_kdl_package/action/detail/execute_trajectory__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
+// Include directives for member types
+// Member 'pose'
+#include "geometry_msgs/msg/detail/pose__traits.hpp"
+
 namespace ros2_kdl_package
 {
 
@@ -25,6 +29,13 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: pose
+  {
+    out << "pose: ";
+    to_flow_style_yaml(msg.pose, out);
+    out << ", ";
+  }
+
   // member: order
   {
     out << "order: ";
@@ -37,6 +48,15 @@ inline void to_block_style_yaml(
   const ExecuteTrajectory_Goal & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: pose
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "pose:\n";
+    to_block_style_yaml(msg.pose, out, indentation + 2);
+  }
+
   // member: order
   {
     if (indentation > 0) {
@@ -94,11 +114,11 @@ inline const char * name<ros2_kdl_package::action::ExecuteTrajectory_Goal>()
 
 template<>
 struct has_fixed_size<ros2_kdl_package::action::ExecuteTrajectory_Goal>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::Pose>::value> {};
 
 template<>
 struct has_bounded_size<ros2_kdl_package::action::ExecuteTrajectory_Goal>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::Pose>::value> {};
 
 template<>
 struct is_message<ros2_kdl_package::action::ExecuteTrajectory_Goal>

@@ -52,6 +52,12 @@ iiwa/velocity_controller:
       - iiwa_joint_a5
       - iiwa_joint_a6
       - iiwa_joint_a7   
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity        
+      
 
 iiwa/effort_controller:
   ros__parameters:

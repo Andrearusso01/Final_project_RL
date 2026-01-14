@@ -17,9 +17,14 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'pose'
+#include "geometry_msgs/msg/detail/pose__struct.h"
+
 /// Struct defined in action/ExecuteTrajectory in the package ros2_kdl_package.
 typedef struct ros2_kdl_package__action__ExecuteTrajectory_Goal
 {
+  geometry_msgs__msg__Pose pose;
   int32_t order;
 } ros2_kdl_package__action__ExecuteTrajectory_Goal;
 

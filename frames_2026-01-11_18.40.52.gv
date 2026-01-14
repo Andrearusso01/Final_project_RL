@@ -1,0 +1,29 @@
+digraph G {
+"fra2mo/odom" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 50.213\nBuffer length: 4.7\nMost recent transform: 9.22\nOldest transform: 4.52\n"];
+"package_link" -> "aruco_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"cart_link" -> "package_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_footprint" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "cart_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"cart_link" -> "cart_wheel_rl"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"cart_link" -> "cart_wheel_rr"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "d435_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"lidar_link" -> "laser_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "lidar_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"iiwa_tool0" -> "iiwa_camera_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"iiwa_link_7" -> "iiwa_tool0"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"iiwa_camera_link" -> "iiwa_camera_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"iiwa_iiwa_base" -> "iiwa_link_0"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"world" -> "iiwa_iiwa_base"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"iiwa_link_6" -> "iiwa_link_7"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+"iiwa_tool0" -> "iiwa_vacuum_gripper_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"iiwa_link_0" -> "iiwa_link_1"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+"iiwa_link_1" -> "iiwa_link_2"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+"iiwa_link_2" -> "iiwa_link_3"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+"iiwa_link_3" -> "iiwa_link_4"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+"iiwa_link_4" -> "iiwa_link_5"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+"iiwa_link_5" -> "iiwa_link_6"[label=" Broadcaster: default_authority\nAverage rate: 18.072\nBuffer length: 4.648\nMost recent transform: 9.184\nOldest transform: 4.536\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1768156852.6746237"[ shape=plaintext ] ;
+}->"world";
+}

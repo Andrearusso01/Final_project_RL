@@ -11,10 +11,19 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `pose`
+#include "geometry_msgs/msg/detail/pose__functions.h"
+
 bool
 ros2_kdl_package__action__ExecuteTrajectory_Goal__init(ros2_kdl_package__action__ExecuteTrajectory_Goal * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // pose
+  if (!geometry_msgs__msg__Pose__init(&msg->pose)) {
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__fini(msg);
     return false;
   }
   // order
@@ -27,6 +36,8 @@ ros2_kdl_package__action__ExecuteTrajectory_Goal__fini(ros2_kdl_package__action_
   if (!msg) {
     return;
   }
+  // pose
+  geometry_msgs__msg__Pose__fini(&msg->pose);
   // order
 }
 
@@ -34,6 +45,12 @@ bool
 ros2_kdl_package__action__ExecuteTrajectory_Goal__are_equal(const ros2_kdl_package__action__ExecuteTrajectory_Goal * lhs, const ros2_kdl_package__action__ExecuteTrajectory_Goal * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // pose
+  if (!geometry_msgs__msg__Pose__are_equal(
+      &(lhs->pose), &(rhs->pose)))
+  {
     return false;
   }
   // order
@@ -49,6 +66,12 @@ ros2_kdl_package__action__ExecuteTrajectory_Goal__copy(
   ros2_kdl_package__action__ExecuteTrajectory_Goal * output)
 {
   if (!input || !output) {
+    return false;
+  }
+  // pose
+  if (!geometry_msgs__msg__Pose__copy(
+      &(input->pose), &(output->pose)))
+  {
     return false;
   }
   // order

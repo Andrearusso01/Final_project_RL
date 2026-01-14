@@ -204,6 +204,9 @@ CMakeFiles/ros2_kdl_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py
  /home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__type_support.h \
  /home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/msg/rosidl_generator_c__visibility_control.h \
  /home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__struct.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
  /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_c/ros2_kdl_package/action/detail/execute_trajectory__functions.h

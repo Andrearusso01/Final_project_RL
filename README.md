@@ -14,3 +14,15 @@ Run the client node
 ```
 ros2 run ros2_kdl_package ros2_kdl_node_client
 ```
+To use the detachable joint:
+```
+ign topic -t /gripper/detach -m ignition.msgs.Empty -p ''
+```
+```
+ign topic -t /gripper/attach -m ignition.msgs.Empty -p ''
+```
+To move iiwa:
+```
+ros2 topic pub /iiwa/velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.0, 0.0,  0.0, 0.0, 0.0, 0.0, 0.0]}"
+
+```

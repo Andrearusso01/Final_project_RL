@@ -123,12 +123,8 @@ def generate_launch_description():
 
             # --- SISTEMA ---
             '/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock',
-
-            # --- CAMERA ---
-            #'/camera/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image',
-            #'/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
             
-            # --- CAMERA BRIDGE (CORRETTO) ---
+            # --- CAMERA BRIDGE ---
             '/iiwa_camera/image_raw@sensor_msgs/msg/Image[ignition.msgs.Image',
             '/iiwa_camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
 
@@ -138,7 +134,16 @@ def generate_launch_description():
             #'/tf_static@tf2_msgs/msg/TFMessage[ignition.msgs.Pose_V',
 
             # Invio comandi movimento
-            '/iiwa/joint_trajectory@trajectory_msgs/msg/JointTrajectory]ignition.msgs.JointTrajectory'
+            '/iiwa/joint_trajectory@trajectory_msgs/msg/JointTrajectory]ignition.msgs.JointTrajectory',
+            
+            # Topic: /gripper/state
+        '/gripper/state@std_msgs/msg/Bool@ignition.msgs.Boolean',
+        
+        # Topic: /gripper/detach
+        '/gripper/detach@std_msgs/msg/Empty@ignition.msgs.Empty',
+        
+        # Topic: /gripper/attach
+        '/gripper/attach@std_msgs/msg/Empty@ignition.msgs.Empty'
         ],
         output='screen'
     )
@@ -182,8 +187,8 @@ def generate_launch_description():
 	arguments=[
             '-topic', '/fra2mo/robot_description',
             '-name', 'fra2mo',
-            '-x', '6.86',
-            '-y', '-4.65',
+            '-x', '0',
+            '-y', '0',
             '-z', '0.15'
         ],
         output='screen'

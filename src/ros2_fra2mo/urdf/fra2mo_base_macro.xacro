@@ -42,12 +42,12 @@
     <link name="cart_link">
       <visual>
         <geometry>
-          <box size="0.30 0.20 0.05"/>
+          <box size="0.3 0.20 0.05"/>
         </geometry>
         <material name="Grey">
           <color rgba="0.6 0.6 0.6 1"/>
         </material>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="-0.1 0 0" rpy="0 0 0"/>
       </visual>
 
       <visual> <origin xyz="0.16 0 0" rpy="0 0 0"/>
@@ -189,6 +189,55 @@
         <topic>/cmd_vel</topic>
       </plugin>
     </gazebo>
+    
+  <link name="container_link">
+    
+    <visual>
+      <origin xyz="0 0 0.01"/>
+      <geometry><box size="0.3 0.3 0.02"/></geometry>
+      <material name="Blue_Dark"><color rgba="0 0 0.5 1"/></material>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0.145 0.075"/>
+      <geometry><box size="0.3 0.01 0.15"/></geometry>
+      <material name="Blue_Dark"/>
+    </visual>
+
+    <visual>
+      <origin xyz="0 -0.145 0.075"/>
+      <geometry><box size="0.3 0.01 0.15"/></geometry>
+      <material name="Blue_Dark"/>
+    </visual>
+
+    <visual>
+      <origin xyz="0.145 0 0.075"/>
+      <geometry><box size="0.01 0.28 0.15"/></geometry>
+      <material name="Blue_Dark"/>
+    </visual>
+
+    <visual>
+      <origin xyz="-0.145 0 0.075"/>
+      <geometry><box size="0.01 0.28 0.15"/></geometry>
+      <material name="Blue_Dark"/>
+    </visual>
+    
+    <collision>
+      <origin xyz="0 0 0.075"/>
+      <geometry><box size="0.3 0.3 0.15"/></geometry>
+    </collision>
+    
+    <inertial>
+       <mass value="0.3"/>
+       <inertia ixx="0.008" ixy="0" ixz="0" iyy="0.008" iyz="0" izz="0.008"/>
+    </inertial>
+  </link>
+
+    <joint name="container_joint" type="fixed">
+      <parent link="cart_link" />
+      <child link="container_link" />
+      <origin xyz="-0.1 0.0 0.025" rpy="0 0 0" />
+    </joint>
     
   
   </xacro:macro>

@@ -19,7 +19,7 @@
       <material>Gazebo/Gray</material>
     </gazebo>
     
-     <gazebo>
+     <!--<gazebo>
       <plugin filename="libignition-gazebo-detachable-joint-system.so"
               name="ignition::gazebo::systems::DetachableJoint">
         <parent_link>${prefix}vacuum_gripper_link</parent_link>
@@ -29,7 +29,7 @@
         <detach_topic>/gripper/detach</detach_topic>
         <attach_topic>/gripper/attach</attach_topic>
       </plugin>
-    </gazebo> 
+    </gazebo> -->
 
   </xacro:macro>
 </robot>

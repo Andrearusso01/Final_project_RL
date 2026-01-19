@@ -27,6 +27,17 @@ ign topic -t /gripper/attach -m ignition.msgs.Empty -p ''
 ```
 To move iiwa:
 ```
-ros2 topic pub /iiwa/velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.0, 0.0,  0.0, 0.0, 0.0, 0.0, 0.0]}"
-
+ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
+  joint_names: [
+    'iiwa_joint_a1', 'iiwa_joint_a2', 'iiwa_joint_a3', 
+    'iiwa_joint_a4', 'iiwa_joint_a5', 'iiwa_joint_a6', 'iiwa_joint_a7'
+  ],
+  points: [
+    {
+      positions: [0.0, 0.0, 0.0, -1.57, 0.0, 0.0, 0.0],
+      time_from_start: {sec: 3, nanosec: 0}
+    },
+    {
+      positions: [0.0, 0.5, 0.0, -1, 0.0, 1.57, 0.0],
+}"] } time_from_start: {sec: 8, nanosec: 0}
 ```

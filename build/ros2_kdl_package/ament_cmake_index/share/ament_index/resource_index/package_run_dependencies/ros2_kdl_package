@@ -1,1 +1,1 @@
-rclcpp;rclcpp_action;std_msgs;geometry_msgs;sensor_msgs;action_msgs;orocos_kdl;kdl_parser;urdf;tf2;tf2_ros;tf2_geometry_msgs;rosidl_default_runtime;ament_lint_auto;ament_lint_common
+rclcpp;rclcpp_action;std_msgs;geometry_msgs;sensor_msgs;action_msgs;orocos_kdl;kdl_parser;urdf;trajectory_msgs;tf2;tf2_ros;tf2_geometry_msgs;rosidl_default_runtime;ament_lint_auto;ament_lint_common

@@ -1,0 +1,187 @@
+[0.040s] Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_fra2mo -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_fra2mo
+[0.060s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.282s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.291s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.323s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.327s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.334s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.346s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.361s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.408s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.439s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.468s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.500s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.502s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.680s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.734s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.778s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[0.779s] -- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)
+[0.786s] -- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.032s] -- Configuring done
+[1.057s] -- Generating done
+[1.064s] -- Build files have been written to: /home/user/ros2_ws/build/ros2_fra2mo
+[1.073s] Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_fra2mo -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_fra2mo
+[1.076s] Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_fra2mo -- -j12 -l12
+[1.140s] [35m[1mConsolidate compiler generated dependencies of target dynamic_tf_publisher[0m
+[1.166s] [100%] Built target dynamic_tf_publisher
+[1.180s] Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_fra2mo -- -j12 -l12
+[1.182s] Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_fra2mo
+[1.192s] -- Install configuration: ""
+[1.193s] -- Execute custom install script
+[1.193s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/display_fra2mo.launch.py
+[1.194s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_amcl.launch.py
+[1.194s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_explore.launch.py
+[1.194s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_navigation.launch.py
+[1.194s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/fra2mo_slam.launch.py
+[1.194s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/gazebo_fra2mo.launch.py
+[1.195s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/launch/warehouse.launch.py
+[1.195s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/d435_gazebo_macro.xacro
+[1.195s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/fra2mo.urdf.xacro
+[1.195s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/fra2mo_base_macro.xacro
+[1.195s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/lidar_gazebo_macro.xacro
+[1.196s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/test.urdf
+[1.196s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/urdf/utility_macro.xacro
+[1.197s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/intruder.sdf
+[1.197s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/mesh/intruder.stl
+[1.198s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/intruder/model.config
+[1.198s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/marker26_8cm_massless.sdf
+[1.198s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material/scripts/marker26_8cm.material
+[1.198s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/material/textures/aruco-26_8cm.png
+[1.198s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker26_8cm_massless/model.config
+[1.198s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/ar_tag_0.png
+[1.199s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/marker_0.sdf
+[1.199s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/scripts/marker_0.material
+[1.199s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_0.png
+[1.199s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_1.png
+[1.199s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_2.png
+[1.199s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_3.png
+[1.200s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/material/textures/ar_tag_4.png
+[1.200s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_0/model.config
+[1.200s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/marker_1.sdf
+[1.200s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/scripts/marker_1.material
+[1.200s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_0.png
+[1.200s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_1.png
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_2.png
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_3.png
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/material/textures/ar_tag_4.png
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_1/model.config
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/marker_2.sdf
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/scripts/marker_2.material
+[1.201s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_0.png
+[1.202s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_1.png
+[1.202s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_2.png
+[1.202s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_3.png
+[1.202s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/material/textures/ar_tag_4.png
+[1.202s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_2/model.config
+[1.202s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/marker_3.sdf
+[1.203s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/scripts/marker_3.material
+[1.203s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_0.png
+[1.203s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_1.png
+[1.203s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_2.png
+[1.203s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_3.png
+[1.203s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/material/textures/ar_tag_4.png
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_3/model.config
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/marker_4.sdf
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/scripts/marker_4.material
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_0.png
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_1.png
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_2.png
+[1.204s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_3.png
+[1.205s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/material/textures/ar_tag_4.png
+[1.205s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/marker_4/model.config
+[1.205s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/mesh/ostacolo_03.stl
+[1.205s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/model.config
+[1.205s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_03/obstacle_03.sdf
+[1.205s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/mesh/ostacolo_06.stl
+[1.206s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/model.config
+[1.206s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_06/obstacle_06.sdf
+[1.206s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/mesh/ostacolo_09.stl
+[1.206s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/model.config
+[1.206s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_09/obstacle_09.sdf
+[1.206s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/mesh/ostacolo_10.stl
+[1.207s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/model.config
+[1.207s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10/obstacle_10.sdf
+[1.207s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/mesh/ostacolo_10_.stl
+[1.207s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/model.config
+[1.207s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/obstacle_10_/obstacle_10_.sdf
+[1.207s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/mesh/campo_gara.stl
+[1.208s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/model.config
+[1.208s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/race_field/model.sdf
+[1.208s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/mesh/roof.stl
+[1.208s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/model.config
+[1.208s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/roof/roof.sdf
+[1.208s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/mesh/start_pod.stl
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/model.config
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/start_pod/start_pod.sdf
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/mesh/unknown_obst_high.stl
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/model.config
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_1/unknown_obst_1.sdf
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/mesh/unknown_obst_low.stl
+[1.209s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/model.config
+[1.210s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_2/unknown_obst_2.sdf
+[1.210s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/mesh/unknown_obst_wall.stl
+[1.210s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/model.config
+[1.210s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_obst_3/unknown_obst_3.sdf
+[1.210s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/mesh/tunnel_long.stl
+[1.210s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/model.config
+[1.211s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_1/unknown_tunnel_1.sdf
+[1.211s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/mesh/tunnel_short.stl
+[1.211s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/model.config
+[1.211s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/models/unknown_tunnel_2/unknown_tunnel_2.sdf
+[1.211s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/assieme_gara_2023.stl
+[1.211s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/campo_gara.stl
+[1.212s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/intruder.stl
+[1.212s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/lidar.stl
+[1.212s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_03.stl
+[1.212s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_06.stl
+[1.212s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_09.stl
+[1.213s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/ostacolo_10.stl
+[1.213s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/rl_fra2mo_body.stl
+[1.213s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/rl_fra2mo_wheel.stl
+[1.213s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/start_pod.stl
+[1.213s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/tunnel_long.stl
+[1.213s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/tunnel_short.stl
+[1.214s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/unknown_obst_high.stl
+[1.214s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/unknown_obst_low.stl
+[1.214s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/meshes/unknown_obst_wall.stl
+[1.214s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/worlds/leonardo_race_field.sdf
+[1.214s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/worlds/warehouse.sdf
+[1.215s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/amcl.yaml
+[1.215s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/explore.yaml
+[1.215s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/iiwa.pose.yaml
+[1.215s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/navigation.yaml
+[1.215s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/config/slam.yaml
+[1.215s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/src/odom_bl_tf.cpp
+[1.216s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/map.pgm
+[1.216s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/map.yaml
+[1.216s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/sim_map.pgm
+[1.216s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/sim_map.yaml
+[1.216s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/warehouse_map.pgm
+[1.217s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/maps/warehouse_map.yaml
+[1.217s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/scripts/follow_waypoints.py
+[1.217s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/scripts/reach_goal.py
+[1.217s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/amcl_view.rviz
+[1.217s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/conf_base.rviz
+[1.218s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/explore.rviz
+[1.218s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/fra2mo_conf.rviz
+[1.218s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/navigation.rviz
+[1.218s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/rviz_conf/slam_view.rviz
+[1.218s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/dynamic_tf_publisher
+[1.218s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/reach_goal.py
+[1.219s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/lib/ros2_fra2mo/follow_waypoints.py
+[1.219s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ament_index/resource_index/package_run_dependencies/ros2_fra2mo
+[1.219s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ament_index/resource_index/parent_prefix_path/ros2_fra2mo
+[1.219s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/ament_prefix_path.sh
+[1.220s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/ament_prefix_path.dsv
+[1.220s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/path.sh
+[1.220s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/environment/path.dsv
+[1.220s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.bash
+[1.220s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.sh
+[1.221s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.zsh
+[1.221s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/local_setup.dsv
+[1.221s] -- Symlinking: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.dsv
+[1.232s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ament_index/resource_index/packages/ros2_fra2mo
+[1.233s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/cmake/ros2_fra2moConfig.cmake
+[1.233s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/cmake/ros2_fra2moConfig-version.cmake
+[1.233s] -- Up-to-date symlink: /home/user/ros2_ws/install/ros2_fra2mo/share/ros2_fra2mo/package.xml
+[1.236s] Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_fra2mo

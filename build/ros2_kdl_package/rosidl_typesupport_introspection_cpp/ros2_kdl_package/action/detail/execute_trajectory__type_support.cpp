@@ -37,7 +37,52 @@ void ExecuteTrajectory_Goal_fini_function(void * message_memory)
   typed_message->~ExecuteTrajectory_Goal();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ExecuteTrajectory_Goal_message_member_array[2] = {
+size_t size_function__ExecuteTrajectory_Goal__joints_target(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__ExecuteTrajectory_Goal__joints_target(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<double> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__ExecuteTrajectory_Goal__joints_target(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<double> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__ExecuteTrajectory_Goal__joints_target(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__ExecuteTrajectory_Goal__joints_target(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__ExecuteTrajectory_Goal__joints_target(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__ExecuteTrajectory_Goal__joints_target(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+void resize_function__ExecuteTrajectory_Goal__joints_target(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<double> *>(untyped_member);
+  member->resize(size);
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ExecuteTrajectory_Goal_message_member_array[3] = {
   {
     "pose",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -71,13 +116,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ExecuteTrajec
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "joints_target",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ros2_kdl_package::action::ExecuteTrajectory_Goal, joints_target),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__ExecuteTrajectory_Goal__joints_target,  // size() function pointer
+    get_const_function__ExecuteTrajectory_Goal__joints_target,  // get_const(index) function pointer
+    get_function__ExecuteTrajectory_Goal__joints_target,  // get(index) function pointer
+    fetch_function__ExecuteTrajectory_Goal__joints_target,  // fetch(index, &value) function pointer
+    assign_function__ExecuteTrajectory_Goal__joints_target,  // assign(index, value) function pointer
+    resize_function__ExecuteTrajectory_Goal__joints_target  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ExecuteTrajectory_Goal_message_members = {
   "ros2_kdl_package::action",  // message namespace
   "ExecuteTrajectory_Goal",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(ros2_kdl_package::action::ExecuteTrajectory_Goal),
   ExecuteTrajectory_Goal_message_member_array,  // message members
   ExecuteTrajectory_Goal_init_function,  // function to initialize message memory (memory has to be allocated)

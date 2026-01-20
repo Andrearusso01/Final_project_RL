@@ -14,6 +14,8 @@
 // Include directives for member types
 // Member `pose`
 #include "geometry_msgs/msg/detail/pose__functions.h"
+// Member `joints_target`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 bool
 ros2_kdl_package__action__ExecuteTrajectory_Goal__init(ros2_kdl_package__action__ExecuteTrajectory_Goal * msg)
@@ -27,6 +29,11 @@ ros2_kdl_package__action__ExecuteTrajectory_Goal__init(ros2_kdl_package__action_
     return false;
   }
   // order
+  // joints_target
+  if (!rosidl_runtime_c__double__Sequence__init(&msg->joints_target, 0)) {
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -39,6 +46,8 @@ ros2_kdl_package__action__ExecuteTrajectory_Goal__fini(ros2_kdl_package__action_
   // pose
   geometry_msgs__msg__Pose__fini(&msg->pose);
   // order
+  // joints_target
+  rosidl_runtime_c__double__Sequence__fini(&msg->joints_target);
 }
 
 bool
@@ -55,6 +64,12 @@ ros2_kdl_package__action__ExecuteTrajectory_Goal__are_equal(const ros2_kdl_packa
   }
   // order
   if (lhs->order != rhs->order) {
+    return false;
+  }
+  // joints_target
+  if (!rosidl_runtime_c__double__Sequence__are_equal(
+      &(lhs->joints_target), &(rhs->joints_target)))
+  {
     return false;
   }
   return true;
@@ -76,6 +91,12 @@ ros2_kdl_package__action__ExecuteTrajectory_Goal__copy(
   }
   // order
   output->order = input->order;
+  // joints_target
+  if (!rosidl_runtime_c__double__Sequence__copy(
+      &(input->joints_target), &(output->joints_target)))
+  {
+    return false;
+  }
   return true;
 }
 

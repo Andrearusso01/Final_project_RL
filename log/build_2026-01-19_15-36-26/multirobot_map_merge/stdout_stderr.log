@@ -1,0 +1,122 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found image_geometry: 3.2.1 (/opt/ros/humble/share/image_geometry/cmake)
+-- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)
+-- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+download.sh: line 7: wget: command not found
+Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+/home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: FAILED open or read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm does not match. Downloading it again
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+/home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: FAILED open or read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm still does not match. Aborting.
+download.sh: line 7: wget: command not found
+Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: No such file or directory
+/home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: FAILED open or read
+md5sum: WARNING: 1 listed file could not be read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm does not match. Downloading it again
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: No such file or directory
+/home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: FAILED open or read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm still does not match. Aborting.
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 7: wget: command not found
+Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm
+/home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: FAILED open or read
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm does not match. Downloading it again
+download.sh: line 15: wget: command not found
+/home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: FAILED open or read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm still does not match. Aborting.
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 7: wget: command not found
+Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+/home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: FAILED open or read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm does not match. Downloading it again
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+/home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: FAILED open or read
+MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm still does not match. Aborting.
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/user/ros2_ws/m-explore-ros2/map_merge/include;$<BUILD_INTERFACE:/home/user/ros2_ws/m-explore-ros2/map_merge/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/ros2_ws/build/multirobot_map_merge
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[35m[1mConsolidate compiler generated dependencies of target combine_grids[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[ 16%] Built target gtest_main
+[ 50%] Built target gtest
+[ 66%] Built target combine_grids
+[35m[1mConsolidate compiler generated dependencies of target test_merging_pipeline[0m
+[35m[1mConsolidate compiler generated dependencies of target map_merge[0m
+[ 83%] Built target test_merging_pipeline
+[100%] Built target map_merge
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/include/map_merge//map_merge.h
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/include/map_merge//ros1_names.hpp
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/from_map_server.launch.py
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/map_merge.launch.py
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/map_merge.rviz
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/bringup_launch.py
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/config/nav2_multirobot_params_1.yaml
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/config/nav2_multirobot_params_2.yaml
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/multi_tb3_simulation_launch.py
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/slam_toolbox.py
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/tb3_simulation_launch.py
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/worlds/world_only.model
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/config/params.yaml
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/lib/multirobot_map_merge/map_merge
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/library_path.sh
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/library_path.dsv
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/ament_index/resource_index/package_run_dependencies/multirobot_map_merge
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/ament_index/resource_index/parent_prefix_path/multirobot_map_merge
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/path.sh
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/path.dsv
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.bash
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.sh
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.zsh
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.dsv
+-- Symlinking: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/ament_index/resource_index/packages/multirobot_map_merge
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/multirobot_map_mergeConfig.cmake
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/multirobot_map_mergeConfig-version.cmake
+-- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/package.xml
+-- Up-to-date: /home/user/ros2_ws/install/multirobot_map_merge/lib/libcombine_grids.a

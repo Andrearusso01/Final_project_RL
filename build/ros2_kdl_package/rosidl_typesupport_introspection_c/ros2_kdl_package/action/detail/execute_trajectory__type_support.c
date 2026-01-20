@@ -17,6 +17,8 @@
 #include "geometry_msgs/msg/pose.h"
 // Member `pose`
 #include "geometry_msgs/msg/detail/pose__rosidl_typesupport_introspection_c.h"
+// Member `joints_target`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -37,7 +39,62 @@ void ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_intros
   ros2_kdl_package__action__ExecuteTrajectory_Goal__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array[2] = {
+size_t ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__size_function__ExecuteTrajectory_Goal__joints_target(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__get_const_function__ExecuteTrajectory_Goal__joints_target(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__get_function__ExecuteTrajectory_Goal__joints_target(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__fetch_function__ExecuteTrajectory_Goal__joints_target(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__get_const_function__ExecuteTrajectory_Goal__joints_target(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__assign_function__ExecuteTrajectory_Goal__joints_target(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__get_function__ExecuteTrajectory_Goal__joints_target(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+bool ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__resize_function__ExecuteTrajectory_Goal__joints_target(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array[3] = {
   {
     "pose",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -71,13 +128,30 @@ static rosidl_typesupport_introspection_c__MessageMember ros2_kdl_package__actio
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "joints_target",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ros2_kdl_package__action__ExecuteTrajectory_Goal, joints_target),  // bytes offset in struct
+    NULL,  // default value
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__size_function__ExecuteTrajectory_Goal__joints_target,  // size() function pointer
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__get_const_function__ExecuteTrajectory_Goal__joints_target,  // get_const(index) function pointer
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__get_function__ExecuteTrajectory_Goal__joints_target,  // get(index) function pointer
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__fetch_function__ExecuteTrajectory_Goal__joints_target,  // fetch(index, &value) function pointer
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__assign_function__ExecuteTrajectory_Goal__joints_target,  // assign(index, value) function pointer
+    ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__resize_function__ExecuteTrajectory_Goal__joints_target  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_members = {
   "ros2_kdl_package__action",  // message namespace
   "ExecuteTrajectory_Goal",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(ros2_kdl_package__action__ExecuteTrajectory_Goal),
   ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_message_member_array,  // message members
   ros2_kdl_package__action__ExecuteTrajectory_Goal__rosidl_typesupport_introspection_c__ExecuteTrajectory_Goal_init_function,  // function to initialize message memory (memory has to be allocated)

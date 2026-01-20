@@ -1,0 +1,83 @@
+[0.035s] Invoking command in '/home/user/ros2_ws/build/impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/impedance_controller
+[0.137s] -- The C compiler identification is GNU 11.4.0
+[0.238s] -- The CXX compiler identification is GNU 11.4.0
+[0.253s] -- Detecting C compiler ABI info
+[0.374s] -- Detecting C compiler ABI info - done
+[0.384s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.384s] -- Detecting C compile features
+[0.385s] -- Detecting C compile features - done
+[0.392s] -- Detecting CXX compiler ABI info
+[0.533s] -- Detecting CXX compiler ABI info - done
+[0.547s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.548s] -- Detecting CXX compile features
+[0.548s] -- Detecting CXX compile features - done
+[0.556s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.827s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.934s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.015s] -- Found controller_interface: 2.52.2 (/opt/ros/humble/share/controller_interface/cmake)
+[1.139s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.161s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.218s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.322s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.436s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.790s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.815s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.918s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.138s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.149s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.219s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.233s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.261s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.294s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.334s] -- Looking for pthread.h
+[3.589s] -- Looking for pthread.h - found
+[3.589s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.875s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.882s] -- Found Threads: TRUE  
+[4.211s] -- Found realtime_tools: 2.14.1 (/opt/ros/humble/share/realtime_tools/cmake)
+[4.304s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[4.317s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.598s] -- Configuring done
+[4.679s] -- Generating done
+[4.696s] -- Build files have been written to: /home/user/ros2_ws/build/impedance_controller
+[4.731s] Invoked command in '/home/user/ros2_ws/build/impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/impedance_controller
+[4.733s] Invoking command in '/home/user/ros2_ws/build/impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/impedance_controller -- -j12 -l12
+[4.928s] [ 50%] [32mBuilding CXX object CMakeFiles/impedance_controller.dir/src/impedance_controller.cpp.o[0m
+[14.889s] In file included from [01m[K/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller/include/impedance_controller/impedance_controller.hpp:27[m[K,
+[14.890s]                  from [01m[K/home/user/ros2_ws/src/ros2_iiwa/iiwa_controllers/impedance_controller/src/impedance_controller.cpp:15[m[K:
+[14.890s] [01m[K/opt/ros/humble/include/realtime_tools/realtime_tools/realtime_buffer.h:22:100:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: This header include is deprecated. Please update your code to use 'realtime_buffer.hpp' header.[m[K’
+[14.890s]    22 | ed. Please update your code to use 'realtime_buffer.hpp' header."[01;36m[K)[m[K  //NOLINT
+[14.890s]       |                                                                  [01;36m[K^[m[K
+[14.890s] 
+[31.080s] [100%] [32m[1mLinking CXX shared library libimpedance_controller.so[0m
+[32.656s] [100%] Built target impedance_controller
+[32.693s] Invoked command in '/home/user/ros2_ws/build/impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/impedance_controller -- -j12 -l12
+[32.697s] Invoking command in '/home/user/ros2_ws/build/impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/impedance_controller
+[32.728s] -- Install configuration: ""
+[32.732s] -- Execute custom install script
+[32.733s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller//impedance_plugin.xml
+[32.770s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/include/impedance_controller/impedance_controller.hpp
+[32.806s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/include/impedance_controller/visibility_control.h
+[32.841s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/lib/libimpedance_controller.so
+[32.874s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/environment/library_path.sh
+[32.910s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/environment/library_path.dsv
+[32.946s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/ament_index/resource_index/package_run_dependencies/impedance_controller
+[32.978s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/ament_index/resource_index/parent_prefix_path/impedance_controller
+[33.014s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/environment/ament_prefix_path.sh
+[33.050s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/environment/ament_prefix_path.dsv
+[33.089s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/environment/path.sh
+[33.128s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/environment/path.dsv
+[33.162s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/local_setup.bash
+[33.197s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/local_setup.sh
+[33.232s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/local_setup.zsh
+[33.274s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/local_setup.dsv
+[33.313s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.dsv
+[33.350s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/ament_index/resource_index/packages/impedance_controller
+[33.388s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/impedance_controller
+[33.429s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[33.470s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.507s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[33.543s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/cmake/impedance_controllerConfig.cmake
+[33.575s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/cmake/impedance_controllerConfig-version.cmake
+[33.602s] -- Symlinking: /home/user/ros2_ws/install/impedance_controller/share/impedance_controller/package.xml
+[33.650s] Invoked command in '/home/user/ros2_ws/build/impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/impedance_controller

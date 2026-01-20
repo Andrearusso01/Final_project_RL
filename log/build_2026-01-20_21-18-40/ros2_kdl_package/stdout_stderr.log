@@ -1,0 +1,48 @@
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_generator_c[0m
+[  2%] Built target ros2_kdl_package__cpp
+[ 10%] Built target ros2_kdl_package__rosidl_generator_c
+[ 10%] Built target ament_cmake_python_copy_ros2_kdl_package
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_cpp[0m
+[ 15%] Built target ros2_kdl_node_example
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_introspection_c[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_fastrtps_c[0m
+[ 22%] Built target ros2_kdl_package__rosidl_typesupport_cpp
+[ 30%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c
+[ 37%] Built target ros2_kdl_package__rosidl_typesupport_c
+[ 45%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp
+[ 52%] Built target ros2_kdl_package__rosidl_typesupport_introspection_cpp
+[ 60%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_node[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_node_client[0m
+[ 60%] Built target ros2_kdl_package
+[ 62%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node_client.dir/src/ros2_kdl_node_client.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o[0m
+[ 67%] Built target ros2_kdl_package__py
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_generator_py[0m
+[ 72%] Built target ros2_kdl_package__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_package__rosidl_typesupport_introspection_c__pyext[0m
+[ 77%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext
+[ 82%] Built target ros2_kdl_package__rosidl_typesupport_c__pyext
+[ 87%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c__pyext
+running egg_info
+writing ros2_kdl_package.egg-info/PKG-INFO
+writing dependency_links to ros2_kdl_package.egg-info/dependency_links.txt
+writing top-level names to ros2_kdl_package.egg-info/top_level.txt
+reading manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[ 87%] Built target ament_cmake_python_build_ros2_kdl_package_egg
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:14:10:[m[K [01;31m[Kfatal error: [m[Ktrajectory_msgs/msg/joint_trajectory.hpp: No such file or directory
+   14 | #include [01;31m[K"trajectory_msgs/msg/joint_trajectory.hpp"[m[K // AGGIUNTO per inviare traiettorie
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/ros2_kdl_node.dir/build.make:76: CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:597: CMakeFiles/ros2_kdl_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 90%] [32m[1mLinking CXX executable ros2_kdl_node_client[0m
+[ 90%] Built target ros2_kdl_node_client
+gmake: *** [Makefile:146: all] Error 2

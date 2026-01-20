@@ -346,7 +346,7 @@
     name="gz::sim::systems::AirPressure">
   </plugin>-->  
   
- <model name="work_table">
+<model name="work_table">
       <static>true</static>
       <pose>8.8 -4.0 0.0 0 0 0</pose>
       
@@ -357,7 +357,8 @@
         </inertial>
 
         <visual name="top_visual">
-          <pose>0 0 0.675 0 0 0</pose> <geometry>
+          <pose>0 0 0.475 0 0 0</pose> 
+          <geometry>
             <box>
               <size>0.8 0.8 0.05</size> </box>
           </geometry>
@@ -367,7 +368,7 @@
           </material>
         </visual>
         <collision name="top_collision">
-          <pose>0 0 0.675 0 0 0</pose>
+          <pose>0 0 0.475 0 0 0</pose>
           <geometry>
             <box>
               <size>0.8 0.8 0.05</size>
@@ -376,28 +377,29 @@
         </collision>
 
         <visual name="leg1_visual">
-          <pose>0.36 0.36 0.325 0 0 0</pose> <geometry>
+          <pose>0.36 0.36 0.225 0 0 0</pose> 
+          <geometry>
             <box>
-              <size>0.05 0.05 0.65</size> </box>
+              <size>0.05 0.05 0.45</size> </box>
           </geometry>
           <material>
             <ambient>0.5 0.5 0.5 1</ambient> <diffuse>0.5 0.5 0.5 1</diffuse>
           </material>
         </visual>
         <collision name="leg1_collision">
-          <pose>0.36 0.36 0.325 0 0 0</pose>
+          <pose>0.36 0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
         </collision>
 
         <visual name="leg2_visual">
-          <pose>0.36 -0.36 0.325 0 0 0</pose>
+          <pose>0.36 -0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
           <material>
@@ -406,19 +408,19 @@
           </material>
         </visual>
         <collision name="leg2_collision">
-          <pose>0.36 -0.36 0.325 0 0 0</pose>
+          <pose>0.36 -0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
         </collision>
 
         <visual name="leg3_visual">
-          <pose>-0.36 0.36 0.325 0 0 0</pose>
+          <pose>-0.36 0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
           <material>
@@ -427,19 +429,19 @@
           </material>
         </visual>
         <collision name="leg3_collision">
-          <pose>-0.36 0.36 0.325 0 0 0</pose>
+          <pose>-0.36 0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
         </collision>
 
         <visual name="leg4_visual">
-          <pose>-0.36 -0.36 0.325 0 0 0</pose>
+          <pose>-0.36 -0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
           <material>
@@ -448,43 +450,54 @@
           </material>
         </visual>
         <collision name="leg4_collision">
-          <pose>-0.36 -0.36 0.325 0 0 0</pose>
+          <pose>-0.36 -0.36 0.225 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.05 0.05 0.65</size>
+              <size>0.05 0.05 0.45</size>
             </box>
           </geometry>
         </collision>
 
       </link>
     </model>
-    
- <model name="package">
-  <static>false</static> <pose>-0.4 0 0.3 0 0 0</pose>
-  
-  <gazebo>
-      <plugin filename="libignition-gazebo-detachable-joint-system.so"
-              name="ignition::gazebo::systems::DetachableJoint">
-        <parent_link>${prefix}vacuum_gripper_link</parent_link>
-        <child_model>package</child_model>
-        <child_link>package_link</child_link>
-        <output_topic>/gripper/state</output_topic>
-        <detach_topic>/gripper/detach</detach_topic>
-        <attach_topic>/gripper/attach</attach_topic>
-      </plugin>
-    </gazebo>
+
+<model name="package">
+  <static>false</static>
+  <pose>-9.6 3.1 0.3 0 0 0</pose> 
   
   <link name="package_link">
-  <velocity_decay>
+    <inertial>
+      <mass>1.5</mass>
+      <inertia 
+        ixx="0.002" ixy="0" ixz="0" 
+        iyy="0.002" iyz="0" 
+        izz="0.0033"/>
+    </inertial>
+
+    <velocity_decay>
       <linear>0.01</linear>
       <angular>0.01</angular>
     </velocity_decay>
-    <collision name="collision">
+
+<collision name="collision">
       <geometry>
         <box>
           <size>0.2 0.2 0.1</size>
         </box>
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>1000.0</mu>
+            <mu2>10.0</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <kp>100000.0</kp>
+            <kd>100.0</kd> <max_vel>0.01</max_vel> <min_depth>0.005</min_depth> </ode>
+        </contact>
+      </surface>
     </collision>
 
     <visual name="visual">
@@ -521,7 +534,6 @@
     </visual>
   </link>
 </model>
-
 
   
   </world>

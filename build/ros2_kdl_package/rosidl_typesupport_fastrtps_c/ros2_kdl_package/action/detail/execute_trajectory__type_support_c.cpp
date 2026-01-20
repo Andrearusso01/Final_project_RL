@@ -35,6 +35,8 @@ extern "C"
 #endif
 
 #include "geometry_msgs/msg/detail/pose__functions.h"  // pose
+#include "rosidl_runtime_c/primitives_sequence.h"  // joints_target
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // joints_target
 
 // forward declare type support functions
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_ros2_kdl_package
@@ -83,6 +85,14 @@ static bool _ExecuteTrajectory_Goal__cdr_serialize(
     cdr << ros_message->order;
   }
 
+  // Field name: joints_target
+  {
+    size_t size = ros_message->joints_target.size;
+    auto array_ptr = ros_message->joints_target.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
+  }
+
   return true;
 }
 
@@ -114,6 +124,32 @@ static bool _ExecuteTrajectory_Goal__cdr_deserialize(
     cdr >> ros_message->order;
   }
 
+  // Field name: joints_target
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.getState();
+    bool correct_size = cdr.jump(size);
+    cdr.setState(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
+    if (ros_message->joints_target.data) {
+      rosidl_runtime_c__double__Sequence__fini(&ros_message->joints_target);
+    }
+    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->joints_target, size)) {
+      fprintf(stderr, "failed to create array for field 'joints_target'");
+      return false;
+    }
+    auto array_ptr = ros_message->joints_target.data;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -139,6 +175,17 @@ size_t get_serialized_size_ros2_kdl_package__action__ExecuteTrajectory_Goal(
   {
     size_t item_size = sizeof(ros_message->order);
     current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name joints_target
+  {
+    size_t array_size = ros_message->joints_target.size;
+    auto array_ptr = ros_message->joints_target.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -197,6 +244,18 @@ size_t max_serialized_size_ros2_kdl_package__action__ExecuteTrajectory_Goal(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: joints_target
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -206,7 +265,7 @@ size_t max_serialized_size_ros2_kdl_package__action__ExecuteTrajectory_Goal(
     using DataType = ros2_kdl_package__action__ExecuteTrajectory_Goal;
     is_plain =
       (
-      offsetof(DataType, order) +
+      offsetof(DataType, joints_target) +
       last_member_size
       ) == ret_val;
   }

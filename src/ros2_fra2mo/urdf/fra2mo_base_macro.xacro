@@ -190,32 +190,28 @@
       </plugin>
     </gazebo>
     
-  <link name="container_link">
+ <link name="container_link">
     
     <visual>
       <origin xyz="0 0 0.01"/>
       <geometry><box size="0.3 0.3 0.02"/></geometry>
       <material name="Blue_Dark"><color rgba="0 0 0.5 1"/></material>
     </visual>
-
     <visual>
       <origin xyz="0 0.145 0.075"/>
       <geometry><box size="0.3 0.01 0.15"/></geometry>
       <material name="Blue_Dark"/>
     </visual>
-
     <visual>
       <origin xyz="0 -0.145 0.075"/>
       <geometry><box size="0.3 0.01 0.15"/></geometry>
       <material name="Blue_Dark"/>
     </visual>
-
     <visual>
       <origin xyz="0.145 0 0.075"/>
       <geometry><box size="0.01 0.28 0.15"/></geometry>
       <material name="Blue_Dark"/>
     </visual>
-
     <visual>
       <origin xyz="-0.145 0 0.075"/>
       <geometry><box size="0.01 0.28 0.15"/></geometry>
@@ -223,8 +219,24 @@
     </visual>
     
     <collision>
-      <origin xyz="0 0 0.075"/>
-      <geometry><box size="0.3 0.3 0.15"/></geometry>
+      <origin xyz="0 0 0.01"/>
+      <geometry><box size="0.3 0.3 0.02"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0.145 0.075"/>
+      <geometry><box size="0.3 0.01 0.15"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 -0.145 0.075"/>
+      <geometry><box size="0.3 0.01 0.15"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.145 0 0.075"/>
+      <geometry><box size="0.01 0.28 0.15"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.145 0 0.075"/>
+      <geometry><box size="0.01 0.28 0.15"/></geometry>
     </collision>
     
     <inertial>

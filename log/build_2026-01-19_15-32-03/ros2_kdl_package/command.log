@@ -1,0 +1,6 @@
+Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_kdl_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_kdl_package
+Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_kdl_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_kdl_package
+Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_kdl_package
+Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_kdl_package

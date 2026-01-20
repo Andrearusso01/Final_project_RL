@@ -20,12 +20,16 @@ extern "C"
 // Include directives for member types
 // Member 'pose'
 #include "geometry_msgs/msg/detail/pose__struct.h"
+// Member 'joints_target'
+#include "rosidl_runtime_c/primitives_sequence.h"
 
 /// Struct defined in action/ExecuteTrajectory in the package ros2_kdl_package.
 typedef struct ros2_kdl_package__action__ExecuteTrajectory_Goal
 {
   geometry_msgs__msg__Pose pose;
   int32_t order;
+  /// <--- AGGIUNTO: per i giunti del tavolo
+  rosidl_runtime_c__double__Sequence joints_target;
 } ros2_kdl_package__action__ExecuteTrajectory_Goal;
 
 // Struct for a sequence of ros2_kdl_package__action__ExecuteTrajectory_Goal.

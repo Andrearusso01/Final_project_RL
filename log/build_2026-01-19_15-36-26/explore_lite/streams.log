@@ -1,0 +1,76 @@
+[0.047s] Invoking command in '/home/user/ros2_ws/build/explore_lite': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/explore_lite
+[0.066s] -- BuilD for ROS2: humble
+[0.067s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.231s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.242s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.302s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.307s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.319s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.340s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.367s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.439s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.440s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.662s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.736s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.781s] -- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.953s] -- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.958s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.959s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.961s] -- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)
+[1.012s] -- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)
+[1.035s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.059s] -- Found nav2_costmap_2d: 1.1.20 (/opt/ros/humble/share/nav2_costmap_2d/cmake)
+[1.286s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.373s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.374s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.396s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.397s] -- Configured cppcheck include dirs: /home/user/ros2_ws/m-explore-ros2/explore/include;$<BUILD_INTERFACE:/home/user/ros2_ws/m-explore-ros2/explore/include>
+[1.397s] -- Configured cppcheck exclude dirs and/or files: 
+[1.397s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.398s] -- Added test 'lint_cmake' to check CMake code style
+[1.399s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.401s] -- Added test 'uncrustify' to check C / C++ code style
+[1.401s] -- Configured uncrustify additional arguments: 
+[1.401s] -- Added test 'xmllint' to check XML markup files
+[1.403s] -- Configuring done
+[1.588s] -- Generating done
+[1.606s] -- Build files have been written to: /home/user/ros2_ws/build/explore_lite
+[1.617s] Invoked command in '/home/user/ros2_ws/build/explore_lite' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/explore_lite
+[1.620s] Invoking command in '/home/user/ros2_ws/build/explore_lite': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/explore_lite -- -j12 -l12
+[1.675s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[1.676s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[1.679s] [35m[1mConsolidate compiler generated dependencies of target explore[0m
+[1.693s] [ 20%] Built target gtest_main
+[1.694s] [ 40%] Built target gtest
+[1.709s] [35m[1mConsolidate compiler generated dependencies of target test_explore[0m
+[1.716s] [ 80%] Built target explore
+[1.727s] [100%] Built target test_explore
+[1.740s] Invoked command in '/home/user/ros2_ws/build/explore_lite' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/explore_lite -- -j12 -l12
+[1.741s] Invoking command in '/home/user/ros2_ws/build/explore_lite': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/explore_lite
+[1.750s] -- Install configuration: ""
+[1.750s] -- Execute custom install script
+[1.751s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/include/explore//costmap_client.h
+[1.751s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/include/explore//costmap_tools.h
+[1.751s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/include/explore//explore.h
+[1.751s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/include/explore//frontier_search.h
+[1.752s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/config/params.yaml
+[1.752s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/config/params_costmap.yaml
+[1.752s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/launch/explore.launch.py
+[1.753s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/lib/explore_lite/explore
+[1.753s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/ament_index/resource_index/package_run_dependencies/explore_lite
+[1.753s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/ament_index/resource_index/parent_prefix_path/explore_lite
+[1.753s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/environment/ament_prefix_path.sh
+[1.754s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/environment/ament_prefix_path.dsv
+[1.754s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/environment/path.sh
+[1.754s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/environment/path.dsv
+[1.754s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/local_setup.bash
+[1.754s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/local_setup.sh
+[1.754s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/local_setup.zsh
+[1.755s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/local_setup.dsv
+[1.755s] -- Symlinking: /home/user/ros2_ws/install/explore_lite/share/explore_lite/package.dsv
+[1.765s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/ament_index/resource_index/packages/explore_lite
+[1.765s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.765s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/cmake/explore_liteConfig.cmake
+[1.765s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/cmake/explore_liteConfig-version.cmake
+[1.766s] -- Up-to-date symlink: /home/user/ros2_ws/install/explore_lite/share/explore_lite/package.xml
+[1.768s] Invoked command in '/home/user/ros2_ws/build/explore_lite' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/explore_lite

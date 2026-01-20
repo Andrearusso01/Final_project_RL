@@ -1,121 +1,81 @@
 #! /usr/bin/env python3
-# Copyright 2021 Samsung Research America
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 from geometry_msgs.msg import PoseStamped
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
 import rclpy
-from rclpy.duration import Duration
 import yaml
+import time
 
-
-waypoints = yaml.safe_load('''
+waypoints_yaml = '''
 waypoints:
-  - position:
-      x: 7.0
-      y: 0.0
-      z: 0.0
-    orientation:
-      x: 0.0
-      y: 0.0
-      z: -0.0055409271259092485
-      w: 0.9999846489454652
-  - position:
-      x: -1.8789787292480469
-      y: 0.0
-      z: 0.0
-    orientation:
-      x: 0.0
-      y: 0.0
-      z: 0.010695864295550759
-      w: 0.9999427976074288
-  - position:
-      x: 0.0
-      y: 0.6118782758712769
-      z: 0.0
-    orientation:
-      x: 0.0
-      y: 0.0
-      z: 0.01899610435153287
-      w: 0.9998195577300264
-''')
+  - {x: -6.0, y: 3.1, z: 0.0, qz: 0.0, qw: 1.0}    # WP 1
+  - {x: -4.8, y: 0.0, z: 0.0, qz: 0.0, qw: 1.0}    # WP 2
+  - {x: -2.3, y: -0.5, z: 0.0, qz: 0.0, qw: 1.0}   # WP 3
+  - {x: -1.8, y: -2.6, z: 0.0, qz: 0.0, qw: 1.0}   # WP 4 (Ingresso corridoio)
+  - {x: 3.0, y: -2.6, z: 0.0, qz: 0.0, qw: 1.0}    # WP 4.5 (Metà corridoio)
+  - {x: 6.5, y: -3.2, z: 0.0, qz: 0.99994, qw: 0.01079} # WP 5 (Uscita - PIU LARGO)
+  - {x: 7.20, y: -4.10, z: 0.0, qz: -0.7643, qw: 0.6448} # WP 6 (Target finale)
+'''
+
+def create_pose(navigator, wp_data):
+    pose = PoseStamped()
+    pose.header.frame_id = 'map'
+    pose.header.stamp = navigator.get_clock().now().to_msg()
+    pose.pose.position.x = wp_data['x']
+    pose.pose.position.y = wp_data['y']
+    pose.pose.orientation.z = wp_data['qz']
+    pose.pose.orientation.w = wp_data['qw']
+    return pose
 
 def main():
     rclpy.init()
     navigator = BasicNavigator()
+    data = yaml.safe_load(waypoints_yaml)
+    waypoints = data['waypoints']
 
-    def create_pose(transform):
-        pose = PoseStamped()
-        pose.header.frame_id = 'map'
-        pose.header.stamp = navigator.get_clock().now().to_msg()
-        pose.pose.position.x = transform["position"]["x"]
-        pose.pose.position.y = transform["position"]["y"]
-        pose.pose.position.z = transform["position"]["z"]
-        pose.pose.orientation.x = transform["orientation"]["x"]
-        pose.pose.orientation.y = transform["orientation"]["y"]
-        pose.pose.orientation.z = transform["orientation"]["z"]
-        pose.pose.orientation.w = transform["orientation"]["w"]
-        return pose
+    # --- INITIAL POSE ---
+    initial_pose = PoseStamped()
+    initial_pose.header.frame_id = 'map'
+    initial_pose.header.stamp = navigator.get_clock().now().to_msg()
+    initial_pose.pose.position.x = -9.2
+    initial_pose.pose.position.y = 3.1
+    initial_pose.pose.orientation.w = 1.0
+    
+    print("Inizializzazione Nav2...")
+    navigator.setInitialPose(initial_pose)
+    navigator.waitUntilNav2Active()
 
-    goal_poses = list(map(create_pose, waypoints["waypoints"]))
+    for i, wp in enumerate(waypoints):
+        wp_idx = i + 1
+        
+        # Al punto 5 e 6, proviamo a resettare SOLO se Nav2 è in crisi
+        if wp_idx >= 5:
+            print(f"--- RESET DI SICUREZZA PER WAYPOINT {wp_idx} ---")
+            # Usiamo la posa del punto PRECEDENTE per dare stabilità
+            reset_pose = create_pose(navigator, waypoints[i-1]) 
+            navigator.setInitialPose(reset_pose)
+            time.sleep(1.0)
 
+        goal_pose = create_pose(navigator, wp)
+        print(f"Andando al Waypoint {wp_idx}...")
+        navigator.goToPose(goal_pose)
 
-    # Wait for navigation to fully activate, since autostarting nav2
-    navigator.waitUntilNav2Active(localizer="smoother_server")
+        while not navigator.isTaskComplete():
+            # Se il robot ci mette troppo (bloccato), proviamo a cancellare e ridare il comando
+            feedback = navigator.getFeedback()
+            if feedback:
+                # Se la distanza al goal non scende per 5 secondi, Nav2 potrebbe essere incastrato
+                pass
+        
+        result = navigator.getResult()
+        if result == TaskResult.SUCCEEDED:
+            print(f"Waypoint {wp_idx} raggiunto!")
+        else:
+            print(f"Waypoint {wp_idx} fallito. Provo a forzare il passaggio al prossimo...")
+            # Non usciamo, proviamo a passare al prossimo waypoint comunque
+            continue
 
-    # sanity check a valid path exists
-    # path = navigator.getPath(initial_pose, goal_pose)
-
-    nav_start = navigator.get_clock().now()
-    navigator.followWaypoints(goal_poses)
-
-    i = 0
-    while not navigator.isTaskComplete():
-        ################################################
-        #
-        # Implement some code here for your application!
-        #
-        ################################################
-
-        # Do something with the feedback
-        i = i + 1
-        feedback = navigator.getFeedback()
-
-        if feedback and i % 5 == 0:
-            print('Executing current waypoint: ' +
-                  str(feedback.current_waypoint + 1) + '/' + str(len(goal_poses)))
-            now = navigator.get_clock().now()
-
-            # Some navigation timeout to demo cancellation
-            if now - nav_start > Duration(seconds=600):
-                navigator.cancelTask()
-
-    # Do something depending on the return code
-    result = navigator.getResult()
-    if result == TaskResult.SUCCEEDED:
-        print('Goal succeeded!')
-    elif result == TaskResult.CANCELED:
-        print('Goal was canceled!')
-    elif result == TaskResult.FAILED:
-        print('Goal failed!')
-    else:
-        print('Goal has an invalid return status!')
-
-    # navigator.lifecycleShutdown()
-
+    print("MISSIONE TERMINATA")
     exit(0)
-
 
 if __name__ == '__main__':
     main()

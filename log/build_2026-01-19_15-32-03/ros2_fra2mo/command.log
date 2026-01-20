@@ -1,0 +1,6 @@
+Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_fra2mo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_fra2mo
+Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/src/ros2_fra2mo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/ros2_fra2mo
+Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_fra2mo -- -j12 -l12
+Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_fra2mo -- -j12 -l12
+Invoking command in '/home/user/ros2_ws/build/ros2_fra2mo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_fra2mo
+Invoked command in '/home/user/ros2_ws/build/ros2_fra2mo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/ros2_fra2mo

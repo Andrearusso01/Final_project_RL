@@ -43,8 +43,8 @@ amcl:
     always_reset_initial_pose: true
     first_map_only: false
     initial_pose:
-      x: 0.0
-      y: 0.0
+      x: -9.2
+      y: 3.1
       z: 0.0
       yaw: 0.0
 
@@ -149,7 +149,7 @@ controller_server:
     goal_checker_plugin: "goal_checker"
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.1
+      xy_goal_tolerance: 0.25
       yaw_goal_tolerance: 0.2
       stateful: True
 
@@ -214,7 +214,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         enabled: True
-        inflation_radius: 0.15
+        inflation_radius: 0.4
         cost_scaling_factor: 1.0
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"

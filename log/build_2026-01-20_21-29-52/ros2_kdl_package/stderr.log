@@ -1,0 +1,8 @@
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:51:25:[m[K [01;35m[Kwarning: [m[Kcomparison of constant ‘[01m[K0[m[K’ with boolean expression is always true [[01;35m[K-Wbool-compare[m[K]
+   51 |     if([01;35m[Kkinematics_status>=0[m[K){
+      |        [01;35m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:[m[K In member function ‘[01m[Kvoid Iiwa_pub_sub::execute(std::shared_ptr<rclcpp_action::ServerGoalHandle<ros2_kdl_package::action::ExecuteTrajectory> >)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:99:24:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcurrent_f[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   99 |             KDL::Frame [01;35m[Kcurrent_f[m[K = robot_->getEEFrame();
+      |                        [01;35m[K^~~~~~~~~[m[K

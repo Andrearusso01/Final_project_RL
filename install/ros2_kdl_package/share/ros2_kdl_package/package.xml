@@ -16,6 +16,8 @@
   <depend>orocos_kdl</depend>
   <depend>kdl_parser</depend>
   <depend>urdf</depend>
+  
+  <depend>trajectory_msgs</depend>
 
   <depend>tf2</depend>
   <depend>tf2_ros</depend>

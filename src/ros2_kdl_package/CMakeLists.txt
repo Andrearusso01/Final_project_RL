@@ -22,6 +22,7 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(tf2 REQUIRED)             # Aggiunto tf2 base
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+find_package(trajectory_msgs REQUIRED)
 
 # ======== Generazione action ========
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -58,6 +59,7 @@ ament_target_dependencies(ros2_kdl_node
   tf2
   tf2_ros
   tf2_geometry_msgs
+  trajectory_msgs
 )
 
 # ======== Nodo CLIENT (Corretto) ========
@@ -71,6 +73,7 @@ ament_target_dependencies(ros2_kdl_node_client
   tf2                 # <--- Aggiunto
   tf2_ros             # <--- Aggiunto
   tf2_geometry_msgs   # <--- Aggiunto
+  trajectory_msgs
 )
 
 # ======== Nodo Esempio (Opzionale) ========

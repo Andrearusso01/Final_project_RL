@@ -12,6 +12,10 @@ module ros2_kdl_package {
       geometry_msgs::msg::Pose pose;
 
       int32 order;
+
+      @verbatim (language="comment", text=
+        "<--- AGGIUNTO: per i giunti del tavolo")
+      sequence<double> joints_target;
     };
     @verbatim (language="comment", text=
       "Result")

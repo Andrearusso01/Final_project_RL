@@ -1,0 +1,128 @@
+[0.039s] Invoking command in '/home/user/ros2_ws/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/m-explore-ros2/map_merge -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/multirobot_map_merge
+[0.061s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.247s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.257s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.310s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.316s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.327s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.354s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.383s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.453s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.457s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.688s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.790s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.817s] -- Found image_geometry: 3.2.1 (/opt/ros/humble/share/image_geometry/cmake)
+[0.872s] -- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)
+[0.954s] -- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.961s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.963s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.151s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.231s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.235s] download.sh: line 7: wget: command not found
+[1.236s] Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm
+[1.237s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: No such file or directory
+[1.237s] md5sum: WARNING: 1 listed file could not be read
+[1.238s] /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: FAILED open or read
+[1.238s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm does not match. Downloading it again
+[1.238s] download.sh: line 15: wget: command not found
+[1.239s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: No such file or directory
+[1.240s] md5sum: WARNING: 1 listed file could not be read
+[1.240s] /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: FAILED open or read
+[1.240s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm still does not match. Aborting.
+[1.243s] download.sh: line 7: wget: command not found
+[1.243s] Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm
+[1.245s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: No such file or directory
+[1.245s] /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: FAILED open or read
+[1.246s] md5sum: WARNING: 1 listed file could not be read
+[1.246s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm does not match. Downloading it again
+[1.246s] download.sh: line 15: wget: command not found
+[1.250s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: No such file or directory
+[1.250s] /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: FAILED open or read
+[1.250s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm still does not match. Aborting.
+[1.251s] md5sum: WARNING: 1 listed file could not be read
+[1.252s] download.sh: line 7: wget: command not found
+[1.252s] Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm
+[1.254s] /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: FAILED open or read
+[1.254s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: No such file or directory
+[1.254s] md5sum: WARNING: 1 listed file could not be read
+[1.254s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm does not match. Downloading it again
+[1.255s] download.sh: line 15: wget: command not found
+[1.257s] /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: FAILED open or read
+[1.257s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm still does not match. Aborting.
+[1.257s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: No such file or directory
+[1.258s] md5sum: WARNING: 1 listed file could not be read
+[1.261s] download.sh: line 7: wget: command not found
+[1.261s] Checking MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm
+[1.263s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: No such file or directory
+[1.263s] md5sum: WARNING: 1 listed file could not be read
+[1.263s] /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: FAILED open or read
+[1.264s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm does not match. Downloading it again
+[1.264s] download.sh: line 15: wget: command not found
+[1.266s] md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: No such file or directory
+[1.267s] md5sum: WARNING: 1 listed file could not be read
+[1.267s] /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: FAILED open or read
+[1.267s] MD5 sum of /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm still does not match. Aborting.
+[1.267s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.281s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.282s] -- Configured cppcheck include dirs: /home/user/ros2_ws/m-explore-ros2/map_merge/include;$<BUILD_INTERFACE:/home/user/ros2_ws/m-explore-ros2/map_merge/include>
+[1.282s] -- Configured cppcheck exclude dirs and/or files: 
+[1.282s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.284s] -- Added test 'lint_cmake' to check CMake code style
+[1.284s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.288s] -- Added test 'uncrustify' to check C / C++ code style
+[1.288s] -- Configured uncrustify additional arguments: 
+[1.288s] -- Added test 'xmllint' to check XML markup files
+[1.291s] -- Configuring done
+[1.437s] -- Generating done
+[1.450s] -- Build files have been written to: /home/user/ros2_ws/build/multirobot_map_merge
+[1.460s] Invoked command in '/home/user/ros2_ws/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/user/ros2_ws/m-explore-ros2/map_merge -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/install/multirobot_map_merge
+[1.462s] Invoking command in '/home/user/ros2_ws/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/multirobot_map_merge -- -j12 -l12
+[1.514s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[1.514s] [35m[1mConsolidate compiler generated dependencies of target combine_grids[0m
+[1.520s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[1.531s] [ 16%] Built target gtest_main
+[1.542s] [ 50%] Built target gtest
+[1.543s] [ 66%] Built target combine_grids
+[1.558s] [35m[1mConsolidate compiler generated dependencies of target test_merging_pipeline[0m
+[1.559s] [35m[1mConsolidate compiler generated dependencies of target map_merge[0m
+[1.584s] [ 83%] Built target test_merging_pipeline
+[1.599s] [100%] Built target map_merge
+[1.613s] Invoked command in '/home/user/ros2_ws/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/multirobot_map_merge -- -j12 -l12
+[1.615s] Invoking command in '/home/user/ros2_ws/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/multirobot_map_merge
+[1.623s] -- Install configuration: ""
+[1.624s] -- Execute custom install script
+[1.624s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/include/map_merge//map_merge.h
+[1.625s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/include/map_merge//ros1_names.hpp
+[1.625s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/from_map_server.launch.py
+[1.625s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/map_merge.launch.py
+[1.626s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/map_merge.rviz
+[1.626s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/bringup_launch.py
+[1.626s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/config/nav2_multirobot_params_1.yaml
+[1.626s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/config/nav2_multirobot_params_2.yaml
+[1.626s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/multi_tb3_simulation_launch.py
+[1.626s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/slam_toolbox.py
+[1.627s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/tb3_simulation_launch.py
+[1.627s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/worlds/world_only.model
+[1.627s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/config/params.yaml
+[1.627s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/lib/multirobot_map_merge/map_merge
+[1.628s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/library_path.sh
+[1.628s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/library_path.dsv
+[1.628s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/ament_index/resource_index/package_run_dependencies/multirobot_map_merge
+[1.628s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/ament_index/resource_index/parent_prefix_path/multirobot_map_merge
+[1.629s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/ament_prefix_path.sh
+[1.629s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/ament_prefix_path.dsv
+[1.629s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/path.sh
+[1.629s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/path.dsv
+[1.629s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.bash
+[1.630s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.sh
+[1.630s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.zsh
+[1.630s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.dsv
+[1.630s] -- Symlinking: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv
+[1.641s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/ament_index/resource_index/packages/multirobot_map_merge
+[1.641s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.642s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/ament_cmake_export_libraries-extras.cmake
+[1.642s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/multirobot_map_mergeConfig.cmake
+[1.642s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/multirobot_map_mergeConfig-version.cmake
+[1.642s] -- Up-to-date symlink: /home/user/ros2_ws/install/multirobot_map_merge/share/multirobot_map_merge/package.xml
+[1.642s] -- Up-to-date: /home/user/ros2_ws/install/multirobot_map_merge/lib/libcombine_grids.a
+[1.645s] Invoked command in '/home/user/ros2_ws/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ros2_ws/build/multirobot_map_merge

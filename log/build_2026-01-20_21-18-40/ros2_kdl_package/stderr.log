@@ -1,0 +1,8 @@
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:14:10:[m[K [01;31m[Kfatal error: [m[Ktrajectory_msgs/msg/joint_trajectory.hpp: No such file or directory
+   14 | #include [01;31m[K"trajectory_msgs/msg/joint_trajectory.hpp"[m[K // AGGIUNTO per inviare traiettorie
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/ros2_kdl_node.dir/build.make:76: CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:597: CMakeFiles/ros2_kdl_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 import os
 from launch import LaunchDescription
 from launch.actions import (
@@ -5,9 +7,10 @@ from launch.actions import (
     DeclareLaunchArgument, 
     SetEnvironmentVariable, 
     IncludeLaunchDescription, 
-    RegisterEventHandler
+    RegisterEventHandler,
+    ExecuteProcess  # <--- AGGIUNTO
 )
-from launch.event_handlers import OnProcessExit
+from launch.event_handlers import OnProcessExit, OnProcessStart # <--- AGGIUNTO OnProcessStart
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
@@ -78,7 +81,7 @@ def generate_launch_description():
                 ' parent:=world',
                 ' use_sim:=true',
                 ' namespace:=iiwa',
-                ' command_interface:=velocity',
+                ' command_interface:=position',
                 ' base_frame_file:=', iiwa_pose_config
             ]),
             value_type=str
@@ -105,50 +108,28 @@ def generate_launch_description():
         output='screen'
     )
 
-    # -------------------------
-    # BRIDGES & TF
-    # -------------------------
-
-    # 1. Bridge Gazebo <-> ROS 2
+    # --- Bridge ---
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         parameters=[{'config_file': bridge_config_file}],
         arguments=[
-            # --- ROBOT FRA2MO (Rover) ---
             '/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
             '/model/fra2mo/odometry@nav_msgs/msg/Odometry@ignition.msgs.Odometry',
             '/model/fra2mo/tf@tf2_msgs/msg/TFMessage@ignition.msgs.Pose_V',
             '/lidar@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
-
-            # --- SISTEMA ---
             '/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock',
-            
-            # --- CAMERA BRIDGE ---
             '/iiwa_camera/image_raw@sensor_msgs/msg/Image[ignition.msgs.Image',
             '/iiwa_camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
-
-            # --- BRACCIO IIWA ---
-            # Lettura stato giunti (per RViz)
             '/iiwa/joint_states@sensor_msgs/msg/JointState@ignition.msgs.Model',
-            #'/tf_static@tf2_msgs/msg/TFMessage[ignition.msgs.Pose_V',
-
-            # Invio comandi movimento
             '/iiwa/joint_trajectory@trajectory_msgs/msg/JointTrajectory]ignition.msgs.JointTrajectory',
-            
-            # Topic: /gripper/state
-        '/gripper/state@std_msgs/msg/Bool@ignition.msgs.Boolean',
-        
-        # Topic: /gripper/detach
-        '/gripper/detach@std_msgs/msg/Empty@ignition.msgs.Empty',
-        
-        # Topic: /gripper/attach
-        '/gripper/attach@std_msgs/msg/Empty@ignition.msgs.Empty'
+            '/gripper/state@std_msgs/msg/Bool@ignition.msgs.Boolean',
+            '/gripper/detach@std_msgs/msg/Empty@ignition.msgs.Empty',
+            '/gripper/attach@std_msgs/msg/Empty@ignition.msgs.Empty'
         ],
         output='screen'
     )
     
-    # 2. Odom TF Publisher
     odom_tf = Node(
         package='ros2_fra2mo',
         executable='dynamic_tf_publisher',
@@ -157,9 +138,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    # -------------------------
-    # Gazebo
-    # -------------------------
     gz_args = DeclareLaunchArgument(
         'gz_args',
         default_value=world_file + ' -r',
@@ -176,39 +154,28 @@ def generate_launch_description():
         launch_arguments={'gz_args': LaunchConfiguration('gz_args')}.items()
     )
 
-    # -------------------------
-    # Spawn robots
-    # -------------------------
-    
-    # Spawn fra2mo
     spawn_fra2mo = Node(
         package='ros_gz_sim',
         executable='create',
-	arguments=[
+        arguments=[
             '-topic', '/fra2mo/robot_description',
             '-name', 'fra2mo',
-            '-x', '0',
-            '-y', '0',
-            '-z', '0.15'
+            '-x', '-9.2', '-y', '3.1', '-z', '0.15'
         ],
         output='screen'
     )
     
-    # Spawn iiwa
     spawn_iiwa = Node(
         package='ros_gz_sim',
         executable='create',
         arguments=[
             '-topic', '/iiwa/robot_description',
             '-name', 'iiwa',
-            '-x', '8.0',
-            '-y', '-4.0',
-            '-z', '0.1'
+            '-x', '8.0', '-y', '-4.0', '-z', '0.1'
         ],
         output='screen'
     )
 
-    # --- Controllers (IIWA) ---
     joint_state_broadcaster = Node(
         package='controller_manager',
         executable='spawner',
@@ -217,37 +184,39 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Nota: arm_controller è commentato, uso velocity_controller
     arm_controller = Node(
         package='controller_manager',
         executable='spawner',
         arguments=['iiwa_arm_controller'],
         namespace='iiwa',
-       output='screen'
+        output='screen'
     )
 
-    velocity_controller = Node(
-        package='controller_manager',
-        executable='spawner',
-        output='log',
-        arguments=['velocity_controller', '-c', '/iiwa/controller_manager'],
-        namespace='iiwa'
-    )
-
-    # Gestore eventi: avvia i controller DOPO che iiwa è stato spawnato
     controllers_after_spawn = RegisterEventHandler(
         OnProcessExit(
             target_action=spawn_iiwa,
-            on_exit=[
-                joint_state_broadcaster,
-                #arm_controller,
-                velocity_controller
-            ]
+            on_exit=[joint_state_broadcaster, arm_controller]
         )
     )
     
-    # Nodo per unire gli alberi TF: world -> fra2mo/odom
-    # Questo permette al braccio di sapere dove si trova il rover rispetto a lui
+    # --- Gestione Detach Pacco ---
+    detach_package = ExecuteProcess(
+       cmd=['ros2', 'topic', 'pub', '--once', '/gripper/detach', 'std_msgs/msg/Empty', '{}'],
+       output='screen'
+    )
+    
+    detach_handler = RegisterEventHandler(
+       OnProcessStart(
+           target_action=bridge,
+           on_start=[
+               TimerAction(
+                   period=10.0,
+                   actions=[detach_package]
+               )
+           ]
+       )
+    )
+
     static_tf_world_to_fra2mo = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
@@ -255,10 +224,8 @@ def generate_launch_description():
         output='screen'
     )
 
-    # -------------------------
-    # Launch description
-    # -------------------------
     return LaunchDescription([
+        set_plugin_path,
         SetEnvironmentVariable(
             name="GZ_SIM_RESOURCE_PATH",
             value=os.path.join(get_package_share_directory('ros2_fra2mo'), 'models') + ':' +
@@ -275,5 +242,6 @@ def generate_launch_description():
         spawn_fra2mo,
         iiwa_rsp,
         spawn_iiwa,
-        controllers_after_spawn
+        controllers_after_spawn,
+        detach_handler # <--- AGGIUNTO QUI per farlo attivare
     ])

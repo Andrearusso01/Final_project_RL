@@ -1,0 +1,53 @@
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_example.cpp:51:25:[m[K [01;35m[Kwarning: [m[Kcomparison of constant ‘[01m[K0[m[K’ with boolean expression is always true [[01;35m[K-Wbool-compare[m[K]
+   51 |     if([01;35m[Kkinematics_status>=0[m[K){
+      |        [01;35m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:[m[K In member function ‘[01m[Kvoid Iiwa_pub_sub::execute(std::shared_ptr<rclcpp_action::ServerGoalHandle<ros2_kdl_package::action::ExecuteTrajectory> >)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:92:44:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst nanoseconds&[m[K’ {aka ‘[01m[Kconst std::chrono::duration<long int, std::ratio<1, 1000000000> >&[m[K’} from expression of type ‘[01m[Kstd::chrono::duration<double>[m[K’
+   92 |             rclcpp::sleep_for(std::chrono::[01;31m[Kduration<double>(traj_duration_ + 0.5)[m[K);
+      |                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:10[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/utilities.hpp:233:36:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kbool rclcpp::sleep_for(const nanoseconds&, rclcpp::Context::SharedPtr)[m[K’
+  233 |   [01;36m[Kconst std::chrono::nanoseconds & nanoseconds[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:108:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKDLRobot::getInverseKinematics(KDL::Frame&, KDL::Frame&, KDL::JntArray&)[m[K’
+  108 |             [01;31m[Krobot_->getInverseKinematics(current_f, target_f, q_target_kdl)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:16[m[K:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/include/kdl_robot.h:63:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid KDLRobot::getInverseKinematics(KDL::Frame&, KDL::JntArray&)[m[K’
+   63 |     void [01;36m[KgetInverseKinematics[m[K(KDL::Frame &f, KDL::JntArray &q);
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/include/kdl_robot.h:63:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:113:44:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst nanoseconds&[m[K’ {aka ‘[01m[Kconst std::chrono::duration<long int, std::ratio<1, 1000000000> >&[m[K’} from expression of type ‘[01m[Kstd::chrono::duration<double>[m[K’
+  113 |             rclcpp::sleep_for(std::chrono::[01;31m[Kduration<double>(traj_duration_ + 0.5)[m[K);
+      |                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:10[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/utilities.hpp:233:36:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kbool rclcpp::sleep_for(const nanoseconds&, rclcpp::Context::SharedPtr)[m[K’
+  233 |   [01;36m[Kconst std::chrono::nanoseconds & nanoseconds[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/ros2_kdl_node.dir/build.make:76: CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:597: CMakeFiles/ros2_kdl_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

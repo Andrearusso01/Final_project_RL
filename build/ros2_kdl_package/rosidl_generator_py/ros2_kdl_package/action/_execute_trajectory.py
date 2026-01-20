@@ -5,7 +5,12 @@
 
 # Import statements for member types
 
+# Member 'joints_target'
+import array  # noqa: E402, I100
+
 import builtins  # noqa: E402, I100
+
+import math  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
 
@@ -61,16 +66,19 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
     __slots__ = [
         '_pose',
         '_order',
+        '_joints_target',
     ]
 
     _fields_and_field_types = {
         'pose': 'geometry_msgs/Pose',
         'order': 'int32',
+        'joints_target': 'sequence<double>',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Pose'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -80,6 +88,7 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
         from geometry_msgs.msg import Pose
         self.pose = kwargs.get('pose', Pose())
         self.order = kwargs.get('order', int())
+        self.joints_target = array.array('d', kwargs.get('joints_target', []))
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -113,6 +122,8 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
         if self.pose != other.pose:
             return False
         if self.order != other.order:
+            return False
+        if self.joints_target != other.joints_target:
             return False
         return True
 
@@ -149,6 +160,34 @@ class ExecuteTrajectory_Goal(metaclass=Metaclass_ExecuteTrajectory_Goal):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'order' field must be an integer in [-2147483648, 2147483647]"
         self._order = value
+
+    @builtins.property
+    def joints_target(self):
+        """Message field 'joints_target'."""
+        return self._joints_target
+
+    @joints_target.setter
+    def joints_target(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'd', \
+                "The 'joints_target' array.array() must have the type code of 'd'"
+            self._joints_target = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'joints_target' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._joints_target = array.array('d', value)
 
 
 # Import statements for member types
@@ -279,7 +318,8 @@ class ExecuteTrajectory_Result(metaclass=Metaclass_ExecuteTrajectory_Result):
 # already imported above
 # import builtins
 
-import math  # noqa: E402, I100
+# already imported above
+# import math
 
 # Member 'position_error'
 import numpy  # noqa: E402, I100

@@ -21,16 +21,32 @@ namespace action
 namespace builder
 {
 
+class Init_ExecuteTrajectory_Goal_joints_target
+{
+public:
+  explicit Init_ExecuteTrajectory_Goal_joints_target(::ros2_kdl_package::action::ExecuteTrajectory_Goal & msg)
+  : msg_(msg)
+  {}
+  ::ros2_kdl_package::action::ExecuteTrajectory_Goal joints_target(::ros2_kdl_package::action::ExecuteTrajectory_Goal::_joints_target_type arg)
+  {
+    msg_.joints_target = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::ros2_kdl_package::action::ExecuteTrajectory_Goal msg_;
+};
+
 class Init_ExecuteTrajectory_Goal_order
 {
 public:
   explicit Init_ExecuteTrajectory_Goal_order(::ros2_kdl_package::action::ExecuteTrajectory_Goal & msg)
   : msg_(msg)
   {}
-  ::ros2_kdl_package::action::ExecuteTrajectory_Goal order(::ros2_kdl_package::action::ExecuteTrajectory_Goal::_order_type arg)
+  Init_ExecuteTrajectory_Goal_joints_target order(::ros2_kdl_package::action::ExecuteTrajectory_Goal::_order_type arg)
   {
     msg_.order = std::move(arg);
-    return std::move(msg_);
+    return Init_ExecuteTrajectory_Goal_joints_target(msg_);
   }
 
 private:

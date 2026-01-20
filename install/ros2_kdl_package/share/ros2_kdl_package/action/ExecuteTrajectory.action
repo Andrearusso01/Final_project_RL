@@ -1,6 +1,7 @@
 # Goal
 geometry_msgs/Pose pose
 int32 order
+float64[] joints_target      # <--- AGGIUNTO: per i giunti del tavolo
 ---
 # Result
 bool success

@@ -64,6 +64,9 @@ struct ExecuteTrajectory_Goal_
   using _order_type =
     int32_t;
   _order_type order;
+  using _joints_target_type =
+    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
+  _joints_target_type joints_target;
 
   // setters for named parameter idiom
   Type & set__pose(
@@ -76,6 +79,12 @@ struct ExecuteTrajectory_Goal_
     const int32_t & _arg)
   {
     this->order = _arg;
+    return *this;
+  }
+  Type & set__joints_target(
+    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
+  {
+    this->joints_target = _arg;
     return *this;
   }
 
@@ -125,6 +134,9 @@ struct ExecuteTrajectory_Goal_
       return false;
     }
     if (this->order != other.order) {
+      return false;
+    }
+    if (this->joints_target != other.joints_target) {
       return false;
     }
     return true;

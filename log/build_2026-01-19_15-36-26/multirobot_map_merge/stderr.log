@@ -1,0 +1,24 @@
+download.sh: line 7: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map00.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 7: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/map05.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 7: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2011-08-09-12-22-52.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 7: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read
+download.sh: line 15: wget: command not found
+md5sum: /home/user/ros2_ws/build/multirobot_map_merge/2012-01-28-11-12-01.pgm: No such file or directory
+md5sum: WARNING: 1 listed file could not be read

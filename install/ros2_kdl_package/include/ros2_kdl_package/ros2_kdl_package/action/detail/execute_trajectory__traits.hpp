@@ -40,6 +40,24 @@ inline void to_flow_style_yaml(
   {
     out << "order: ";
     rosidl_generator_traits::value_to_yaml(msg.order, out);
+    out << ", ";
+  }
+
+  // member: joints_target
+  {
+    if (msg.joints_target.size() == 0) {
+      out << "joints_target: []";
+    } else {
+      out << "joints_target: [";
+      size_t pending_items = msg.joints_target.size();
+      for (auto item : msg.joints_target) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -65,6 +83,26 @@ inline void to_block_style_yaml(
     out << "order: ";
     rosidl_generator_traits::value_to_yaml(msg.order, out);
     out << "\n";
+  }
+
+  // member: joints_target
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.joints_target.size() == 0) {
+      out << "joints_target: []\n";
+    } else {
+      out << "joints_target:\n";
+      for (auto item : msg.joints_target) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
   }
 }  // NOLINT(readability/fn_size)
 
@@ -114,11 +152,11 @@ inline const char * name<ros2_kdl_package::action::ExecuteTrajectory_Goal>()
 
 template<>
 struct has_fixed_size<ros2_kdl_package::action::ExecuteTrajectory_Goal>
-  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::Pose>::value> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<ros2_kdl_package::action::ExecuteTrajectory_Goal>
-  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::Pose>::value> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<ros2_kdl_package::action::ExecuteTrajectory_Goal>

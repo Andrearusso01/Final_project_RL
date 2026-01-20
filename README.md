@@ -29,7 +29,7 @@ ign topic -t /gripper/detach -m ignition.msgs.Empty -p ''
 ```
 ign topic -t /gripper/attach -m ignition.msgs.Empty -p ''
 ```
-To move iiwa:
+To move iiwa (this is for the descending phase):
 ```
 ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
   joint_names: [
@@ -38,15 +38,24 @@ ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs
   ],
   points: [
     {
-      positions: [-1.57, 0.5, 0.0, -1.2, 0.0, 1.57, 0.0],
+      positions: [-0.4, -0.9, 0.0, 1.3, 0.0, -0.7, 0.0],
       time_from_start: {sec: 4, nanosec: 0}
-    },
-    {
-      positions: [-1.57, 1.05, 0.0, -0.85, 0.0, 1.57, 0.0],
-      time_from_start: {sec: 8, nanosec: 0}
     }
   ]
 }"
-
-
+```
+To place the package:
+```
+ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
+  joint_names: [
+    'iiwa_joint_a1', 'iiwa_joint_a2', 'iiwa_joint_a3', 
+    'iiwa_joint_a4', 'iiwa_joint_a5', 'iiwa_joint_a6', 'iiwa_joint_a7'
+  ],
+  points: [
+    {
+      positions: [0.2, 0.9, 0.0, -1.3, 0.0, 0.7, 0.0],
+      time_from_start: {sec: 4, nanosec: 0}
+    }
+  ]
+}"
 ```

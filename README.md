@@ -1,9 +1,17 @@
 # Final_project
-In order to do the control vision:  
 Run gazebo:
 ```
 ros2 launch ros2_fra2mo warehouse.launch.py
 ```
+To set a goal with autonomous navigation (REMEMBER TO DETACH FIRST):
+```
+ros2 launch ros2_fra2mo fra2mo_navigation.launch.py
+```
+In another terminal:
+```
+ros2 run ros2_fra2mo follow_waypoints.py
+```
+In order to do the control vision:  
 Open rqt -> /iiwa_camera/image_raw.  
 Run the kdl node: 
 ```
@@ -21,8 +29,33 @@ ign topic -t /gripper/detach -m ignition.msgs.Empty -p ''
 ```
 ign topic -t /gripper/attach -m ignition.msgs.Empty -p ''
 ```
-To move iiwa:
+To move iiwa (this is for the descending phase):
 ```
-ros2 topic pub /iiwa/velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.0, 0.0,  0.0, 0.0, 0.0, 0.0, 0.0]}"
-
+ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
+  joint_names: [
+    'iiwa_joint_a1', 'iiwa_joint_a2', 'iiwa_joint_a3', 
+    'iiwa_joint_a4', 'iiwa_joint_a5', 'iiwa_joint_a6', 'iiwa_joint_a7'
+  ],
+  points: [
+    {
+      positions: [-0.4, -0.9, 0.0, 1.3, 0.0, -0.7, 0.0],
+      time_from_start: {sec: 4, nanosec: 0}
+    }
+  ]
+}"
+```
+To place the package:
+```
+ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
+  joint_names: [
+    'iiwa_joint_a1', 'iiwa_joint_a2', 'iiwa_joint_a3', 
+    'iiwa_joint_a4', 'iiwa_joint_a5', 'iiwa_joint_a6', 'iiwa_joint_a7'
+  ],
+  points: [
+    {
+      positions: [0.2, 0.9, 0.0, -1.3, 0.0, 0.7, 0.0],
+      time_from_start: {sec: 4, nanosec: 0}
+    }
+  ]
+}"
 ```

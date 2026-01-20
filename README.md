@@ -3,10 +3,11 @@ Run gazebo:
 ```
 ros2 launch ros2_fra2mo warehouse.launch.py
 ```
-To set a goal with autonomous navigation:
+To set a goal with autonomous navigation (REMEMBER TO DETACH FIRST):
 ```
 ros2 launch ros2_fra2mo fra2mo_navigation.launch.py
 ```
+In another terminal:
 ```
 ros2 run ros2_fra2mo follow_waypoints.py
 ```

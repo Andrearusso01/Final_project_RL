@@ -1,0 +1,183 @@
+[0.035s] Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[0.124s] [  2%] Built target ros2_kdl_package__cpp
+[0.134s] [ 10%] Built target ros2_kdl_package__rosidl_generator_c
+[0.144s] [ 10%] Built target ament_cmake_python_copy_ros2_kdl_package
+[0.161s] [ 15%] Built target ros2_kdl_node_example
+[0.204s] [ 22%] Built target ros2_kdl_package__rosidl_typesupport_cpp
+[0.211s] [ 30%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp
+[0.212s] [ 37%] Built target ros2_kdl_package__rosidl_typesupport_introspection_cpp
+[0.212s] [ 45%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c
+[0.213s] [ 52%] Built target ros2_kdl_package__rosidl_typesupport_c
+[0.214s] [ 60%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c
+[0.225s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_node_client[0m
+[0.251s] [ 60%] Built target ros2_kdl_package
+[0.252s] [ 72%] Built target ros2_kdl_node
+[0.253s] [ 75%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node_client.dir/src/ros2_kdl_node_client.cpp.o[0m
+[0.291s] [ 77%] Built target ros2_kdl_package__py
+[0.313s] [ 82%] Built target ros2_kdl_package__rosidl_generator_py
+[0.353s] [ 87%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c__pyext
+[0.353s] [ 97%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext
+[0.354s] [ 97%] Built target ros2_kdl_package__rosidl_typesupport_c__pyext
+[0.504s] running egg_info
+[0.504s] writing ros2_kdl_package.egg-info/PKG-INFO
+[0.504s] writing dependency_links to ros2_kdl_package.egg-info/dependency_links.txt
+[0.505s] writing top-level names to ros2_kdl_package.egg-info/top_level.txt
+[0.507s] reading manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[0.507s] writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[0.531s] [ 97%] Built target ament_cmake_python_build_ros2_kdl_package_egg
+[2.505s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:127:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+[2.505s]   127 |     }
+[2.505s]       |      [01;31m[K^[m[K
+[2.505s]       |      [32m[K;[m[K
+[2.505s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K In constructor ‘[01m[KPickPlaceClient::PickPlaceClient()[m[K’:
+[2.505s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:23:52:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KPickPlaceClient[m[K’ does not have any field named ‘[01m[Kcurrent_state_[m[K’
+[2.505s]    23 |     PickPlaceClient() : Node("pick_place_client"), [01;31m[Kcurrent_state_[m[K(State::SEARCHING) {
+[2.505s]       |                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.519s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:25:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_client_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_action_client_t[m[K’?
+[2.519s]    25 |         [01;31m[Kaction_client_[m[K = rclcpp_action::create_client<ExecuteTrajectory>(this, "/iiwa/ExecuteTrajectory");
+[2.519s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.519s]       |         [32m[Krcl_action_client_t[m[K
+[2.529s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Karuco_sub_[m[K’ was not declared in this scope
+[2.529s]    27 |         [01;31m[Karuco_sub_[m[K = this->create_subscription<geometry_msgs::msg::PoseStamped>(
+[2.529s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.572s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:30:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ was not declared in this scope
+[2.572s]    30 |         [01;31m[Kattach_pub_[m[K = this->create_publisher<std_msgs::msg::Empty>("/gripper/attach", 10);
+[2.572s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.579s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:31:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ was not declared in this scope
+[2.579s]    31 |         [01;31m[Kdetach_pub_[m[K = this->create_publisher<std_msgs::msg::Empty>("/gripper/detach", 10);
+[2.579s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.582s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:36:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[2.582s]    36 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(500ms, std::bind(&PickPlaceClient::start_search, this));
+[2.582s]       |         [01;31m[K^~~~~~[m[K
+[2.582s]       |         [32m[Ktimer_t[m[K
+[2.599s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K In member function ‘[01m[Kvoid PickPlaceClient::start_search()[m[K’:
+[2.599s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:57:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[2.599s]    57 |         [01;31m[Ktimer_[m[K->cancel(); // Eseguito una volta sola all'avvio
+[2.600s]       |         [01;31m[K^~~~~~[m[K
+[2.600s]       |         [32m[Ktimer_t[m[K
+[2.607s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:59:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksend_joint_goal[m[K’ was not declared in this scope
+[2.607s]    59 |         [01;31m[Ksend_joint_goal[m[K(joints_search_);
+[2.607s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.614s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K In member function ‘[01m[Kvoid PickPlaceClient::aruco_callback(geometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.614s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:64:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state_[m[K’ was not declared in this scope
+[2.614s]    64 |         if ([01;31m[Kcurrent_state_[m[K == State::SEARCHING) {
+[2.614s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.620s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:76:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_client_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_action_client_t[m[K’?
+[2.620s]    76 |             [01;31m[Kaction_client_[m[K->async_cancel_all_goals();
+[2.620s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.620s]       |             [32m[Krcl_action_client_t[m[K
+[2.626s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K In member function ‘[01m[Kvoid PickPlaceClient::result_callback(const rclcpp_action::ClientGoalHandle<ros2_kdl_package::action::ExecuteTrajectory>::WrappedResult&)[m[K’:
+[2.626s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:83:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state_[m[K’ was not declared in this scope
+[2.626s]    83 |         if ([01;31m[Kcurrent_state_[m[K == State::CANCELLING) {
+[2.626s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.633s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:86:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksend_joint_goal[m[K’ was not declared in this scope
+[2.633s]    86 |             [01;31m[Ksend_joint_goal[m[K(joints_pick_);
+[2.633s]       |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.638s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:94:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ was not declared in this scope
+[2.638s]    94 |                 [01;31m[Kattach_pub_[m[K->publish(std_msgs::msg::Empty());
+[2.638s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[2.645s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:99:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ksend_joint_goal[m[K’ was not declared in this scope
+[2.645s]    99 |                 [01;31m[Ksend_joint_goal[m[K(joints_table_);
+[2.645s]       |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.651s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:109:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ was not declared in this scope
+[2.651s]   109 |                 [01;31m[Kdetach_pub_[m[K->publish(std_msgs::msg::Empty());
+[2.651s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[2.658s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:117:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ksend_joint_goal[m[K’ was not declared in this scope
+[2.658s]   117 |                 [01;31m[Ksend_joint_goal[m[K(joints_safe_lift_);
+[2.658s]       |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.662s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K In function ‘[01m[Kvoid send_joint_goal(std::vector<double, std::allocator<double> >)[m[K’:
+[2.662s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:130:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_client_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_action_client_t[m[K’?
+[2.662s]   130 |         if (![01;31m[Kaction_client_[m[K->wait_for_action_server(5s)) {
+[2.662s]       |              [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.662s]       |              [32m[Krcl_action_client_t[m[K
+[2.664s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.664s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.665s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.665s]                  from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:7[m[K:
+[2.665s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:131:26:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.665s]   131 |             RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Server non trovato!");
+[2.665s]       |                          [01;31m[K^~~~[m[K
+[2.665s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:131:26:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.665s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:131:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.665s]   131 |             [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Server non trovato!");
+[2.665s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[2.666s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.666s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.666s]                  from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:7[m[K:
+[2.666s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:131:26:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.667s]   131 |             RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Server non trovato!");
+[2.667s]       |                          [01;31m[K^~~~[m[K
+[2.667s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:131:26:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.667s]   131 |             RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Server non trovato!");
+[2.667s]       |                          [01;31m[K^~~~[m[K
+[2.667s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:134:25:[m[K [01;31m[Kerror: [m[K‘[01m[KExecuteTrajectory[m[K’ has not been declared
+[2.667s]   134 |         auto goal_msg = [01;31m[KExecuteTrajectory[m[K::Goal();
+[2.667s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.667s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:137:43:[m[K [01;31m[Kerror: [m[K‘[01m[KExecuteTrajectory[m[K’ was not declared in this scope; did you mean ‘[01m[Kros2_kdl_package::action::ExecuteTrajectory[m[K’?
+[2.667s]   137 |         auto opts = rclcpp_action::Client<[01;31m[KExecuteTrajectory[m[K>::SendGoalOptions();
+[2.667s]       |                                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.667s]       |                                           [32m[Kros2_kdl_package::action::ExecuteTrajectory[m[K
+[2.668s] In file included from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/execute_trajectory.hpp:7[m[K,
+[2.668s]                  from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:11[m[K:
+[2.668s] [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/detail/execute_trajectory__struct.hpp:1086:34:[m[K [01;36m[Knote: [m[K‘[01m[Kros2_kdl_package::action::ExecuteTrajectory[m[K’ declared here
+[2.668s]  1086 | typedef struct ExecuteTrajectory [01;36m[KExecuteTrajectory[m[K;
+[2.668s]       |                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.668s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:137:60:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.668s]   137 |         auto opts = rclcpp_action::Client<ExecuteTrajectory[01;31m[K>[m[K::SendGoalOptions();
+[2.668s]       |                                                            [01;31m[K^[m[K
+[2.668s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:138:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PickPlaceClient::result_callback(const rclcpp_action::ClientGoalHandle<ros2_kdl_package::action::ExecuteTrajectory>::WrappedResult&)[m[K’ is private within this context
+[2.668s]   138 |         opts.result_callback = std::bind(&PickPlaceClient::[01;31m[Kresult_callback[m[K, this, std::placeholders::_1);
+[2.668s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.668s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:80:10:[m[K [01;36m[Knote: [m[Kdeclared private here
+[2.668s]    80 |     void [01;36m[Kresult_callback[m[K(const GoalHandle::WrappedResult & result) {
+[2.668s]       |          [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.668s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:138:77:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.669s]   138 |         opts.result_callback = std::bind(&PickPlaceClient::result_callback, [01;31m[Kthis[m[K, std::placeholders::_1);
+[2.669s]       |                                                                             [01;31m[K^~~~[m[K
+[2.669s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:139:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_client_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_action_client_t[m[K’?
+[2.669s]   139 |         [01;31m[Kaction_client_[m[K->async_send_goal(goal_msg, opts);
+[2.669s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.669s]       |         [32m[Krcl_action_client_t[m[K
+[2.670s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K At global scope:
+[2.670s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:142:5:[m[K [01;31m[Kerror: [m[K‘[01m[KState[m[K’ does not name a type; did you mean ‘[01m[K_xstate[m[K’?
+[2.670s]   142 |     [01;31m[KState[m[K current_state_;
+[2.670s]       |     [01;31m[K^~~~~[m[K
+[2.670s]       |     [32m[K_xstate[m[K
+[2.670s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:143:27:[m[K [01;31m[Kerror: [m[K‘[01m[KExecuteTrajectory[m[K’ was not declared in this scope; did you mean ‘[01m[Kros2_kdl_package::action::ExecuteTrajectory[m[K’?
+[2.670s]   143 |     rclcpp_action::Client<[01;31m[KExecuteTrajectory[m[K>::SharedPtr action_client_;
+[2.670s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.670s]       |                           [32m[Kros2_kdl_package::action::ExecuteTrajectory[m[K
+[2.670s] In file included from [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/execute_trajectory.hpp:7[m[K,
+[2.670s]                  from [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:11[m[K:
+[2.670s] [01m[K/home/user/ros2_ws/build/ros2_kdl_package/rosidl_generator_cpp/ros2_kdl_package/action/detail/execute_trajectory__struct.hpp:1086:34:[m[K [01;36m[Knote: [m[K‘[01m[Kros2_kdl_package::action::ExecuteTrajectory[m[K’ declared here
+[2.670s]  1086 | typedef struct ExecuteTrajectory [01;36m[KExecuteTrajectory[m[K;
+[2.670s]       |                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.671s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:143:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.671s]   143 |     rclcpp_action::Client<ExecuteTrajectory[01;31m[K>[m[K::SharedPtr action_client_;
+[2.671s]       |                                            [01;31m[K^[m[K
+[2.671s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:143:57:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kaction_client_[m[K’
+[2.671s]   143 |     rclcpp_action::Client<ExecuteTrajectory>::SharedPtr [01;31m[Kaction_client_[m[K;
+[2.671s]       |                                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.672s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:148:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.672s]   148 | [01;31m[K}[m[K;
+[2.672s]       | [01;31m[K^[m[K
+[4.515s] gmake[2]: *** [CMakeFiles/ros2_kdl_node_client.dir/build.make:76: CMakeFiles/ros2_kdl_node_client.dir/src/ros2_kdl_node_client.cpp.o] Error 1
+[4.516s] gmake[1]: *** [CMakeFiles/Makefile2:624: CMakeFiles/ros2_kdl_node_client.dir/all] Error 2
+[4.516s] gmake: *** [Makefile:146: all] Error 2
+[4.518s] Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12

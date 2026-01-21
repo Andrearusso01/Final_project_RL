@@ -13,7 +13,7 @@ waypoints:
   - {x: -1.8, y: -2.6, z: 0.0, qz: 0.0, qw: 1.0}   # WP 4 (Ingresso corridoio)
   - {x: 3.0, y: -2.6, z: 0.0, qz: 0.0, qw: 1.0}    # WP 4.5 (Metà corridoio)
   - {x: 6.5, y: -3.2, z: 0.0, qz: 0.99994, qw: 0.01079} # WP 5 (Uscita - PIU LARGO)
-  - {x: 7.20, y: -4.10, z: 0.0, qz: -0.7643, qw: 0.6448} # WP 6 (Target finale)
+  - {x: 7.20, y: -4.10, z: 0.0, qz: -0.7, qw: 0.7} # WP 6 (Target finale)
 '''
 
 def create_pose(navigator, wp_data):
@@ -40,7 +40,7 @@ def main():
     initial_pose.pose.position.y = 3.1
     initial_pose.pose.orientation.w = 1.0
     
-    print("Inizializzazione Nav2...")
+    print("Initialization Nav2...")
     navigator.setInitialPose(initial_pose)
     navigator.waitUntilNav2Active()
 
@@ -49,14 +49,14 @@ def main():
         
         # Al punto 5 e 6, proviamo a resettare SOLO se Nav2 è in crisi
         if wp_idx >= 5:
-            print(f"--- RESET DI SICUREZZA PER WAYPOINT {wp_idx} ---")
+            print(f"--- WAYPOINT SECURITY RESET {wp_idx} ---")
             # Usiamo la posa del punto PRECEDENTE per dare stabilità
             reset_pose = create_pose(navigator, waypoints[i-1]) 
             navigator.setInitialPose(reset_pose)
             time.sleep(1.0)
 
         goal_pose = create_pose(navigator, wp)
-        print(f"Andando al Waypoint {wp_idx}...")
+        print(f"Going to waypoint {wp_idx}...")
         navigator.goToPose(goal_pose)
 
         while not navigator.isTaskComplete():
@@ -68,13 +68,13 @@ def main():
         
         result = navigator.getResult()
         if result == TaskResult.SUCCEEDED:
-            print(f"Waypoint {wp_idx} raggiunto!")
+            print(f"Waypoint {wp_idx} reached!")
         else:
-            print(f"Waypoint {wp_idx} fallito. Provo a forzare il passaggio al prossimo...")
+            print(f"Waypoint {wp_idx} failed. Forcing on the next one...")
             # Non usciamo, proviamo a passare al prossimo waypoint comunque
             continue
 
-    print("MISSIONE TERMINATA")
+    print("MISSION COMPLETED")
     exit(0)
 
 if __name__ == '__main__':

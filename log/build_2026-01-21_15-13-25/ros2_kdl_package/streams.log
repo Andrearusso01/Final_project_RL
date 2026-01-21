@@ -1,0 +1,35 @@
+[0.045s] Invoking command in '/home/user/ros2_ws/build/ros2_kdl_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12
+[0.216s] [  2%] Built target ros2_kdl_package__cpp
+[0.216s] [ 10%] Built target ros2_kdl_package__rosidl_generator_c
+[0.217s] [ 15%] Built target ros2_kdl_node_example
+[0.217s] [ 15%] Built target ament_cmake_python_copy_ros2_kdl_package
+[0.224s] [ 22%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c
+[0.227s] [ 30%] Built target ros2_kdl_package__rosidl_typesupport_introspection_cpp
+[0.229s] [ 40%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp
+[0.229s] [ 45%] Built target ros2_kdl_package__rosidl_typesupport_cpp
+[0.234s] [ 52%] Built target ros2_kdl_package__rosidl_typesupport_c
+[0.235s] [ 60%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c
+[0.259s] [35m[1mConsolidate compiler generated dependencies of target ros2_kdl_node[0m
+[0.270s] [ 65%] Built target ros2_kdl_node_client
+[0.271s] [ 65%] Built target ros2_kdl_package
+[0.353s] [ 70%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o[0m
+[0.353s] [ 70%] Built target ros2_kdl_package__py
+[0.353s] [ 75%] Built target ros2_kdl_package__rosidl_generator_py
+[0.383s] [ 80%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext
+[0.383s] [ 85%] Built target ros2_kdl_package__rosidl_typesupport_c__pyext
+[0.387s] [ 90%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c__pyext
+[0.526s] running egg_info
+[0.527s] writing ros2_kdl_package.egg-info/PKG-INFO
+[0.527s] writing dependency_links to ros2_kdl_package.egg-info/dependency_links.txt
+[0.527s] writing top-level names to ros2_kdl_package.egg-info/top_level.txt
+[0.529s] reading manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[0.530s] writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[0.554s] [ 90%] Built target ament_cmake_python_build_ros2_kdl_package_egg
+[3.841s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:[m[K In member function ‘[01m[Kvoid Iiwa_pub_sub::execute(std::shared_ptr<rclcpp_action::ServerGoalHandle<ros2_kdl_package::action::ExecuteTrajectory> >)[m[K’:
+[3.841s] [01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:152:51:[m[K [01;31m[Kerror: [m[Kvoid value not ignored as it ought to be
+[3.841s]   152 |             int ret = [01;31m[Krobot_->getInverseKinematics(target_f, q_target_kdl)[m[K;
+[3.841s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.473s] gmake[2]: *** [CMakeFiles/ros2_kdl_node.dir/build.make:76: CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o] Error 1
+[11.474s] gmake[1]: *** [CMakeFiles/Makefile2:597: CMakeFiles/ros2_kdl_node.dir/all] Error 2
+[11.474s] gmake: *** [Makefile:146: all] Error 2
+[11.476s] Invoked command in '/home/user/ros2_ws/build/ros2_kdl_package' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ros2_ws/build/ros2_kdl_package -- -j12 -l12

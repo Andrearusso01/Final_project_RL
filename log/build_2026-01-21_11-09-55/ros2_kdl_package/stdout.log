@@ -1,0 +1,26 @@
+[  2%] Built target ros2_kdl_package__cpp
+[ 10%] Built target ros2_kdl_package__rosidl_generator_c
+[ 10%] Built target ament_cmake_python_copy_ros2_kdl_package
+[ 15%] Built target ros2_kdl_node_example
+[ 22%] Built target ros2_kdl_package__rosidl_typesupport_introspection_cpp
+[ 30%] Built target ros2_kdl_package__rosidl_typesupport_cpp
+[ 37%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_cpp
+[ 45%] Built target ros2_kdl_package__rosidl_typesupport_c
+[ 52%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c
+[ 60%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c
+[35m[1mConsolidate compiler generated dependencies of target ros2_kdl_node_client[0m
+[ 60%] Built target ros2_kdl_package
+[ 62%] [32mBuilding CXX object CMakeFiles/ros2_kdl_node_client.dir/src/ros2_kdl_node_client.cpp.o[0m
+[ 75%] Built target ros2_kdl_node
+[ 77%] Built target ros2_kdl_package__py
+[ 82%] Built target ros2_kdl_package__rosidl_generator_py
+[ 87%] Built target ros2_kdl_package__rosidl_typesupport_fastrtps_c__pyext
+[ 92%] Built target ros2_kdl_package__rosidl_typesupport_c__pyext
+[ 97%] Built target ros2_kdl_package__rosidl_typesupport_introspection_c__pyext
+running egg_info
+writing ros2_kdl_package.egg-info/PKG-INFO
+writing dependency_links to ros2_kdl_package.egg-info/dependency_links.txt
+writing top-level names to ros2_kdl_package.egg-info/top_level.txt
+reading manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+writing manifest file 'ros2_kdl_package.egg-info/SOURCES.txt'
+[ 97%] Built target ament_cmake_python_build_ros2_kdl_package_egg

@@ -262,10 +262,10 @@
 </model>
 
     
-    <!-- Docking Station Base -->
+    <!-- Docking Station Base 
 <model name="docking_station">
   <static>true</static>
-  <!-- posizione docking -->
+  <!-- posizione docking 
   <pose>8.0 -4.0 0.1 0 0 1.57</pose>
 
   <link name="base_link">
@@ -290,7 +290,7 @@
 </visual>
 
   </link>
-</model>
+</model>-->
 
 
     <!-- AR markers -->

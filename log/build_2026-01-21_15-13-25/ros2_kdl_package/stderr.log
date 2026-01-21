@@ -1,0 +1,7 @@
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:[m[K In member function ‘[01m[Kvoid Iiwa_pub_sub::execute(std::shared_ptr<rclcpp_action::ServerGoalHandle<ros2_kdl_package::action::ExecuteTrajectory> >)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node.cpp:152:51:[m[K [01;31m[Kerror: [m[Kvoid value not ignored as it ought to be
+  152 |             int ret = [01;31m[Krobot_->getInverseKinematics(target_f, q_target_kdl)[m[K;
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/ros2_kdl_node.dir/build.make:76: CMakeFiles/ros2_kdl_node.dir/src/ros2_kdl_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:597: CMakeFiles/ros2_kdl_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

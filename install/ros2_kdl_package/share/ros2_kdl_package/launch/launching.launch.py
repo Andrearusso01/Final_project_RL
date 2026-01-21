@@ -17,7 +17,7 @@ def generate_launch_description():
     # --- ARGOMENTI ---
     cmd_interface_arg = DeclareLaunchArgument(
         'cmd_interface', 
-        default_value='velocity',
+        default_value='position',
         description='Select controller: position, velocity or effort'
     )
     
@@ -49,8 +49,8 @@ def generate_launch_description():
             'image_is_rect': True,
             'marker_size': 0.08,         # Dimensione del tag in metri
             'marker_id': 201,            # ID del tag (assicurati coincida con Gazebo)
-            'reference_frame': 'camera_link_optical',
-            'camera_frame': 'camera_link_optical',
+            'reference_frame': 'iiwa_iiwa_base',
+            'camera_frame': 'iiwa/iiwa_link_7/iiwa_camera',
             'marker_frame': 'aruco_marker_frame',
             'dictionary': 'DICT_4X4_50'
         }],
@@ -83,11 +83,29 @@ def generate_launch_description():
             ('/aruco_single/pose', '/aruco_single/pose')
         ]
     )
+    
+    static_tf_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='camera_static_tf',
+        arguments=[
+            '--x', '0.07',            # Coordinata X URDF
+            '--y', '0.0',             # Coordinata Y URDF
+            '--z', '-0.03',           # Coordinata Z URDF
+            '--roll', '3.14',         # R (Roll) URDF
+            '--pitch', '-1.57',       # P (Pitch) URDF
+            '--yaw', '0.0',           # Y (Yaw) URDF
+            '--frame-id', 'iiwa_tool0',                  # Padre (Parent Link nell'URDF)
+            '--child-frame-id', 'iiwa/iiwa_link_7/iiwa_camera' # Figlio (Nome che dava errore)
+        ],
+        output='screen'
+    )
 
     return LaunchDescription([
         cmd_interface_arg,
         ctrl_arg,
         bridge_node,
         aruco_node,
-        ros2_kdl_node
+        ros2_kdl_node,
+        static_tf_node
     ])

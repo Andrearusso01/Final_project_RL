@@ -1,0 +1,4 @@
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:[m[K In member function ‘[01m[Kvoid PickPlaceClient::aruco_callback(geometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/user/ros2_ws/src/ros2_kdl_package/src/ros2_kdl_node_client.cpp:61:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   61 |     void aruco_callback([01;35m[Kconst geometry_msgs::msg::PoseStamped::SharedPtr msg[m[K) {
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

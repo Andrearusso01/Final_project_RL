@@ -1,4 +1,12 @@
 # Final_project
+Remember to build (in the src fold):
+```
+colcon build
+```
+and to source every new terminal:
+```
+. install/setup.bash
+```
 Run gazebo:
 ```
 ros2 launch ros2_fra2mo warehouse.launch.py
@@ -7,7 +15,7 @@ To set a goal with autonomous navigation:
 ```
 ros2 launch ros2_fra2mo fra2mo_navigation.launch.py
 ```
-In another terminal:
+To make the rover follow given waypoints (run the previous command first): 
 ```
 ros2 run ros2_fra2mo follow_waypoints.py
 ```

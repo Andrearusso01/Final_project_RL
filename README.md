@@ -1,35 +1,43 @@
 # Final_project
+Remember to build (in the src fold):
+```
+colcon build
+```
+and to source every new terminal:
+```
+. install/setup.bash
+```
 Run gazebo:
 ```
 ros2 launch ros2_fra2mo warehouse.launch.py
 ```
-To set a goal with autonomous navigation (REMEMBER TO DETACH FIRST):
+To set a goal with autonomous navigation:
 ```
 ros2 launch ros2_fra2mo fra2mo_navigation.launch.py
 ```
-In another terminal:
+To make the rover follow given waypoints (run the previous command first): 
 ```
 ros2 run ros2_fra2mo follow_waypoints.py
 ```
 In order to do the control vision:  
 Open rqt -> /iiwa_camera/image_raw.  
-Run the kdl node: 
+Run the kdl node. 
 ```
 ros2 launch ros2_kdl_package launching.launch.py ctrl:=vision
 ```
 Set the rqt topic to /aruco_single/result.  
-Run the client node 
+Run the client node for the autonomous pick and place. 
 ```
 ros2 run ros2_kdl_package ros2_kdl_node_client
 ```
-To use the detachable joint:
+To use the detachable joint manually:
 ```
 ign topic -t /gripper/detach -m ignition.msgs.Empty -p ''
 ```
 ```
 ign topic -t /gripper/attach -m ignition.msgs.Empty -p ''
 ```
-To move iiwa (this is for the descending phase):
+To move iiwa manually (this is for the descending phase):
 ```
 ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
   joint_names: [
@@ -44,7 +52,7 @@ ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs
   ]
 }"
 ```
-To place the package:
+To place the package manually:
 ```
 ros2 topic pub --once /iiwa/iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{
   joint_names: [

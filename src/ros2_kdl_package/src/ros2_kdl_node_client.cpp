@@ -17,40 +17,43 @@ public:
     using ExecuteTrajectory = ros2_kdl_package::action::ExecuteTrajectory;
     using GoalHandle = rclcpp_action::ClientGoalHandle<ExecuteTrajectory>;
 
-    // Stati della missione
-    enum class State { SEARCHING, CANCELLING, DESCENDING, ATTACHING, TO_TABLE, DETACHING, LIFT_AFTER_DROP, FINISHED };
+    enum class State { SEARCHING, CANCELLING, DESCENDING, ATTACHING, LIFTING_FROM_CART, ROTATING_TO_DROP, DETACHING, LIFT_AFTER_DROP, FINISHED };
 
     PickPlaceClient() : Node("pick_place_client"), current_state_(State::SEARCHING) {
         
-        // Action Client
         action_client_ = rclcpp_action::create_client<ExecuteTrajectory>(this, "/iiwa/ExecuteTrajectory");
         
-        // Vision Subscriber
         aruco_sub_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "/aruco_single/pose", 10, std::bind(&PickPlaceClient::aruco_callback, this, std::placeholders::_1));
 
-        // Gripper Publishers
         attach_pub_ = this->create_publisher<std_msgs::msg::Empty>("/gripper/attach", 10);
         detach_pub_ = this->create_publisher<std_msgs::msg::Empty>("/gripper/detach", 10);
 
         RCLCPP_INFO(this->get_logger(), "--- Waiting for the rover... ---");
         
-        // Timer per avvio ritardato
         timer_ = this->create_wall_timer(500ms, std::bind(&PickPlaceClient::start_search, this));
     }
 
 private:
+    // --- COORDINATE ---
+
     // 1. Cerca (Guarda giù)
     std::vector<double> joints_search_ = {-0.4, -0.5, 0.0, 1.5, 0.0, -1.0, 0.0};
 
     // 2. Prendi (Basso sul rover)
     std::vector<double> joints_pick_ = {-0.4, -0.9, 0.0, 1.5, 0.0, -0.5, 0.0};
 
-    // 3. Tavolo (Deposito)
-    std::vector<double> joints_table_ = {0.2, 0.7, 0.0, -0.7, 0.0, 1.8, 0.0};
+    // 3. LIFT (Salita verticale dal carrello)
+    //    Mantengo J1 (-0.4) uguale al pick per non ruotare, ma alzo J2 e J4
+    std::vector<double> joints_lift_cart_ = {-0.4, 0.0, 0.0, 1.5, 0.0, -1.0, 0.0};
 
-    // 4. Salita di sicurezza
-    std::vector<double> joints_safe_lift_ = {0.2, 0.0, 0.0, -1.3, 0.0, 0.7, 0.0}; 
+    // 4. ROTATE & DROP (La tua coordinata -3.14)
+    //    Questa posizione ruota di 180 gradi e mette il robot a L per il rilascio
+    std::vector<double> joints_rotate_drop_ = {-3.14, 0.0, 0.0, 1.7, 0.0, -1.4, 0.0};
+
+    // 5. Salita di sicurezza finale
+    //    Mantengo la rotazione -3.14 ma alzo il braccio
+    std::vector<double> joints_safe_lift_ = {-3.14, 0.0, 0.0, 1.0, 0.0, -1.4, 0.0}; 
 
 
     void start_search() {
@@ -62,13 +65,11 @@ private:
     void aruco_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
         if (current_state_ == State::SEARCHING) {
             
-            // Filtro distanza: attiva solo se il tag è sotto 1.0m di altezza
             if (msg->pose.position.z > 1.0) {
                 return; 
             }
 
             RCLCPP_WARN(this->get_logger(), "ROVER DETECTED! Starting procedure...");
-            
             current_state_ = State::CANCELLING;
             action_client_->async_cancel_all_goals();
         }
@@ -76,38 +77,51 @@ private:
 
     void result_callback(const GoalHandle::WrappedResult & result) {
         
-        // CASO 1: Transizione da RICERCA a DISCESA (scatenata dal cancel)
+        // A. Transizione INIZIALE (Start -> Pick)
         if (current_state_ == State::CANCELLING) {
-            RCLCPP_INFO(this->get_logger(), "Stop confirmed. Going down...");
+            RCLCPP_INFO(this->get_logger(), "Stop confirmed. Going down to PICK...");
             current_state_ = State::DESCENDING;
             send_joint_goal(joints_pick_);
         }
         
-        // CASO 2: Successo del movimento precedente
+        // B. Gestione Sequenza
         else if (result.code == rclcpp_action::ResultCode::SUCCEEDED) {
             
+            // FASE 2 -> 3: Presa e Salita Verticale
             if (current_state_ == State::DESCENDING) {
-                RCLCPP_INFO(this->get_logger(), "On the package. Attach...");
+                RCLCPP_INFO(this->get_logger(), "On package. ATTACH.");
                 attach_pub_->publish(std_msgs::msg::Empty());
                 rclcpp::sleep_for(2s); 
                 
-                RCLCPP_INFO(this->get_logger(), "Picked! Going to table...");
-                current_state_ = State::TO_TABLE;
-                send_joint_goal(joints_table_);
+                RCLCPP_INFO(this->get_logger(), "Lifting form cart (Vertical)...");
+                current_state_ = State::LIFTING_FROM_CART;
+                send_joint_goal(joints_lift_cart_);
             }
-            else if (current_state_ == State::TO_TABLE) {
-                RCLCPP_INFO(this->get_logger(), "On the table. Stabilizing..");
-                rclcpp::sleep_for(2s); // Pausa per smorzare oscillazioni
+            
+            // FASE 3 -> 4: Rotazione verso il tavolo
+            else if (current_state_ == State::LIFTING_FROM_CART) {
+                RCLCPP_INFO(this->get_logger(), "Clear of cart. Rotating to TABLE...");
+                current_state_ = State::ROTATING_TO_DROP;
+                send_joint_goal(joints_rotate_drop_);
+            }
+
+            // FASE 4 -> 5: Rilascio e Salita finale
+            else if (current_state_ == State::ROTATING_TO_DROP) {
+                RCLCPP_INFO(this->get_logger(), "At table position. DETACH...");
                 
-                RCLCPP_INFO(this->get_logger(), "Detach...");
+                // Pausa per stabilizzare l'oscillazione prima di mollare
+                rclcpp::sleep_for(2s); 
+                
                 current_state_ = State::DETACHING;
                 detach_pub_->publish(std_msgs::msg::Empty());
                 rclcpp::sleep_for(1s);
 
-                RCLCPP_INFO(this->get_logger(), "Safety rising...");
+                RCLCPP_INFO(this->get_logger(), "Mission done. Safe lift...");
                 current_state_ = State::LIFT_AFTER_DROP;
                 send_joint_goal(joints_safe_lift_);
             }
+
+            // FINE
             else if (current_state_ == State::LIFT_AFTER_DROP) {
                 RCLCPP_INFO(this->get_logger(), "--- MISSION COMPLETED ---");
                 current_state_ = State::FINISHED;
@@ -136,7 +150,7 @@ private:
     rclcpp::Publisher<std_msgs::msg::Empty>::SharedPtr detach_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
 
-}; // <--- FINE CLASSE (Importante!)
+};
 
 int main(int argc, char ** argv) {
     rclcpp::init(argc, argv);

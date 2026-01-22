@@ -348,7 +348,7 @@
   
 <model name="work_table">
       <static>true</static>
-      <pose>8.8 -4.0 0.0 0 0 0</pose>
+      <pose>8.6 -4.0 0.0 0 0 0</pose>
       
       <link name="link">
         <inertial>

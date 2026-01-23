@@ -38,14 +38,13 @@ public:
         robot_ = nullptr;
         controller_ = nullptr;
 
-        // 1. TENTIAMO IL SETUP KDL
+        // 1. SETUP KDL
         if (!setup_kdl()) {
             RCLCPP_ERROR(this->get_logger(), "CRITICO: Setup KDL fallito. Il nodo non funzionerà.");
-            // Non creiamo né subscriber né server se il robot non c'è.
             return; 
         }
 
-        // 2. SOLO SE KDL È OK, AVVIAMO IL RESTO
+        // 2. SOLO SE KDL È OK, SI AVVIA IL RESTO
         this->action_server_ = rclcpp_action::create_server<ExecuteTrajectory>(
             this, "ExecuteTrajectory",
             std::bind(&Iiwa_pub_sub::handle_goal, this, std::placeholders::_1, std::placeholders::_2),
@@ -137,7 +136,7 @@ private:
         
         {
             std::lock_guard<std::mutex> lock(mutex_);
-            // Se non abbiamo mai ricevuto dati dal topic, è inutile calcolare
+            // Se non sono stati ricevuti dati dal topic, è inutile calcolare
             if (!state_received_) {
                  RCLCPP_WARN(this->get_logger(), "Nessun dato giunti ricevuto! Controlla i topic.");
                  result->success = false;
@@ -199,7 +198,7 @@ private:
     }
 
     void joint_state_subscriber(const sensor_msgs::msg::JointState& msg) {
-        // SAFETY FIRST: Se il robot non è pronto, non fare nulla!
+        // SAFETY FIRST: Se il robot non è pronto, non viene fatto niente
         if (robot_ == nullptr) return;
         
         std::lock_guard<std::mutex> lock(mutex_);
@@ -214,10 +213,10 @@ private:
             joint_velocities_.data[i] = msg.velocity[i];
         }
         
-        state_received_ = true; // Segnala che abbiamo dati validi
+        state_received_ = true; // Segnala che i dati sono validi
     }
 
-    // Boilerplate Action
+    // Boilerplate Action (codice di contorno necessario all'infrastruttura)
     rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID&, std::shared_ptr<const ExecuteTrajectory::Goal>) 
     { return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE; }
     
@@ -236,7 +235,7 @@ private:
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr cmdPublisher_;
     
     std::mutex mutex_;
-    bool state_received_; // <--- Variabile fondamentale
+    bool state_received_; 
 };
 
 int main(int argc, char** argv) {

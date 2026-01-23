@@ -28,7 +28,6 @@ def generate_launch_description():
     )
 
     # --- NODO BRIDGE (IGNITION -> ROS 2) ---
-    # Questo nodo traduce i topic della camera per ROS
     bridge_node = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
@@ -48,7 +47,7 @@ def generate_launch_description():
         parameters=[{
             'image_is_rect': True,
             'marker_size': 0.08,         # Dimensione del tag in metri
-            'marker_id': 201,            # ID del tag (assicurati coincida con Gazebo)
+            'marker_id': 201,            # ID del tag 
             'reference_frame': 'iiwa_iiwa_base',
             'camera_frame': 'iiwa/iiwa_link_7/iiwa_camera',
             'marker_frame': 'aruco_marker_frame',
@@ -62,7 +61,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # --- NODO KDL (IL TUO CODICE C++) ---
+    # --- NODO KDL  ---
     ros2_kdl_node = Node(
         package='ros2_kdl_package',
         executable='ros2_kdl_node',
@@ -95,9 +94,8 @@ def generate_launch_description():
             '--roll', '3.14',         # R (Roll) URDF
             '--pitch', '-1.57',       # P (Pitch) URDF
             '--yaw', '0.0',           # Y (Yaw) URDF
-            '--frame-id', 'iiwa_tool0',                  # Padre (Parent Link nell'URDF)
-            '--child-frame-id', 'iiwa/iiwa_link_7/iiwa_camera' # Figlio (Nome che dava errore)
-        ],
+            '--frame-id', 'iiwa_tool0',                 
+            '--child-frame-id', 'iiwa/iiwa_link_7/iiwa_camera' 
         output='screen'
     )
 

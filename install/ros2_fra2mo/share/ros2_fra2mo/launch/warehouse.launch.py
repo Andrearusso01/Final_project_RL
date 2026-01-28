@@ -10,7 +10,7 @@ from launch.actions import (
     RegisterEventHandler,
     ExecuteProcess  # <--- AGGIUNTO
 )
-from launch.event_handlers import OnProcessExit, OnProcessStart # <--- AGGIUNTO OnProcessStart
+from launch.event_handlers import OnProcessExit, OnProcessStart 
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue

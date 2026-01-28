@@ -47,7 +47,7 @@ private:
     //    Mantengo J1 (-0.4) uguale al pick per non ruotare, ma alzo J2 e J4
     std::vector<double> joints_lift_cart_ = {-0.4, 0.0, 0.0, 1.5, 0.0, -1.0, 0.0};
 
-    // 4. ROTATE & DROP (La tua coordinata -3.14)
+    // 4. ROTATE & DROP
     //    Questa posizione ruota di 180 gradi e mette il robot a L per il rilascio
     std::vector<double> joints_rotate_drop_ = {-3.14, 0.0, 0.0, 1.7, 0.0, -1.4, 0.0};
 

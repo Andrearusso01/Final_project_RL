@@ -95,7 +95,8 @@ def generate_launch_description():
             '--pitch', '-1.57',       # P (Pitch) URDF
             '--yaw', '0.0',           # Y (Yaw) URDF
             '--frame-id', 'iiwa_tool0',                 
-            '--child-frame-id', 'iiwa/iiwa_link_7/iiwa_camera' 
+            '--child-frame-id', 'iiwa/iiwa_link_7/iiwa_camera'
+            ], 
         output='screen'
     )
 
